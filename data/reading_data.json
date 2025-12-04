@@ -1,0 +1,849 @@
+{
+    "levels": [
+        {
+            "id": "basic",
+            "name": "Basic (Cơ bản)",
+            "description": "Dành cho người mới bắt đầu. Câu ngắn, rõ ràng, tập trung vào nhu cầu thiết yếu.",
+            "topics": [
+                {
+                    "id": "greeting",
+                    "name": "Greetings & Introduction (Chào hỏi & Giới thiệu)",
+                    "conversations": [
+                        {
+                            "id": "basic_greet_1",
+                            "title": "First Meeting (Lần đầu gặp gỡ)",
+                            "sentences": [
+                                {
+                                    "en": "Hi, I don't think we've met. I'm Sarah.",
+                                    "vi": "Chào, hình như chúng ta chưa gặp nhau. Mình là Sarah."
+                                },
+                                {
+                                    "en": "Nice to meet you, Sarah. I'm Tom. Are you new here?",
+                                    "vi": "Rất vui được gặp bạn, Sarah. Mình là Tom. Bạn là người mới à?"
+                                },
+                                {
+                                    "en": "Yes, it is my first day at school.",
+                                    "vi": "Ừ, hôm nay là ngày đầu tiên mình đến trường."
+                                },
+                                {
+                                    "en": "Welcome! Let me know if you need help finding your class.",
+                                    "vi": "Chào mừng nhé! Cần tìm lớp thì cứ bảo mình."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "basic_greet_2",
+                            "title": "Casual Greeting (Chào hỏi xã giao)",
+                            "sentences": [
+                                {
+                                    "en": "Hey John, how is it going?",
+                                    "vi": "Này John, dạo này thế nào?"
+                                },
+                                {
+                                    "en": "Not bad. Just a bit busy. How about you?",
+                                    "vi": "Không tệ lắm. Chỉ hơi bận chút thôi. Còn cậu?"
+                                },
+                                {
+                                    "en": "I am doing well, thanks.",
+                                    "vi": "Tớ vẫn khỏe, cảm ơn nhé."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "basic_greet_3",
+                            "title": "Saying Goodbye (Chào tạm biệt)",
+                            "sentences": [
+                                {
+                                    "en": "It is getting late. I have to go now.",
+                                    "vi": "Muộn rồi. Tớ phải đi bây giờ đây."
+                                },
+                                {
+                                    "en": "Okay, see you later.",
+                                    "vi": "Ok, gặp cậu sau nhé."
+                                },
+                                {
+                                    "en": "Bye! Have a good night.",
+                                    "vi": "Tạm biệt! Chúc buổi tối vui vẻ."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "family",
+                    "name": "Family & Friends (Gia đình & Bạn bè)",
+                    "conversations": [
+                        {
+                            "id": "basic_fam_1",
+                            "title": "Talking about siblings (Nói về anh chị em)",
+                            "sentences": [
+                                {
+                                    "en": "Do you have any brothers or sisters?",
+                                    "vi": "Bạn có anh chị em gì không?"
+                                },
+                                {
+                                    "en": "I have one older brother. He is working in London.",
+                                    "vi": "Mình có một anh trai. Anh ấy đang làm việc ở London."
+                                },
+                                {
+                                    "en": "That is cool. I am an only child.",
+                                    "vi": "Hay thế. Mình là con một."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "basic_fam_2",
+                            "title": "Talking about Pets (Nói về thú cưng)",
+                            "sentences": [
+                                {
+                                    "en": "Do you have any pets at home?",
+                                    "vi": "Nhà bạn có nuôi thú cưng không?"
+                                },
+                                {
+                                    "en": "Yes, I have a dog named Max. He is very friendly.",
+                                    "vi": "Có, tớ có một chú chó tên là Max. Nó thân thiện lắm."
+                                },
+                                {
+                                    "en": "I love dogs! I want to get one too.",
+                                    "vi": "Tớ yêu chó lắm! Tớ cũng muốn nuôi một con."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "weather",
+                    "name": "Weather (Thời tiết)",
+                    "conversations": [
+                        {
+                            "id": "basic_weather_1",
+                            "title": "A Rainy Day (Ngày mưa)",
+                            "sentences": [
+                                {
+                                    "en": "Look outside, it is raining again.",
+                                    "vi": "Nhìn bên ngoài kìa, trời lại mưa rồi."
+                                },
+                                {
+                                    "en": "Oh no, I forgot my umbrella at home.",
+                                    "vi": "Ôi không, tớ quên dù ở nhà mất rồi."
+                                },
+                                {
+                                    "en": "Don't worry, we can share mine.",
+                                    "vi": "Đừng lo, chúng ta có thể dùng chung dù của tớ."
+                                },
+                                {
+                                    "en": "Thank you, that is very kind of you.",
+                                    "vi": "Cảm ơn nhé, cậu tốt bụng quá."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "basic_weather_2",
+                            "title": "Hot Weather (Trời nóng)",
+                            "sentences": [
+                                {
+                                    "en": "It is so hot today!",
+                                    "vi": "Hôm nay trời nóng quá!"
+                                },
+                                {
+                                    "en": "I know. I need a cold drink.",
+                                    "vi": "Biết mà. Tớ cần một ly nước lạnh."
+                                },
+                                {
+                                    "en": "Let's go buy some ice cream.",
+                                    "vi": "Đi mua kem ăn đi."
+                                },
+                                {
+                                    "en": "Good idea!",
+                                    "vi": "Ý hay đấy!"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "food",
+                    "name": "Food & Drink (Ăn uống)",
+                    "conversations": [
+                        {
+                            "id": "basic_food_1",
+                            "title": "I am hungry (Tôi đói bụng)",
+                            "sentences": [
+                                {
+                                    "en": "I am so hungry. Is it lunch time yet?",
+                                    "vi": "Tớ đói quá. Đã đến giờ ăn trưa chưa?"
+                                },
+                                {
+                                    "en": "Almost. It is 11:30.",
+                                    "vi": "Sắp rồi. Bây giờ là 11:30."
+                                },
+                                {
+                                    "en": "What do you want to eat?",
+                                    "vi": "Cậu muốn ăn gì?"
+                                },
+                                {
+                                    "en": "Maybe pizza or a sandwich.",
+                                    "vi": "Chắc là pizza hoặc bánh mì kẹp."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "basic_food_2",
+                            "title": "Coffee or Tea? (Cà phê hay trà?)",
+                            "sentences": [
+                                {
+                                    "en": "Do you like coffee?",
+                                    "vi": "Cậu có thích cà phê không?"
+                                },
+                                {
+                                    "en": "No, I prefer tea. Coffee is too bitter for me.",
+                                    "vi": "Không, tớ thích trà hơn. Cà phê đắng quá."
+                                },
+                                {
+                                    "en": "I drink coffee every morning to wake up.",
+                                    "vi": "Tớ uống cà phê mỗi sáng để tỉnh táo."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "hobbies",
+                    "name": "Hobbies (Sở thích)",
+                    "conversations": [
+                        {
+                            "id": "basic_hobby_1",
+                            "title": "What do you do for fun? (Bạn làm gì để giải trí?)",
+                            "sentences": [
+                                {
+                                    "en": "What do you do in your free time?",
+                                    "vi": "Bạn làm gì vào thời gian rảnh?"
+                                },
+                                {
+                                    "en": "I like playing soccer with my friends.",
+                                    "vi": "Tớ thích đá bóng với bạn bè."
+                                },
+                                {
+                                    "en": "Me too! We should play together sometime.",
+                                    "vi": "Tớ cũng thế! Hôm nào bọn mình nên đá chung nhé."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "intermediate",
+            "name": "Intermediate (Trung cấp)",
+            "description": "Giao tiếp tự nhiên, sử dụng thành ngữ, cụm động từ và văn phong đời thường.",
+            "topics": [
+                {
+                    "id": "shopping",
+                    "name": "Shopping & Services (Mua sắm & Dịch vụ)",
+                    "conversations": [
+                        {
+                            "id": "inter_shop_1",
+                            "title": "Grocery Run (Đi siêu thị)",
+                            "sentences": [
+                                {
+                                    "en": "Hey, check the fridge. Are we out of eggs?",
+                                    "vi": "Này, kiểm tra tủ lạnh xem. Nhà mình hết trứng chưa?"
+                                },
+                                {
+                                    "en": "Yeah, completely out. And we're low on milk too.",
+                                    "vi": "Ừ, hết sạch rồi. Với cả mình cũng sắp hết sữa nữa."
+                                },
+                                {
+                                    "en": "Okay, let's grab a cart. The dairy section is over there.",
+                                    "vi": "Ok, đi lấy cái xe đẩy đi. Khu đồ sữa ở đằng kia kìa."
+                                },
+                                {
+                                    "en": "Wait, look at these strawberries. They're on sale, buy one get one free!",
+                                    "vi": "Từ từ, nhìn mấy hộp dâu này xem. Đang giảm giá này, mua một tặng một!"
+                                },
+                                {
+                                    "en": "Sweet! Put two packs in the cart then.",
+                                    "vi": "Ngon! Thế thì bỏ hai hộp vào xe đi."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "inter_shop_2",
+                            "title": "Returning an Item (Đổi trả hàng)",
+                            "sentences": [
+                                {
+                                    "en": "Hi, I bought this jacket yesterday, but it's a bit too tight.",
+                                    "vi": "Chào bạn, mình mua cái áo khoác này hôm qua, nhưng nó hơi chật một chút."
+                                },
+                                {
+                                    "en": "No problem. Do you have your receipt with you?",
+                                    "vi": "Không sao ạ. Bạn có mang theo hóa đơn không?"
+                                },
+                                {
+                                    "en": "Yes, here it is. Can I exchange it for a larger size?",
+                                    "vi": "Có, đây ạ. Mình đổi sang cỡ lớn hơn được không?"
+                                },
+                                {
+                                    "en": "Let me check. Actually, we're out of Large in black. Would you like a refund instead?",
+                                    "vi": "Để mình kiểm tra. Tiếc là bên mình hết size L màu đen rồi. Bạn có muốn hoàn tiền không?"
+                                },
+                                {
+                                    "en": "That works for me. Thanks for your help.",
+                                    "vi": "Thế cũng được. Cảm ơn bạn đã giúp nhé."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "social",
+                    "name": "Socializing & Dining (Giao tiếp & Ăn uống)",
+                    "conversations": [
+                        {
+                            "id": "inter_social_1",
+                            "title": "Inviting a Friend Out (Rủ bạn đi chơi)",
+                            "sentences": [
+                                {
+                                    "en": "Hey, are you free this Friday night?",
+                                    "vi": "Này, tối thứ Sáu cậu có rảnh không?"
+                                },
+                                {
+                                    "en": "I think so. Why, what's up?",
+                                    "vi": "Hình như là có. Sao thế, có vụ gì à?"
+                                },
+                                {
+                                    "en": "A few of us are heading to that new karaoke spot downtown. Wanna come?",
+                                    "vi": "Mấy đứa bọn tớ định đi quán karaoke mới mở ở trung tâm. Đi cùng không?"
+                                },
+                                {
+                                    "en": "Oh, I'm terrible at singing, but sure, sounds fun! Who else is going?",
+                                    "vi": "Ôi, tớ hát dở tệ, nhưng mà chắc chắn rồi, nghe vui đấy! Có những ai đi thế?"
+                                },
+                                {
+                                    "en": "Just Mike, Jenny, and maybe Alex. It'll be chill.",
+                                    "vi": "Có Mike, Jenny với chắc là cả Alex nữa. Thoải mái thôi mà."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "inter_social_2",
+                            "title": "Ordering at a Restaurant (Gọi món tại nhà hàng)",
+                            "sentences": [
+                                {
+                                    "en": "Are you guys ready to order, or do you need a few more minutes?",
+                                    "vi": "Các bạn đã sẵn sàng gọi món chưa, hay cần thêm vài phút nữa?"
+                                },
+                                {
+                                    "en": "I think we're ready. I'll have the grilled salmon, please.",
+                                    "vi": "Mình nghĩ là xong rồi đấy. Cho mình món cá hồi nướng nhé."
+                                },
+                                {
+                                    "en": "Excellent choice. And for you, miss?",
+                                    "vi": "Lựa chọn tuyệt vời. Còn cô thì sao ạ?"
+                                },
+                                {
+                                    "en": "I'm torn between the pasta and the steak. Is the steak spicy?",
+                                    "vi": "Mình đang phân vân giữa mì Ý và bít tết. Món bít tết có cay không?"
+                                },
+                                {
+                                    "en": "Not at all. But it comes with a pepper sauce on the side.",
+                                    "vi": "Không hề cay đâu ạ. Nhưng nó có kèm sốt tiêu để bên cạnh."
+                                },
+                                {
+                                    "en": "Perfect. I'll go with the steak then, medium rare.",
+                                    "vi": "Tuyệt. Thế mình chọn bít tết nhé, chín vừa."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "work",
+                    "name": "Work & Office (Công việc & Văn phòng)",
+                    "conversations": [
+                        {
+                            "id": "inter_work_1",
+                            "title": "Calling in Sick (Xin nghỉ ốm)",
+                            "sentences": [
+                                {
+                                    "en": "Hi Susan, it's Mark. I don't think I can make it in today.",
+                                    "vi": "Chào Susan, Mark đây. Chắc hôm nay tôi không đi làm được rồi."
+                                },
+                                {
+                                    "en": "Oh no, is everything okay?",
+                                    "vi": "Ôi không, mọi chuyện ổn cả chứ?"
+                                },
+                                {
+                                    "en": "Not really. I woke up with a splitting headache and a fever.",
+                                    "vi": "Không ổn lắm. Tôi dậy với cái đầu đau như búa bổ và bị sốt nữa."
+                                },
+                                {
+                                    "en": "That sounds rough. Don't worry about the meeting, just rest up and feel better.",
+                                    "vi": "Nghe tệ quá nhỉ. Đừng lo về cuộc họp, cứ nghỉ ngơi cho khỏe đi nhé."
+                                },
+                                {
+                                    "en": "Thanks, Susan. I'll check my emails later if I can.",
+                                    "vi": "Cảm ơn Susan. Tôi sẽ check email sau nếu đỡ hơn."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "inter_work_2",
+                            "title": "Discussing a Deadline (Thảo luận hạn chót)",
+                            "sentences": [
+                                {
+                                    "en": "How is the marketing report coming along?",
+                                    "vi": "Báo cáo marketing làm đến đâu rồi?"
+                                },
+                                {
+                                    "en": "I'm almost done, just need to finalize the charts.",
+                                    "vi": "Tôi sắp xong rồi, chỉ cần chốt lại mấy cái biểu đồ nữa thôi."
+                                },
+                                {
+                                    "en": "Great. Can you send it to me by 3 PM? I need to review it before the client meeting.",
+                                    "vi": "Tốt. Bạn gửi cho tôi trước 3 giờ chiều được không? Tôi cần xem qua trước khi họp với khách hàng."
+                                },
+                                {
+                                    "en": "That might be tight, but I'll do my best to get it to you on time.",
+                                    "vi": "Hơi gấp đấy, nhưng tôi sẽ cố hết sức để gửi đúng giờ."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "advanced",
+            "name": "Advanced (Nâng cao & Chuyên ngành)",
+            "description": "Tiếng Anh chuyên ngành IT, thảo luận về công nghệ, phần mềm và kỹ thuật.",
+            "topics": [
+                {
+                    "id": "tech_gadgets",
+                    "name": "Technology & Gadgets (Công nghệ & Thiết bị)",
+                    "conversations": [
+                        {
+                            "id": "adv_tech_1",
+                            "title": "Discussing Smartphone Specs (Thảo luận thông số điện thoại)",
+                            "sentences": [
+                                {
+                                    "en": "Have you seen the specs on the new model released yesterday?",
+                                    "vi": "Cậu đã xem thông số của mẫu máy mới ra mắt hôm qua chưa?"
+                                },
+                                {
+                                    "en": "Yes, the processor speed is a significant upgrade.",
+                                    "vi": "Rồi, tốc độ bộ vi xử lý là một bước nâng cấp đáng kể."
+                                },
+                                {
+                                    "en": "I am actually more impressed by the battery life improvement.",
+                                    "vi": "Thực ra tớ ấn tượng hơn với sự cải thiện về thời lượng pin."
+                                },
+                                {
+                                    "en": "True, but the lack of a headphone jack is still a deal-breaker for me.",
+                                    "vi": "Đúng, nhưng việc thiếu cổng cắm tai nghe vẫn là điểm trừ lớn đối với tớ."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "adv_tech_2",
+                            "title": "Smart Home Setup (Thiết lập nhà thông minh)",
+                            "sentences": [
+                                {
+                                    "en": "I'm thinking about upgrading to a smart home system.",
+                                    "vi": "Tớ đang tính nâng cấp lên hệ thống nhà thông minh."
+                                },
+                                {
+                                    "en": "That sounds fun. Are you going with voice control or just an app?",
+                                    "vi": "Nghe vui đấy. Cậu định dùng điều khiển giọng nói hay chỉ dùng app thôi?"
+                                },
+                                {
+                                    "en": "Definitely voice control. I want to turn off the lights without getting out of bed.",
+                                    "vi": "Chắc chắn là giọng nói rồi. Tớ muốn tắt đèn mà không cần phải rời khỏi giường."
+                                },
+                                {
+                                    "en": "Just make sure your Wi-Fi router is powerful enough to handle all the devices.",
+                                    "vi": "Nhớ đảm bảo bộ định tuyến Wi-Fi của cậu đủ mạnh để tải hết các thiết bị nhé."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "software_dev",
+                    "name": "Software Development (Phát triển phần mềm)",
+                    "conversations": [
+                        {
+                            "id": "adv_dev_1",
+                            "title": "Reporting a Bug (Báo lỗi phần mềm)",
+                            "sentences": [
+                                {
+                                    "en": "I found a critical bug in the login module during testing.",
+                                    "vi": "Tôi tìm thấy một lỗi nghiêm trọng trong mô-đun đăng nhập khi kiểm thử."
+                                },
+                                {
+                                    "en": "Can you reproduce it consistently?",
+                                    "vi": "Bạn có thể tái hiện lại lỗi đó liên tục không?"
+                                },
+                                {
+                                    "en": "Yes, the app crashes whenever I enter a special character in the password field.",
+                                    "vi": "Có, ứng dụng bị văng ra bất cứ khi nào tôi nhập ký tự đặc biệt vào trường mật khẩu."
+                                },
+                                {
+                                    "en": "Okay, please log a ticket in Jira and assign it to me right away.",
+                                    "vi": "Ok, hãy tạo một vé (ticket) trên Jira và gán cho tôi ngay nhé."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "adv_dev_2",
+                            "title": "Code Review (Đánh giá mã nguồn)",
+                            "sentences": [
+                                {
+                                    "en": "Could you review my pull request when you have a moment?",
+                                    "vi": "Bạn có thể xem qua yêu cầu kéo (pull request) của tôi khi rảnh không?"
+                                },
+                                {
+                                    "en": "Sure, I will take a look after the daily stand-up meeting.",
+                                    "vi": "Chắc chắn rồi, tôi sẽ xem sau cuộc họp đứng hàng ngày (stand-up)."
+                                },
+                                {
+                                    "en": "Thanks. I refactored the database connection logic to improve performance.",
+                                    "vi": "Cảm ơn. Tôi đã cấu trúc lại logic kết nối cơ sở dữ liệu để cải thiện hiệu suất."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "adv_dev_3",
+                            "title": "Deployment Issues (Vấn đề triển khai)",
+                            "sentences": [
+                                {
+                                    "en": "The deployment to production failed. Do we have a rollback plan?",
+                                    "vi": "Việc triển khai lên môi trường production bị lỗi rồi. Chúng ta có kế hoạch quay lui (rollback) không?"
+                                },
+                                {
+                                    "en": "Yes, I have a backup of the previous version ready.",
+                                    "vi": "Có, tôi đã chuẩn bị sẵn bản sao lưu của phiên bản trước rồi."
+                                },
+                                {
+                                    "en": "Good. It seems like a missing environment variable caused the crash.",
+                                    "vi": "Tốt. Có vẻ như thiếu một biến môi trường đã gây ra sự cố."
+                                },
+                                {
+                                    "en": "I'll fix the config file and we can try deploying again in an hour.",
+                                    "vi": "Tôi sẽ sửa file cấu hình và chúng ta có thể thử triển khai lại trong một tiếng nữa."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "adv_dev_4",
+                            "title": "API Architecture Discussion (Thảo luận kiến trúc API)",
+                            "sentences": [
+                                {
+                                    "en": "Should we build the new API using REST or GraphQL?",
+                                    "vi": "Chúng ta nên xây dựng API mới bằng REST hay GraphQL?"
+                                },
+                                {
+                                    "en": "Well, REST is standard and easier to cache, but GraphQL offers more flexibility for the frontend.",
+                                    "vi": "Chà, REST là tiêu chuẩn và dễ cache hơn, nhưng GraphQL lại linh hoạt hơn cho phía giao diện (frontend)."
+                                },
+                                {
+                                    "en": "True. Our mobile app needs to fetch nested data, and REST would require multiple round trips.",
+                                    "vi": "Đúng. Ứng dụng di động của mình cần lấy dữ liệu lồng nhau, nếu dùng REST thì phải gọi server nhiều lần."
+                                },
+                                {
+                                    "en": "In that case, let's go with GraphQL to avoid over-fetching data.",
+                                    "vi": "Trong trường hợp đó, hãy dùng GraphQL để tránh việc tải thừa dữ liệu (over-fetching)."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "adv_dev_5",
+                            "title": "Debugging a Memory Leak (Gỡ lỗi rò rỉ bộ nhớ)",
+                            "sentences": [
+                                {
+                                    "en": "The server keeps crashing with an 'Out of Memory' error every 24 hours.",
+                                    "vi": "Máy chủ cứ bị sập vì lỗi 'Hết bộ nhớ' sau mỗi 24 giờ."
+                                },
+                                {
+                                    "en": "That sounds like a memory leak. Have you checked the heap snapshots?",
+                                    "vi": "Nghe như bị rò rỉ bộ nhớ (memory leak) rồi. Cậu đã kiểm tra ảnh chụp vùng nhớ heap chưa?"
+                                },
+                                {
+                                    "en": "Yes, it seems like the database connections aren't being closed properly after requests.",
+                                    "vi": "Rồi, có vẻ như các kết nối cơ sở dữ liệu không được đóng đúng cách sau mỗi yêu cầu."
+                                },
+                                {
+                                    "en": "Ah, we might be missing a 'finally' block in the connection handler code.",
+                                    "vi": "À, có thể chúng ta thiếu khối 'finally' trong đoạn mã xử lý kết nối rồi."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "devops_cloud",
+                    "name": "DevOps & Cloud (DevOps & Điện toán đám mây)",
+                    "conversations": [
+                        {
+                            "id": "adv_devops_1",
+                            "title": "Docker Container Issue (Sự cố Docker Container)",
+                            "sentences": [
+                                {
+                                    "en": "The application works on my machine but keeps failing in the Docker container.",
+                                    "vi": "Ứng dụng chạy ngon lành trên máy tôi nhưng cứ bị lỗi trong container Docker."
+                                },
+                                {
+                                    "en": "It works on my machine is a classic excuse. Have you checked the environment variables?",
+                                    "vi": "'Chạy được trên máy tôi' là cái cớ kinh điển rồi. Bạn đã kiểm tra các biến môi trường chưa?"
+                                },
+                                {
+                                    "en": "Wait, I might have forgotten to copy the .env file into the image.",
+                                    "vi": "Khoan đã, có thể tôi quên chưa copy file .env vào trong image rồi."
+                                },
+                                {
+                                    "en": "That would explain it. Add it to the Dockerfile and rebuild the image.",
+                                    "vi": "Thế thì đúng rồi. Thêm nó vào Dockerfile rồi build lại image đi."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "adv_devops_2",
+                            "title": "CI/CD Pipeline Failure (Lỗi quy trình CI/CD)",
+                            "sentences": [
+                                {
+                                    "en": "The build failed on the staging branch again. What happened?",
+                                    "vi": "Việc build trên nhánh staging lại thất bại rồi. Có chuyện gì thế?"
+                                },
+                                {
+                                    "en": "Let me check the CI logs. It looks like the linter is throwing an error.",
+                                    "vi": "Để tôi xem log CI đã. Có vẻ như trình kiểm tra cú pháp (linter) đang báo lỗi."
+                                },
+                                {
+                                    "en": "Oh, I see. I missed a semicolon in the config file.",
+                                    "vi": "Ồ, thấy rồi. Tôi bỏ sót một dấu chấm phẩy trong file cấu hình."
+                                },
+                                {
+                                    "en": "Fix it and push the commit. The pipeline should trigger automatically.",
+                                    "vi": "Sửa đi rồi push commit lên. Pipeline sẽ tự động chạy lại thôi."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "data_science",
+                    "name": "Data Science & AI (Khoa học dữ liệu & AI)",
+                    "conversations": [
+                        {
+                            "id": "adv_ds_1",
+                            "title": "Model Overfitting (Mô hình bị quá khớp)",
+                            "sentences": [
+                                {
+                                    "en": "Our model performs great on training data but poorly on the test set.",
+                                    "vi": "Mô hình hoạt động rất tốt trên dữ liệu huấn luyện nhưng lại kém trên tập kiểm thử."
+                                },
+                                {
+                                    "en": "That is a clear sign of overfitting. The model is memorizing the data instead of learning patterns.",
+                                    "vi": "Đó là dấu hiệu rõ ràng của việc quá khớp (overfitting). Mô hình đang học vẹt dữ liệu thay vì học các quy luật."
+                                },
+                                {
+                                    "en": "Should we try increasing the regularization parameter?",
+                                    "vi": "Chúng ta có nên thử tăng tham số chẩn hóa (regularization) lên không?"
+                                },
+                                {
+                                    "en": "Yes, or we could try gathering more diverse training data.",
+                                    "vi": "Đúng, hoặc chúng ta có thể thử thu thập thêm dữ liệu huấn luyện đa dạng hơn."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "technical_interview",
+                    "name": "Technical Interview Q&A (Phỏng vấn kỹ thuật)",
+                    "conversations": [
+                        {
+                            "id": "adv_interview_1",
+                            "title": "Algorithm Complexity (Độ phức tạp thuật toán)",
+                            "sentences": [
+                                {
+                                    "en": "Can you explain the time complexity of your solution?",
+                                    "vi": "Bạn có thể giải thích độ phức tạp thời gian của giải pháp này không?"
+                                },
+                                {
+                                    "en": "Since I'm using two nested loops, the complexity is O(n^2), which isn't ideal.",
+                                    "vi": "Vì tôi đang dùng hai vòng lặp lồng nhau, độ phức tạp là O(n^2), không lý tưởng lắm."
+                                },
+                                {
+                                    "en": "How would you optimize it to run faster?",
+                                    "vi": "Bạn sẽ tối ưu hóa thế nào để nó chạy nhanh hơn?"
+                                },
+                                {
+                                    "en": "I can use a hash map to store visited elements, bringing it down to O(n).",
+                                    "vi": "Tôi có thể dùng bảng băm (hash map) để lưu các phần tử đã duyệt, giảm nó xuống còn O(n)."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "adv_interview_2",
+                            "title": "Database Selection (Lựa chọn cơ sở dữ liệu)",
+                            "sentences": [
+                                {
+                                    "en": "Why did you choose a NoSQL database for this project instead of a relational one?",
+                                    "vi": "Tại sao bạn lại chọn cơ sở dữ liệu NoSQL cho dự án này thay vì loại quan hệ (SQL)?"
+                                },
+                                {
+                                    "en": "Our data structure is unstructured and changes frequently, so a document store like MongoDB is more flexible.",
+                                    "vi": "Cấu trúc dữ liệu của chúng tôi không cố định và thay đổi thường xuyên, nên kho lưu trữ dạng văn bản như MongoDB linh hoạt hơn."
+                                },
+                                {
+                                    "en": "But what about data consistency and transactions?",
+                                    "vi": "Nhưng còn về tính nhất quán dữ liệu và các giao dịch thì sao?"
+                                },
+                                {
+                                    "en": "For critical financial transactions, we actually use a separate PostgreSQL service to ensure ACID compliance.",
+                                    "vi": "Đối với các giao dịch tài chính quan trọng, chúng tôi dùng một dịch vụ PostgreSQL riêng để đảm bảo tuân thủ chuẩn ACID."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "system_design",
+                    "name": "System Design (Thiết kế hệ thống)",
+                    "conversations": [
+                        {
+                            "id": "adv_sys_1",
+                            "title": "Microservices vs Monolith (Microservices và Monolith)",
+                            "sentences": [
+                                {
+                                    "en": "We are debating whether to split our backend into microservices.",
+                                    "vi": "Chúng tôi đang tranh luận xem có nên tách backend thành kiến trúc microservices không."
+                                },
+                                {
+                                    "en": "Be careful. Microservices introduce a lot of complexity in deployment and monitoring.",
+                                    "vi": "Cẩn thận nhé. Microservices sẽ làm phức tạp thêm rất nhiều khâu triển khai và giám sát."
+                                },
+                                {
+                                    "en": "I agree, but our team is growing too large to work on a single codebase.",
+                                    "vi": "Tôi đồng ý, nhưng team đang phát triển quá lớn để cùng làm việc trên một bộ mã nguồn duy nhất."
+                                },
+                                {
+                                    "en": "Start by extracting just one service, maybe the notification system, and see how it goes.",
+                                    "vi": "Hãy bắt đầu bằng việc tách một dịch vụ thôi, có thể là hệ thống thông báo, rồi xem thế nào đã."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "it_support",
+                    "name": "IT Support (Hỗ trợ kỹ thuật)",
+                    "conversations": [
+                        {
+                            "id": "adv_it_1",
+                            "title": "Network Issues (Sự cố mạng)",
+                            "sentences": [
+                                {
+                                    "en": "The Wi-Fi connection is extremely unstable in the meeting room today.",
+                                    "vi": "Kết nối Wi-Fi trong phòng họp hôm nay cực kỳ không ổn định."
+                                },
+                                {
+                                    "en": "Have you tried restarting the access point?",
+                                    "vi": "Bạn đã thử khởi động lại điểm truy cập chưa?"
+                                },
+                                {
+                                    "en": "Yes, but it keeps dropping packets.",
+                                    "vi": "Rồi, nhưng nó vẫn bị mất gói tin liên tục."
+                                },
+                                {
+                                    "en": "I will check the server logs to see if there is a wider outage.",
+                                    "vi": "Tôi sẽ kiểm tra nhật ký máy chủ xem có bị mất mạng diện rộng không."
+                                }
+                            ]
+                        },
+                        {
+                            "id": "adv_it_2",
+                            "title": "Password Reset (Đặt lại mật khẩu)",
+                            "sentences": [
+                                {
+                                    "en": "Hi, I locked myself out of my account. Can you help me reset my password?",
+                                    "vi": "Chào bạn, tôi lỡ làm khóa tài khoản của mình rồi. Bạn giúp tôi đặt lại mật khẩu được không?"
+                                },
+                                {
+                                    "en": "Sure, I just need to verify your employee ID first.",
+                                    "vi": "Được chứ, tôi cần xác minh mã nhân viên của bạn trước đã."
+                                },
+                                {
+                                    "en": "It's ID-4509. I haven't changed my password in months.",
+                                    "vi": "Là ID-4509. Tôi chưa đổi mật khẩu mấy tháng nay rồi."
+                                },
+                                {
+                                    "en": "Okay, I've sent a temporary password to your secondary email.",
+                                    "vi": "Ok, tôi đã gửi mật khẩu tạm thời vào email phụ của bạn rồi nhé."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "cyber_security",
+                    "name": "Cybersecurity (An ninh mạng)",
+                    "conversations": [
+                        {
+                            "id": "adv_sec_1",
+                            "title": "Phishing Alert (Cảnh báo lừa đảo)",
+                            "sentences": [
+                                {
+                                    "en": "Did you see that suspicious email claiming to be from HR?",
+                                    "vi": "Bạn có thấy cái email đáng ngờ tự xưng là từ phòng nhân sự không?"
+                                },
+                                {
+                                    "en": "Yes, the sender address looked fake. It's definitely a phishing attempt.",
+                                    "vi": "Có, địa chỉ người gửi trông giả lắm. Chắc chắn là một nỗ lực lừa đảo (phishing) rồi."
+                                },
+                                {
+                                    "en": "Don't click on any links or download attachments.",
+                                    "vi": "Đừng nhấp vào bất kỳ liên kết nào hay tải tệp đính kèm xuống nhé."
+                                },
+                                {
+                                    "en": "I already forwarded it to the security team for analysis.",
+                                    "vi": "Tôi đã chuyển tiếp nó cho đội bảo mật để phân tích rồi."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "project_management",
+                    "name": "Project Management (Quản lý dự án)",
+                    "conversations": [
+                        {
+                            "id": "adv_pm_1",
+                            "title": "Daily Stand-up (Họp đứng hàng ngày)",
+                            "sentences": [
+                                {
+                                    "en": "Let's start the stand-up. What did you work on yesterday?",
+                                    "vi": "Bắt đầu họp đứng nào. Hôm qua bạn đã làm những gì?"
+                                },
+                                {
+                                    "en": "I finished the API integration for the payment gateway.",
+                                    "vi": "Tôi đã hoàn thành việc tích hợp API cho cổng thanh toán."
+                                },
+                                {
+                                    "en": "Any blockers preventing you from moving forward?",
+                                    "vi": "Có trở ngại (blocker) nào ngăn bạn tiếp tục không?"
+                                },
+                                {
+                                    "en": "No blockers. Today I will start writing unit tests.",
+                                    "vi": "Không có trở ngại nào. Hôm nay tôi sẽ bắt đầu viết unit test."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
