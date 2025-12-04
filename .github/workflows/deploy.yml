@@ -26,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build -- --configuration production --base-href /an-eng-pro/
+        run: npm run build -- --configuration production --base-href /anEngPro/
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
