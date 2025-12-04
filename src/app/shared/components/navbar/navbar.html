@@ -1,0 +1,56 @@
+<header class="sticky top-0 z-50 w-full bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+    <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <!-- Logo -->
+        <a routerLink="/" class="flex items-center gap-2.5 group">
+            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-600 text-white transition-transform group-hover:scale-110 group-hover:rotate-12">
+                <span class="material-symbols-outlined text-lg">school</span>
+            </div>
+            <span class="text-xl font-bold text-white">EngLearn</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center gap-2">
+            <a *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive="bg-gray-700 text-white" [routerLinkActiveOptions]="{exact: link.path === '/'}"
+                class="px-4 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">
+                {{link.label}}
+            </a>
+        </nav>
+
+        <!-- Desktop Actions -->
+        <div class="hidden md:flex items-center gap-4">
+            <a routerLink="/login" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+                Đăng nhập
+            </a>
+            <a routerLink="/register"
+                class="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-blue-700 transition-all active:scale-95">
+                Đăng ký
+            </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button (click)="toggleMobileMenu()" class="md:hidden text-gray-400 hover:text-white">
+            <span class="material-symbols-outlined text-2xl">
+                {{ isMobileMenuOpen ? 'close' : 'menu' }}
+            </span>
+        </button>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div *ngIf="isMobileMenuOpen" class="md:hidden bg-gray-900 border-t border-gray-800">
+        <nav class="flex flex-col p-4 space-y-1">
+            <a *ngFor="let link of navLinks" [routerLink]="link.path" (click)="closeMobileMenu()" routerLinkActive="bg-gray-700 text-white" [routerLinkActiveOptions]="{exact: link.path === '/'}"
+                class="px-4 py-3 rounded-md text-base font-medium text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">
+                {{link.label}}
+            </a>
+        </nav>
+        <div class="border-t border-gray-800 p-4 flex items-center gap-4">
+            <a routerLink="/login" (click)="closeMobileMenu()" class="flex-1 text-center text-sm font-medium text-gray-400 hover:text-white transition-colors">
+                Đăng nhập
+            </a>
+            <a routerLink="/register" (click)="closeMobileMenu()"
+                class="flex-1 text-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-bold text-white hover:bg-blue-700 transition-all">
+                Đăng ký
+            </a>
+        </div>
+    </div>
+</header>

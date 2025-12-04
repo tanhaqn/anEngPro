@@ -1,0 +1,202 @@
+<div class="min-h-screen bg-background-light dark:bg-background-dark font-display text-white" *ngIf="course">
+
+    <!-- Mobile View (md:hidden) -->
+    <div class="relative flex h-screen w-full flex-col overflow-hidden md:hidden">
+        <div class="flex h-full grow flex-col">
+            <div class="flex flex-1 justify-center">
+                <div class="flex w-full max-w-md flex-col bg-background-light dark:bg-background-dark">
+                    <!-- Header -->
+                    <header
+                        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 py-3">
+                        <div class="flex items-center gap-4 text-white">
+                            <a [routerLink]="['/vocabulary', course.id]"
+                                class="flex h-10 w-10 items-center justify-center rounded-lg text-white hover:bg-white/10 transition-colors">
+                                <span class="material-symbols-outlined text-2xl">arrow_back</span>
+                            </a>
+                            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">{{ course.title
+                                }}</h2>
+                        </div>
+                        <button
+                            class="flex h-10 w-10 items-center justify-center rounded-lg text-white hover:bg-white/10 transition-colors">
+                            <span class="material-symbols-outlined text-2xl">more_vert</span>
+                        </button>
+                    </header>
+
+                    <main class="flex flex-1 flex-col justify-between overflow-y-auto px-4">
+                        <div class="flex flex-col gap-2 py-6">
+                            <p class="text-sm font-normal text-slate-400">{{ currentQuestionIndex + 1 }}/{{
+                                questions.length }}</p>
+                            <div class="h-2 rounded bg-slate-700">
+                                <div class="h-2 rounded bg-primary transition-all duration-300"
+                                    [style.width.%]="((currentQuestionIndex + 1) / questions.length) * 100"></div>
+                            </div>
+                        </div>
+
+                        <div class="flex-grow flex flex-col justify-center gap-8"
+                            *ngIf="!showResult && questions.length > 0">
+                            <div class="flex flex-col items-center text-center">
+                                <p class="text-slate-400 text-sm font-medium mb-2">Điền vào chỗ trống</p>
+                                <h1 class="text-3xl font-bold leading-tight tracking-tight text-white">{{
+                                    questions[currentQuestionIndex].word.term }}</h1>
+                                <div class="mt-2 flex items-center justify-center gap-2">
+                                    <p class="text-lg font-normal leading-normal text-slate-300">{{
+                                        questions[currentQuestionIndex].word.pronunciation }}</p>
+                                    <button
+                                        class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-300 hover:bg-white/10">
+                                        <span class="material-symbols-outlined text-xl">volume_up</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <div class="text-center">
+                                    <p class="text-slate-300 text-lg leading-relaxed">
+                                        {{ questions[currentQuestionIndex].sentence }}
+                                    </p>
+                                </div>
+                                <div class="relative">
+                                    <input type="text" [(ngModel)]="questions[currentQuestionIndex].userAnswer"
+                                        (keyup.enter)="checkAnswer()"
+                                        [disabled]="questions[currentQuestionIndex].isCorrect !== null"
+                                        class="w-full rounded-xl border-2 border-slate-700 bg-slate-800 py-4 px-4 text-center text-lg text-white placeholder-slate-500 focus:border-primary focus:ring-primary/50 transition-colors"
+                                        placeholder="Nhập câu trả lời">
+                                </div>
+
+                                <!-- Feedback -->
+                                <div *ngIf="questions[currentQuestionIndex].isCorrect === true"
+                                    class="mt-6 rounded-lg bg-green-500/10 p-4 text-center text-green-400 border border-green-500/20">
+                                    <p class="font-bold">Chính xác!</p>
+                                </div>
+                                <div *ngIf="questions[currentQuestionIndex].isCorrect === false"
+                                    class="mt-6 rounded-lg bg-red-500/10 p-4 text-center text-red-400 border border-red-500/20">
+                                    <p class="font-bold">Đáp án đúng: {{ questions[currentQuestionIndex].word.term }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Result View Mobile -->
+                        <div *ngIf="showResult" class="flex flex-col items-center justify-center h-full text-center">
+                            <div
+                                class="mb-6 inline-flex h-24 w-24 items-center justify-center rounded-full bg-primary/20">
+                                <span class="material-symbols-outlined text-5xl text-primary">emoji_events</span>
+                            </div>
+                            <h3 class="mb-4 text-3xl font-bold text-white">Hoàn thành!</h3>
+                            <p class="mb-8 text-xl text-gray-300">Bạn đã đạt được <span
+                                    class="font-bold text-primary">{{ score }}</span> điểm.</p>
+                            <div class="flex justify-center gap-4 w-full">
+                                <button (click)="resetGame()"
+                                    class="flex-1 rounded-xl bg-slate-700 px-6 py-4 font-bold text-white hover:bg-slate-600">Làm
+                                    lại</button>
+                                <a [routerLink]="['/vocabulary', course.id]"
+                                    class="flex-1 rounded-xl bg-primary px-6 py-4 font-bold text-white hover:bg-primary/90">Về
+                                    bài học</a>
+                            </div>
+                        </div>
+
+                        <div class="pb-24 pt-4"></div>
+                    </main>
+
+                    <footer
+                        class="absolute bottom-0 left-0 right-0 z-10 mx-auto w-full max-w-md bg-gradient-to-t from-background-dark via-background-dark/90 to-transparent p-4 pt-8"
+                        *ngIf="!showResult">
+                        <button (click)="checkAnswer()"
+                            [disabled]="!questions[currentQuestionIndex].userAnswer || questions[currentQuestionIndex].isCorrect !== null"
+                            class="flex h-14 w-full cursor-pointer items-center justify-center rounded-xl bg-primary text-lg font-bold leading-normal tracking-wide text-white shadow-lg shadow-primary/30 transition-colors hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed">
+                            Kiểm tra
+                        </button>
+                        <button *ngIf="questions[currentQuestionIndex].isCorrect !== null" (click)="skipQuestion()"
+                            class="mt-2 flex h-14 w-full cursor-pointer items-center justify-center rounded-xl bg-slate-700 text-lg font-bold leading-normal tracking-wide text-white shadow-lg transition-colors hover:bg-slate-600">
+                            Tiếp theo
+                        </button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop View (hidden md:block) -->
+    <main class="hidden md:block mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+        <!-- Breadcrumb -->
+        <div class="mb-6 flex items-center gap-2 text-sm text-gray-400">
+            <a routerLink="/vocabulary" class="hover:text-white transition-colors">Luyện tập</a>
+            <span class="material-symbols-outlined text-xs">chevron_right</span>
+            <a [routerLink]="['/vocabulary', course.id]" class="hover:text-white transition-colors">Từ vựng {{
+                course.title }}</a>
+            <span class="material-symbols-outlined text-xs">chevron_right</span>
+            <span class="text-white">Bài tập Điền từ</span>
+        </div>
+
+        <div class="mb-12 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white">Fill in the Blank</h2>
+            <p class="mt-4 text-lg text-gray-400">Complete the sentence below by filling in the correct word in the
+                blank space.</p>
+        </div>
+
+        <div *ngIf="!showResult && questions.length > 0"
+            class="rounded-2xl bg-[#1e293b] p-6 sm:p-12 shadow-xl border border-white/5">
+            <div class="mb-12 text-center">
+                <p class="text-xl sm:text-2xl font-medium text-white leading-relaxed">{{
+                    questions[currentQuestionIndex].sentence
+                    }}</p>
+                <p class="mt-6 text-sm text-gray-400">Hint: {{ questions[currentQuestionIndex].word.definition }}</p>
+            </div>
+
+            <div class="max-w-md mx-auto">
+                <label class="mb-2 block text-sm font-bold text-white">Your Answer</label>
+                <input type="text" [(ngModel)]="questions[currentQuestionIndex].userAnswer"
+                    (keyup.enter)="checkAnswer()" [disabled]="questions[currentQuestionIndex].isCorrect !== null"
+                    class="w-full rounded-lg border border-[#334155] bg-[#0f172a] px-4 py-3 text-white placeholder-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    placeholder="Enter your answer...">
+
+                <div class="mt-8 grid grid-cols-2 gap-4">
+                    <button (click)="checkAnswer()"
+                        [disabled]="!questions[currentQuestionIndex].userAnswer || questions[currentQuestionIndex].isCorrect !== null"
+                        class="rounded-lg bg-primary py-3 text-base font-bold text-white hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed">
+                        Check
+                    </button>
+                    <button (click)="skipQuestion()" [disabled]="questions[currentQuestionIndex].isCorrect !== null"
+                        class="rounded-lg bg-[#334155] py-3 text-base font-bold text-white hover:bg-[#475569] disabled:opacity-50 disabled:cursor-not-allowed">
+                        Skip
+                    </button>
+                </div>
+
+                <!-- Feedback -->
+                <div *ngIf="questions[currentQuestionIndex].isCorrect === true"
+                    class="mt-6 rounded-lg bg-green-500/10 p-4 text-center text-green-400 border border-green-500/20">
+                    <p class="font-bold">Correct! The answer is: {{ questions[currentQuestionIndex].word.term }}</p>
+                </div>
+                <div *ngIf="questions[currentQuestionIndex].isCorrect === false"
+                    class="mt-6 rounded-lg bg-red-500/10 p-4 text-center text-red-400 border border-red-500/20">
+                    <p class="font-bold">Incorrect. The correct answer is: {{ questions[currentQuestionIndex].word.term
+                        }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="showResult" class="rounded-2xl bg-[#1e293b] p-12 text-center shadow-xl border border-white/5">
+            <div class="mb-6 inline-flex h-24 w-24 items-center justify-center rounded-full bg-primary/20">
+                <span class="material-symbols-outlined text-5xl text-primary">emoji_events</span>
+            </div>
+            <h3 class="mb-4 text-3xl font-bold text-white">Completed!</h3>
+            <p class="mb-8 text-xl text-gray-300">You scored <span class="font-bold text-primary">{{ score }}</span> out
+                of {{ questions.length }}.</p>
+            <div class="flex justify-center gap-4">
+                <button (click)="resetGame()"
+                    class="rounded-lg bg-[#334155] px-8 py-3 font-bold text-white hover:bg-[#475569]">Try Again</button>
+                <a [routerLink]="['/vocabulary', course.id]"
+                    class="rounded-lg bg-primary px-8 py-3 font-bold text-white hover:bg-primary/90">Back to Lesson</a>
+            </div>
+        </div>
+
+        <!-- Footer Progress -->
+        <div class="mt-12 text-center" *ngIf="!showResult">
+            <p class="mb-4 text-sm font-medium text-gray-400">Question {{ currentQuestionIndex + 1 }} / {{
+                questions.length }}</p>
+            <div class="mx-auto h-2 w-64 rounded-full bg-[#334155]">
+                <div class="h-2 rounded-full bg-primary transition-all duration-300"
+                    [style.width.%]="((currentQuestionIndex + 1) / questions.length) * 100"></div>
+            </div>
+        </div>
+    </main>
+</div>

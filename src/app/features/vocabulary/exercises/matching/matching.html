@@ -1,0 +1,168 @@
+<div class="min-h-screen bg-background-light dark:bg-background-dark font-display text-white" *ngIf="course">
+
+    <!-- Mobile View (md:hidden) -->
+    <div class="relative flex h-screen w-full flex-col overflow-hidden md:hidden">
+        <div class="flex h-full grow flex-col">
+            <div class="flex flex-1 justify-center">
+                <div class="flex w-full max-w-md flex-col bg-background-light dark:bg-background-dark">
+                    <!-- Header -->
+                    <header
+                        class="flex items-center justify-between whitespace-nowrap border-b border-solid border-white/10 px-4 py-3">
+                        <div class="flex items-center gap-4 text-white">
+                            <a [routerLink]="['/vocabulary', course.id]"
+                                class="flex h-10 w-10 items-center justify-center rounded-lg text-white hover:bg-white/10 transition-colors">
+                                <span class="material-symbols-outlined text-2xl">close</span>
+                            </a>
+                            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Nối từ</h2>
+                        </div>
+                    </header>
+
+                    <main class="flex-1 overflow-y-auto px-4">
+                        <!-- Progress -->
+                        <div class="flex flex-col gap-2 py-6">
+                            <p class="text-sm font-normal text-slate-400">{{ lines.length }}/{{ leftColumn.length }}</p>
+                            <div class="h-2 w-full rounded-full bg-slate-700">
+                                <div class="h-2 rounded-full bg-primary transition-all duration-300"
+                                    [style.width.%]="(lines.length / leftColumn.length) * 100"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-6 text-center">
+                            <h3 class="text-xl font-bold text-white">Nối các từ với nghĩa tương ứng</h3>
+                        </div>
+
+                        <div class="flex flex-col gap-6">
+                            <div class="grid grid-cols-2 gap-4">
+                                <!-- Left Column -->
+                                <div class="flex flex-col items-center gap-4">
+                                    <button *ngFor="let item of leftColumn; let i = index" (click)="selectLeft(item, i)"
+                                        [disabled]="item.matched" [class.border-primary]="item.selected"
+                                        [class.bg-primary/20]="item.selected" [class.ring-2]="item.selected"
+                                        [class.ring-primary]="item.selected" [class.opacity-50]="item.matched"
+                                        class="flex min-h-[64px] w-full items-center justify-center rounded-xl border-2 border-slate-700 bg-slate-800/60 p-3 text-center text-lg font-semibold text-white shadow-md transition-all hover:bg-slate-800 active:scale-95 disabled:cursor-not-allowed">
+                                        {{ item.text }}
+                                    </button>
+                                </div>
+
+                                <!-- Right Column -->
+                                <div class="flex flex-col items-center gap-4">
+                                    <button *ngFor="let item of rightColumn; let i = index"
+                                        (click)="selectRight(item, i)" [disabled]="item.matched"
+                                        [class.border-primary]="item.selected" [class.bg-primary/20]="item.selected"
+                                        [class.ring-2]="item.selected" [class.ring-primary]="item.selected"
+                                        [class.opacity-50]="item.matched"
+                                        class="flex min-h-[64px] w-full items-center justify-center rounded-xl border-2 border-slate-700 bg-slate-800/60 p-3 text-center text-base font-medium text-slate-300 shadow-md transition-all hover:bg-slate-800 active:scale-95 disabled:cursor-not-allowed">
+                                        {{ item.text }}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+
+                    <!-- Footer (Success State) -->
+                    <footer class="w-full max-w-md" *ngIf="lines.length === leftColumn.length">
+                        <div class="bg-success/10 p-6 text-center text-white">
+                            <div class="mb-2 flex items-center justify-center gap-2">
+                                <span class="material-symbols-outlined text-3xl text-success">check_circle</span>
+                                <p class="text-2xl font-bold text-success">Hoàn thành!</p>
+                            </div>
+                            <p class="text-base text-slate-300">Tuyệt vời! Bạn đã hoàn thành bài tập.</p>
+                            <div class="mt-6 flex items-center gap-4">
+                                <button (click)="resetGame()"
+                                    class="flex h-14 flex-1 cursor-pointer items-center justify-center rounded-xl border-2 border-slate-600 bg-transparent text-lg font-bold leading-normal tracking-wide text-slate-300 transition-colors hover:bg-slate-800">
+                                    Làm lại
+                                </button>
+                                <a [routerLink]="['/vocabulary', course.id]"
+                                    class="flex h-14 flex-1 cursor-pointer items-center justify-center rounded-xl bg-success text-lg font-bold leading-normal tracking-wide text-white shadow-lg shadow-success/30 transition-colors hover:bg-success/90">
+                                    Tiếp theo
+                                </a>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop View (hidden md:block) -->
+    <main class="hidden md:block mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
+        <!-- Breadcrumb -->
+        <div class="mb-6 flex items-center gap-2 text-sm text-gray-400">
+            <a routerLink="/vocabulary" class="hover:text-white transition-colors">Luyện tập</a>
+            <span class="material-symbols-outlined text-xs">chevron_right</span>
+            <a [routerLink]="['/vocabulary', course.id]" class="hover:text-white transition-colors">Từ vựng {{
+                course.title }}</a>
+            <span class="material-symbols-outlined text-xs">chevron_right</span>
+            <span class="text-white">Bài tập Nối từ</span>
+        </div>
+
+        <div class="mb-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white">Nối từ: {{ course.title }}</h2>
+            <p class="mt-4 text-lg text-gray-400">Chọn một từ tiếng Anh và nối với nghĩa tiếng Việt tương ứng.</p>
+        </div>
+
+        <div class="desktop-matching-container relative">
+            <!-- SVG Overlay for connecting lines -->
+            <svg class="pointer-events-none absolute inset-0 z-10 h-full w-full hidden md:block"
+                style="overflow: visible;">
+                <!-- Completed lines -->
+                <line *ngFor="let line of lines" [attr.x1]="line.start.x" [attr.y1]="line.start.y"
+                    [attr.x2]="line.end.x" [attr.y2]="line.end.y"
+                    [attr.stroke]="line.status === 'correct' ? '#22c55e' : '#ef4444'" stroke-width="2" />
+            </svg>
+
+            <!-- Grid Layout for Alignment -->
+            <div class="grid grid-cols-2 gap-x-8 gap-y-4">
+                <!-- Headers -->
+                <h3 class="text-lg font-bold text-white mb-2">Cột từ vựng (Tiếng Anh)</h3>
+                <h3 class="text-lg font-bold text-white mb-2">Cột định nghĩa (Tiếng Việt)</h3>
+
+                <!-- Items -->
+                <ng-container *ngFor="let leftItem of leftColumn; let i = index">
+                    <!-- Left Item -->
+                    <div (click)="selectLeft(leftItem, i)" [id]="'left-' + i" [class.opacity-50]="leftItem.matched"
+                        [class.pointer-events-none]="leftItem.matched" [class.border-primary]="leftItem.selected"
+                        [class.bg-[#263345]]="leftItem.selected"
+                        class="group relative flex cursor-pointer items-center justify-between rounded-lg border border-transparent bg-[#1e293b] p-4 transition-all hover:bg-[#263345] z-20 h-full">
+                        <span class="text-base font-medium text-white">{{ leftItem.text }}</span>
+                        <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 border-gray-500"
+                            [class.border-primary]="leftItem.selected" [class.bg-primary]="leftItem.selected">
+                            <div class="h-2 w-2 rounded-full bg-white" *ngIf="leftItem.selected"></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Item -->
+                    <div (click)="selectRight(rightColumn[i], i)" [id]="'right-' + i"
+                        [class.opacity-50]="rightColumn[i].matched" [class.pointer-events-none]="rightColumn[i].matched"
+                        [class.border-primary]="rightColumn[i].selected" [class.bg-[#263345]]="rightColumn[i].selected"
+                        class="group relative flex cursor-pointer items-center justify-between rounded-lg border border-transparent bg-[#1e293b] p-4 transition-all hover:bg-[#263345] z-20 h-full">
+                        <div class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 border-gray-500"
+                            [class.border-primary]="rightColumn[i].selected"
+                            [class.bg-primary]="rightColumn[i].selected">
+                            <div class="h-2 w-2 rounded-full bg-white" *ngIf="rightColumn[i].selected"></div>
+                        </div>
+                        <span class="text-base font-medium text-white ml-3">{{ rightColumn[i].text }}</span>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+        <!-- Success Message Desktop -->
+        <div class="mt-12 flex flex-col items-center justify-center gap-4" *ngIf="lines.length === leftColumn.length">
+            <div class="flex items-center gap-2 text-success mb-4">
+                <span class="material-symbols-outlined text-4xl">check_circle</span>
+                <h3 class="text-2xl font-bold">Hoàn thành xuất sắc!</h3>
+            </div>
+            <div class="flex gap-4">
+                <button (click)="resetGame()"
+                    class="min-w-[160px] rounded-lg bg-[#34d399] px-6 py-3 text-base font-bold text-gray-900 hover:bg-[#34d399]/90">
+                    Làm lại
+                </button>
+                <a [routerLink]="['/vocabulary', course.id]"
+                    class="min-w-[160px] flex items-center justify-center rounded-lg bg-primary px-6 py-3 text-base font-bold text-white hover:bg-primary/90">
+                    Tiếp theo
+                </a>
+            </div>
+        </div>
+    </main>
+</div>

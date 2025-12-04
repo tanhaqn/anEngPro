@@ -1,0 +1,41 @@
+<div class="flex min-h-screen w-full items-center justify-center p-4 bg-background-dark font-display text-gray-200">
+    <div class="w-full max-w-md rounded-xl bg-[#192633] p-8 shadow-2xl">
+        <div class="flex w-full flex-col gap-8">
+            <div class="text-center">
+                <div class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                    <span class="material-symbols-outlined text-4xl text-primary">lock</span>
+                </div>
+                <h1 class="text-3xl font-bold text-white">Đăng nhập</h1>
+                <p class="mt-2 text-gray-400">Chào mừng bạn quay trở lại!</p>
+            </div>
+
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-col gap-4">
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-medium text-gray-300" for="email">Email</label>
+                    <input
+                        class="flex h-12 w-full items-center rounded-lg border border-gray-600 bg-[#263345] px-4 text-white placeholder:text-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                        id="email" type="email" formControlName="email" placeholder="name@example.com">
+                </div>
+                <div class="flex flex-col gap-2">
+                    <div class="flex items-center justify-between">
+                        <label class="text-sm font-medium text-gray-300" for="password">Mật khẩu</label>
+                        <a class="text-sm font-medium text-primary hover:underline" href="#">Quên mật khẩu?</a>
+                    </div>
+                    <input
+                        class="flex h-12 w-full items-center rounded-lg border border-gray-600 bg-[#263345] px-4 text-white placeholder:text-gray-500 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                        id="password" type="password" formControlName="password" placeholder="••••••••">
+                </div>
+
+                <button type="submit" [disabled]="!loginForm.valid"
+                    class="mt-2 flex h-12 w-full cursor-pointer items-center justify-center rounded-lg bg-primary px-5 text-base font-bold text-white transition-colors hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed">
+                    Đăng nhập
+                </button>
+            </form>
+
+            <p class="text-center text-sm text-gray-400">
+                Chưa có tài khoản? <a class="font-medium text-primary hover:underline" routerLink="/register">Đăng ký
+                    ngay</a>
+            </p>
+        </div>
+    </div>
+</div>

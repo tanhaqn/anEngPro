@@ -1,0 +1,87 @@
+<div class="min-h-screen bg-background-light dark:bg-background-dark font-display text-white" *ngIf="course">
+    <main class="max-w-5xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <!-- Back Link -->
+        <button (click)="goBack()"
+            class="group flex items-center gap-2 text-slate-400 hover:text-white transition-colors mb-6">
+            <span
+                class="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform">arrow_back</span>
+            <span class="font-medium">Quay lại chi tiết bài học</span>
+        </button>
+
+        <!-- Title Section -->
+        <div class="mb-12">
+            <h1 class="text-4xl font-bold text-white mb-3 tracking-tight">Tổng quan Dạng bài tập</h1>
+            <p class="text-lg text-slate-400 font-light">Luyện tập từ vựng chủ đề "{{ course.title }}" để ghi nhớ tốt
+                hơn.</p>
+        </div>
+
+        <!-- Exercises Grid -->
+        <div class="mb-16">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-1 h-8 bg-primary rounded-full"></div>
+                <h2 class="text-2xl font-bold text-white">Practice Exercises</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Matching -->
+                <a [routerLink]="['/vocabulary', course.id, 'exercises', 'matching']"
+                    class="group relative overflow-hidden bg-[#1e293b] hover:bg-[#263345] rounded-2xl p-8 border border-white/5 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 flex flex-col items-center text-center h-64 justify-center">
+                    <div
+                        class="mb-6 w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-4xl text-blue-500">link</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Nối từ</h3>
+                    <p class="text-sm text-slate-400 group-hover:text-blue-400 transition-colors">Match the word</p>
+                </a>
+
+                <!-- Quiz -->
+                <a [routerLink]="['/vocabulary', course.id, 'exercises', 'quiz']"
+                    class="group relative overflow-hidden bg-[#1e293b] hover:bg-[#263345] rounded-2xl p-8 border border-white/5 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/10 flex flex-col items-center text-center h-64 justify-center">
+                    <div
+                        class="mb-6 w-16 h-16 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-4xl text-purple-500">quiz</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Trắc nghiệm</h3>
+                    <p class="text-sm text-slate-400 group-hover:text-purple-400 transition-colors">Multiple choice</p>
+                </a>
+
+                <!-- Fill in Blank -->
+                <a [routerLink]="['/vocabulary', course.id, 'exercises', 'fill-in-blank']"
+                    class="group relative overflow-hidden bg-[#1e293b] hover:bg-[#263345] rounded-2xl p-8 border border-white/5 hover:border-green-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-green-500/10 flex flex-col items-center text-center h-64 justify-center">
+                    <div
+                        class="mb-6 w-16 h-16 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-4xl text-green-500">edit_note</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Điền từ</h3>
+                    <p class="text-sm text-slate-400 group-hover:text-green-400 transition-colors">Fill the blank</p>
+                </a>
+
+                <!-- Listen & Write -->
+                <a [routerLink]="['/vocabulary', course.id, 'exercises', 'listen-write']"
+                    class="group relative overflow-hidden bg-[#1e293b] hover:bg-[#263345] rounded-2xl p-8 border border-white/5 hover:border-orange-500/30 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-500/10 flex flex-col items-center text-center h-64 justify-center">
+                    <div
+                        class="mb-6 w-16 h-16 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        <span class="material-symbols-outlined text-4xl text-orange-500">hearing</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Nghe & Viết</h3>
+                    <p class="text-sm text-slate-400 group-hover:text-orange-400 transition-colors">Listen & Write</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="flex items-center justify-between pt-8 border-t border-white/10">
+            <button (click)="goBack()"
+                class="flex items-center gap-3 px-6 py-3 rounded-xl bg-[#1e293b] hover:bg-[#263345] text-white font-bold transition-all hover:shadow-lg border border-white/5 hover:border-white/10">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Previous
+            </button>
+
+            <button (click)="nextLesson()"
+                class="flex items-center gap-3 px-8 py-3 rounded-xl bg-primary hover:bg-primary/90 text-white font-bold shadow-lg shadow-primary/25 transition-all hover:shadow-primary/40 hover:-translate-y-0.5">
+                Tiếp theo
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+        </div>
+    </main>
+</div>
