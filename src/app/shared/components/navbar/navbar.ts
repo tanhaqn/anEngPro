@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { GamificationService } from '../../../core/services/gamification.service';
 
 @Component({
   selector: 'app-navbar',
@@ -11,6 +12,11 @@ import { CommonModule } from '@angular/common';
 })
 export class Navbar {
   isMobileMenuOpen = false;
+  progress$;
+
+  constructor(private gamificationService: GamificationService) {
+    this.progress$ = this.gamificationService.progress$;
+  }
 
   navLinks = [
     { path: '/', label: 'Trang chủ' },

@@ -18797,5 +18797,428 @@
                 "mnemonic": "Gà (Gar) bích (bage) đi nhặt rác."
             }
         ]
+    },
+    {
+        "topic_id": 37,
+        "topic_name": "Kiểm thử & Đảm bảo chất lượng (Testing & QA)",
+        "words": [
+            {
+                "word": "Unit Testing",
+                "ipa": "/ˈjuː.nɪt ˈtes.tɪŋ/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Kiểm thử đơn vị",
+                "english_definition": "A software testing method where individual units or components of a software are tested.",
+                "example_sentence": "We use xUnit for unit testing in .NET.",
+                "example_translation": "Chúng tôi sử dụng xUnit để kiểm thử đơn vị trong .NET.",
+                "grammar_analysis": {
+                    "grammar_id": 1,
+                    "structure": "S + V (use)",
+                    "explanation": "Mô tả công cụ sử dụng."
+                },
+                "collocations": [
+                    "xUnit",
+                    "NUnit",
+                    "MSTest"
+                ],
+                "notes": "",
+                "image_keyword": "unit testing diagram",
+                "synonyms": [],
+                "antonyms": [
+                    "Integration Testing"
+                ],
+                "word_family": [
+                    "Test (v/n)"
+                ],
+                "common_mistakes": "",
+                "mnemonic": "U (U) nít (nit) - Kiểm tra từng đơn vị nhỏ."
+            },
+            {
+                "word": "Integration Testing",
+                "ipa": "/ˌɪn.t̬əˈɡreɪ.ʃən ˈtes.tɪŋ/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Kiểm thử tích hợp",
+                "english_definition": "A level of software testing where individual units are combined and tested as a group.",
+                "example_sentence": "Integration testing ensures that different modules work together correctly.",
+                "example_translation": "Kiểm thử tích hợp đảm bảo các mô-đun khác nhau hoạt động cùng nhau một cách chính xác.",
+                "grammar_analysis": {
+                    "grammar_id": 1,
+                    "structure": "S + V(s/es) (ensures)",
+                    "explanation": "Nêu mục đích."
+                },
+                "collocations": [],
+                "notes": "",
+                "image_keyword": "integration testing puzzle",
+                "synonyms": [],
+                "antonyms": [
+                    "Unit Testing"
+                ],
+                "word_family": [],
+                "common_mistakes": "",
+                "mnemonic": "In (In) tờ (te) - Kiểm tra sự tương tác."
+            },
+            {
+                "word": "Mocking",
+                "ipa": "/ˈmɑːkɪŋ/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Giả lập (đối tượng)",
+                "english_definition": "Creating objects that simulate the behavior of real objects.",
+                "example_sentence": "We are mocking the database context for unit tests.",
+                "example_translation": "Chúng tôi đang giả lập ngữ cảnh cơ sở dữ liệu cho các bài kiểm thử đơn vị.",
+                "grammar_analysis": {
+                    "grammar_id": 2,
+                    "structure": "S + are + V-ing (are mocking)",
+                    "explanation": "Hành động đang diễn ra."
+                },
+                "collocations": [
+                    "Moq (thư viện phổ biến)"
+                ],
+                "notes": "",
+                "image_keyword": "mock object testing",
+                "synonyms": [
+                    "faking",
+                    "stubbing"
+                ],
+                "antonyms": [],
+                "word_family": [
+                    "Mock (v/adj)"
+                ],
+                "common_mistakes": "",
+                "mnemonic": "Móc (Mock) nối giả."
+            },
+            {
+                "word": "Bug Tracking",
+                "ipa": "/bʌɡ ˈtrækɪŋ/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Theo dõi lỗi",
+                "english_definition": "The process of logging and monitoring bugs or errors during software development.",
+                "example_sentence": "We use Jira for bug tracking.",
+                "example_translation": "Chúng tôi sử dụng Jira để theo dõi lỗi.",
+                "grammar_analysis": {
+                    "grammar_id": 1,
+                    "structure": "S + V (use)",
+                    "explanation": "Mô tả công cụ."
+                },
+                "collocations": [
+                    "Bug tracker",
+                    "Issue tracking"
+                ],
+                "notes": "",
+                "image_keyword": "bug tracking system",
+                "synonyms": [],
+                "antonyms": [],
+                "word_family": [],
+                "common_mistakes": "",
+                "mnemonic": "Bắt (Bug) trắc (track) trở."
+            },
+            {
+                "word": "Code Review",
+                "ipa": "/koʊd rɪˈvjuː/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Đánh giá mã nguồn (Review code)",
+                "english_definition": "Systematic examination of computer source code.",
+                "example_sentence": "Code review helps find bugs early.",
+                "example_translation": "Việc đánh giá mã nguồn giúp tìm ra lỗi sớm.",
+                "grammar_analysis": {
+                    "grammar_id": 1,
+                    "structure": "S + V(s/es) (helps)",
+                    "explanation": "Nêu lợi ích."
+                },
+                "collocations": [
+                    "Peer review",
+                    "Pull request review"
+                ],
+                "notes": "",
+                "image_keyword": "code review meeting",
+                "synonyms": [],
+                "antonyms": [],
+                "word_family": [],
+                "common_mistakes": "",
+                "mnemonic": "Cố (Code) rì (re) viu (view) cho kỹ."
+            }
+        ]
+    },
+    {
+        "topic_id": 38,
+        "topic_name": "Bảo mật & Xác thực (Security & Authentication)",
+        "words": [
+            {
+                "word": "Authentication",
+                "ipa": "/ɔːˌθen.t̬əˈkeɪ.ʃən/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Xác thực (Đăng nhập)",
+                "english_definition": "The process of verifying the identity of a user or process.",
+                "example_sentence": "We use JWT for authentication.",
+                "example_translation": "Chúng tôi sử dụng JWT để xác thực.",
+                "grammar_analysis": {
+                    "grammar_id": 1,
+                    "structure": "S + V (use)",
+                    "explanation": "Mô tả công nghệ."
+                },
+                "collocations": [
+                    "Two-factor authentication (2FA)",
+                    "Identity Server"
+                ],
+                "notes": "Thường gọi tắt là 'AuthN'.",
+                "image_keyword": "authentication login screen",
+                "synonyms": [
+                    "verification"
+                ],
+                "antonyms": [],
+                "word_family": [
+                    "Authenticate (v)"
+                ],
+                "common_mistakes": "Authentication (xác định BẠN LÀ AI) vs Authorization (xác định BẠN ĐƯỢC LÀM GÌ).",
+                "mnemonic": "Au (Au) then (then) - Ai tên gì (xác thực)."
+            },
+            {
+                "word": "Authorization",
+                "ipa": "/ˌɑː.θɚ.əˈzeɪ.ʃən/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Phân quyền (Ủy quyền)",
+                "english_definition": "The function of specifying access rights/privileges to resources.",
+                "example_sentence": "Authorization ensures users can only access their own data.",
+                "example_translation": "Phân quyền đảm bảo người dùng chỉ có thể truy cập dữ liệu của chính họ.",
+                "grammar_analysis": {
+                    "grammar_id": 1,
+                    "structure": "S + V(s/es) (ensures)",
+                    "explanation": "Nêu mục đích."
+                },
+                "collocations": [
+                    "Role-based authorization",
+                    "Policy-based authorization"
+                ],
+                "notes": "Thường gọi tắt là 'AuthZ'.",
+                "image_keyword": "authorization access control",
+                "synonyms": [
+                    "permission"
+                ],
+                "antonyms": [],
+                "word_family": [
+                    "Authorize (v)"
+                ],
+                "common_mistakes": "",
+                "mnemonic": "Au (Au) thờ (tho) - Ai thờ ai (quyền lực/phân quyền)."
+            },
+            {
+                "word": "Encryption",
+                "ipa": "/ɪnˈkrɪp.ʃən/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Mã hóa",
+                "english_definition": "The process of converting information or data into a code, especially to prevent unauthorized access.",
+                "example_sentence": "Data encryption is essential for security.",
+                "example_translation": "Mã hóa dữ liệu là thiết yếu cho bảo mật.",
+                "grammar_analysis": {
+                    "grammar_id": 1,
+                    "structure": "S + be + Adj (is essential)",
+                    "explanation": "Khẳng định tầm quan trọng."
+                },
+                "collocations": [
+                    "Encrypt data",
+                    "Decryption"
+                ],
+                "notes": "",
+                "image_keyword": "data encryption lock",
+                "synonyms": [
+                    "encoding"
+                ],
+                "antonyms": [
+                    "decryption"
+                ],
+                "word_family": [
+                    "Encrypt (v)"
+                ],
+                "common_mistakes": "",
+                "mnemonic": "In (En) cờ (cryp) - In cờ bí mật."
+            },
+            {
+                "word": "Token",
+                "ipa": "/ˈtoʊ.kən/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Mã thông báo (Token)",
+                "english_definition": "A piece of data that proves your identity.",
+                "example_sentence": "The access token expires in one hour.",
+                "example_translation": "Mã thông báo truy cập sẽ hết hạn trong một giờ.",
+                "grammar_analysis": {
+                    "grammar_id": 1,
+                    "structure": "S + V(s/es) (expires)",
+                    "explanation": "Mô tả thuộc tính."
+                },
+                "collocations": [
+                    "Access token",
+                    "Refresh token",
+                    "JWT (JSON Web Token)"
+                ],
+                "notes": "",
+                "image_keyword": "digital token key",
+                "synonyms": [],
+                "antonyms": [],
+                "word_family": [],
+                "common_mistakes": "",
+                "mnemonic": "Tô (To) cần (ken) - Tôi cần vé (token) để vào."
+            },
+            {
+                "word": "SQL Injection",
+                "ipa": "/ˌes.kjuːˈel ɪnˈdʒek.ʃən/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Tiêm mã SQL (Lỗ hổng bảo mật)",
+                "english_definition": "A code injection technique used to attack data-driven applications.",
+                "example_sentence": "Use parameterized queries to prevent SQL Injection.",
+                "example_translation": "Sử dụng các truy vấn tham số hóa để ngăn chặn SQL Injection.",
+                "grammar_analysis": {
+                    "grammar_id": 5,
+                    "structure": "V-inf (Use) + ...",
+                    "explanation": "Lời khuyên bảo mật."
+                },
+                "collocations": [],
+                "notes": "",
+                "image_keyword": "sql injection code attack",
+                "synonyms": [],
+                "antonyms": [],
+                "word_family": [],
+                "common_mistakes": "",
+                "mnemonic": "Ếch (S) kiul (QL) in (in) check (jection) - Ếch kiểm tra lỗ hổng."
+            }
+        ]
+    },
+    {
+        "topic_id": 39,
+        "topic_name": "Hiệu năng & Tối ưu hóa (Performance & Optimization)",
+        "words": [
+            {
+                "word": "Caching",
+                "ipa": "/ˈkæʃɪŋ/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Lưu bộ nhớ đệm (Caching)",
+                "english_definition": "Storing data in a temporary storage area so it can be accessed more quickly.",
+                "example_sentence": "Caching improves the application's response time.",
+                "example_translation": "Việc lưu bộ nhớ đệm cải thiện thời gian phản hồi của ứng dụng.",
+                "grammar_analysis": {
+                    "grammar_id": 1,
+                    "structure": "S + V(s/es) (improves)",
+                    "explanation": "Nêu lợi ích."
+                },
+                "collocations": [
+                    "In-memory caching",
+                    "Distributed caching (Redis)"
+                ],
+                "notes": "",
+                "image_keyword": "caching memory speed",
+                "synonyms": [],
+                "antonyms": [],
+                "word_family": [
+                    "Cache (n/v)"
+                ],
+                "common_mistakes": "",
+                "mnemonic": "Cất (Ca) xinh (ching) - Cất dữ liệu xinh xắn vào kho để lấy nhanh."
+            },
+            {
+                "word": "Benchmark",
+                "ipa": "/ˈbentʃ.mɑːrk/",
+                "part_of_speech": "noun/verb",
+                "vietnamese_meaning": "Điểm chuẩn / Đo kiểm hiệu năng",
+                "english_definition": "A standard or point of reference against which things may be compared or assessed.",
+                "example_sentence": "We benchmarked the new code against the old version.",
+                "example_translation": "Chúng tôi đã đo kiểm mã nguồn mới so với phiên bản cũ.",
+                "grammar_analysis": {
+                    "grammar_id": 3,
+                    "structure": "S + V-ed (benchmarked)",
+                    "explanation": "Hành động đã thực hiện."
+                },
+                "collocations": [
+                    "Benchmark test",
+                    "Performance benchmark"
+                ],
+                "notes": "",
+                "image_keyword": "benchmark chart comparison",
+                "synonyms": [
+                    "standard",
+                    "criterion"
+                ],
+                "antonyms": [],
+                "word_family": [],
+                "common_mistakes": "",
+                "mnemonic": "Bến (Ben) mác (mark) - Mốc đánh dấu bến đỗ chuẩn."
+            },
+            {
+                "word": "Bottleneck",
+                "ipa": "/ˈbɑː.t̬əl.nek/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Nút thắt cổ chai (Điểm nghẽn)",
+                "english_definition": "A point of congestion or blockage that slows down a process.",
+                "example_sentence": "The database is the bottleneck in our system.",
+                "example_translation": "Cơ sở dữ liệu là điểm nghẽn trong hệ thống của chúng tôi.",
+                "grammar_analysis": {
+                    "grammar_id": 1,
+                    "structure": "S + be + Noun (is the bottleneck)",
+                    "explanation": "Xác định vấn đề."
+                },
+                "collocations": [
+                    "Identify a bottleneck",
+                    "Performance bottleneck"
+                ],
+                "notes": "",
+                "image_keyword": "bottleneck traffic congestion",
+                "synonyms": [
+                    "obstruction",
+                    "blockage"
+                ],
+                "antonyms": [],
+                "word_family": [],
+                "common_mistakes": "",
+                "mnemonic": "Bóp (Bot) cổ (tle) nếch (neck) - Bị bóp cổ nên nghẽn."
+            },
+            {
+                "word": "Load Testing",
+                "ipa": "/loʊd ˈtes.tɪŋ/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Kiểm thử tải",
+                "english_definition": "Testing how a system behaves under expected load conditions.",
+                "example_sentence": "We perform load testing before major releases.",
+                "example_translation": "Chúng tôi thực hiện kiểm thử tải trước các đợt phát hành lớn.",
+                "grammar_analysis": {
+                    "grammar_id": 1,
+                    "structure": "S + V (perform)",
+                    "explanation": "Mô tả quy trình."
+                },
+                "collocations": [
+                    "Stress testing (kiểm thử chịu tải cực đại)"
+                ],
+                "notes": "",
+                "image_keyword": "load testing server weight",
+                "synonyms": [],
+                "antonyms": [],
+                "word_family": [],
+                "common_mistakes": "",
+                "mnemonic": "Lốt (Load) test - Test xem tải được bao nhiêu lốt hàng."
+            },
+            {
+                "word": "Throughput",
+                "ipa": "/ˈθruː.pʊt/",
+                "part_of_speech": "noun",
+                "vietnamese_meaning": "Lưu lượng xử lý (Thông lượng)",
+                "english_definition": "The amount of material or items passing through a system or process.",
+                "example_sentence": "We need to increase the system's throughput.",
+                "example_translation": "Chúng ta cần tăng lưu lượng xử lý của hệ thống.",
+                "grammar_analysis": {
+                    "grammar_id": 8,
+                    "structure": "Need + to V (need to increase)",
+                    "explanation": "Mục tiêu tối ưu hóa."
+                },
+                "collocations": [
+                    "High throughput",
+                    "Network throughput"
+                ],
+                "notes": "",
+                "image_keyword": "throughput data pipe flow",
+                "synonyms": [
+                    "output",
+                    "capacity"
+                ],
+                "antonyms": [],
+                "word_family": [],
+                "common_mistakes": "",
+                "mnemonic": "Thru (Through) pút (put) - Đẩy qua đường ống."
+            }
+        ]
     }
 ]

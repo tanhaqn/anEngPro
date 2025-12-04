@@ -40,3 +40,10 @@ export interface Course {
     hours?: number;
     progress?: number;
 }
+
+export interface WordStatus {
+    wordId: string;
+    strength: number; // 0 to 5 (or higher)
+    nextReviewDate: string; // ISO date string
+    lastReviewed: string; // ISO date string
+}

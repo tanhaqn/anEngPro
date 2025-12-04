@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { GamificationService } from '../../../core/services/gamification.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,12 +11,41 @@ import { RouterLink } from '@angular/router';
   styleUrl: './dashboard.css',
 })
 export class Dashboard {
-  stats = [
-    { title: 'Hoàn thành', value: '68%', subtitle: 'Hoàn thành', icon: 'pie_chart', iconClass: 'bg-primary/20 text-primary' },
-    { title: 'Chuỗi ngày', value: '12', subtitle: 'Chuỗi ngày', icon: 'local_fire_department', iconClass: 'bg-orange-500/20 text-orange-400' },
-    { title: 'Điểm KN', value: '1,450', subtitle: 'Điểm KN', icon: 'star', iconClass: 'bg-purple-500/20 text-purple-400' },
-    { title: 'Thời gian', value: '350 phút', subtitle: 'Thời gian', icon: 'timer', iconClass: 'bg-green-500/20 text-green-400' }
-  ];
+  stats: any[] = [];
+  leaderboard: any[] = [];
+
+  constructor(private gamificationService: GamificationService) {
+    this.updateStats();
+    this.generateLeaderboard();
+  }
+
+  updateStats() {
+    const progress = this.gamificationService.currentProgress;
+    this.stats = [
+      { title: 'Cấp độ', value: progress.level, subtitle: 'Level', icon: 'military_tech', iconClass: 'bg-primary/20 text-primary' },
+      { title: 'Chuỗi ngày', value: progress.streak, subtitle: 'Chuỗi ngày', icon: 'local_fire_department', iconClass: 'bg-orange-500/20 text-orange-400' },
+      { title: 'Điểm KN', value: progress.xp, subtitle: 'XP', icon: 'star', iconClass: 'bg-purple-500/20 text-purple-400' },
+      { title: 'Đá quý', value: progress.gems, subtitle: 'Gems', icon: 'diamond', iconClass: 'bg-blue-500/20 text-blue-400' }
+    ];
+  }
+
+  generateLeaderboard() {
+    // Mock data
+    const mockUsers = [
+      { name: 'Sarah M.', xp: 2500, avatar: 'https://i.pravatar.cc/150?u=1' },
+      { name: 'John D.', xp: 2350, avatar: 'https://i.pravatar.cc/150?u=2' },
+      { name: 'Emily R.', xp: 2100, avatar: 'https://i.pravatar.cc/150?u=3' },
+    ];
+
+    const currentUser = {
+      name: 'Bạn',
+      xp: this.gamificationService.currentProgress.xp,
+      avatar: 'https://i.pravatar.cc/150?u=4',
+      isMe: true
+    };
+
+    this.leaderboard = [...mockUsers, currentUser].sort((a, b) => b.xp - a.xp);
+  }
 
   courses = [
     {

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { GamificationService } from '../../core/services/gamification.service';
+import { VocabularyService, Word } from '../../core/services/vocabulary';
 
 @Component({
   selector: 'app-review',
@@ -9,66 +11,64 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./review.css']
 })
 export class Review {
-  todayWords = [
-    {
-      word: 'Hello',
-      pronunciation: '/həˈloʊ/',
-      meaning: 'Xin chào',
-      status: 'good',
-      statusText: 'Ghi nhớ tốt',
-      nextReview: 'Ôn lại sau: 7 ngày',
-      expanded: false
-    },
-    {
-      word: 'Apple',
-      pronunciation: '/ˈæp.əl/',
-      meaning: 'Quả táo',
-      example: 'Ví dụ: She eats an apple every day.',
-      status: 'good',
-      statusText: 'Ghi nhớ tốt',
-      nextReview: '',
-      expanded: true
-    },
-    {
-      word: 'House',
-      pronunciation: '/haʊs/',
-      meaning: 'Ngôi nhà',
-      status: 'medium',
-      statusText: 'Sắp quên',
-      nextReview: 'Ôn lại sau: 1 ngày',
-      expanded: false
-    },
-    {
-      word: 'Computer',
-      pronunciation: '/kəmˈpjuː.t̬ɚ/',
-      meaning: 'Máy tính',
-      status: 'poor',
-      statusText: 'Cần ôn ngay',
-      nextReview: 'Ôn lại sau: 10 phút',
-      expanded: false
+  todayWords: any[] = [];
+  schedule: any[] = []; // Keep mock for now or implement later
+  progress: any[] = []; // Keep mock for now
+
+  selectedWord: any;
+
+  constructor(
+    private gamificationService: GamificationService,
+    private vocabularyService: VocabularyService
+  ) {
+    this.loadDueWords();
+  }
+
+  loadDueWords() {
+    const dueIds = this.gamificationService.getDueWords();
+    this.todayWords = dueIds.map(id => {
+      const word = this.vocabularyService.getWordById(id);
+      const status = this.gamificationService.getWordStatus(id);
+      if (!word || !status) return null;
+
+      return {
+        ...word,
+        word: word.term, // Map term to word for template compatibility
+        meaning: word.definition, // Map definition to meaning
+        status: this.getStatusText(status.strength),
+        statusClass: this.getStatusClass(status.strength),
+        nextReview: `Ôn lại: ${new Date(status.nextReviewDate).toLocaleDateString()}`,
+        expanded: false,
+        id: word.id
+      };
+    }).filter(w => w !== null);
+
+    if (this.todayWords.length > 0) {
+      this.selectWord(this.todayWords[0]);
     }
-  ];
+  }
 
-  schedule = [
-    { day: 'T2', date: '18/07', count: 0, isToday: true, label: 'HÔM NAY' },
-    { day: 'T3', date: '18/07', count: 21 },
-    { day: 'T4', date: '19/07', count: 18 },
-    { day: 'T5', date: '20/07', count: 8 },
-    { day: 'T6', date: '21/07', count: 12 },
-    { day: 'T7', date: '22/07', count: 25 },
-    { day: 'CN', date: '23/07', count: 5 },
-  ];
+  getStatusText(strength: number): string {
+    if (strength >= 5) return 'Thành thạo';
+    if (strength >= 3) return 'Ghi nhớ tốt';
+    return 'Cần ôn tập';
+  }
 
-  progress = [
-      { title: 'Từ vựng cơ bản', completed: 15, total: 50, percent: 30 },
-      { title: 'Ngữ pháp A1', completed: 35, total: 40, percent: 87.5 }
-  ];
-
-  selectedWord = this.todayWords.find(w => w.expanded);
+  getStatusClass(strength: number): string {
+    if (strength >= 5) return 'good';
+    if (strength >= 3) return 'medium';
+    return 'poor';
+  }
 
   selectWord(word: any) {
     this.todayWords.forEach(w => w.expanded = false);
     word.expanded = true;
     this.selectedWord = word;
+  }
+
+  reviewWord(wordId: string, quality: number) {
+    this.gamificationService.updateWordStatus(wordId, quality);
+    // Remove from list or update status
+    this.loadDueWords();
   }
 }

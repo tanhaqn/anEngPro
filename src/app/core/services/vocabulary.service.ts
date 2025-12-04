@@ -72,4 +72,12 @@ export class VocabularyService {
     getCourseById(id: string): Course | undefined {
         return this.courses.find(course => course.id === id);
     }
+
+    getWordById(id: string): Word | undefined {
+        for (const course of this.courses) {
+            const word = course.words.find(w => w.id === id);
+            if (word) return word;
+        }
+        return undefined;
+    }
 }
