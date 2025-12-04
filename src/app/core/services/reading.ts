@@ -2,14 +2,17 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import { Level } from '../models/reading.model';
+import { PlatformLocation } from '@angular/common';
 
 @Injectable({
     providedIn: 'root'
 })
 export class ReadingService {
-    private dataUrl = '/data/reading_data.json';
+    private dataUrl: string;
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient, private platformLocation: PlatformLocation) {
+        this.dataUrl = this.platformLocation.getBaseHrefFromDOM() + 'data/reading_data.json';
+    }
 
     getLevels(): Observable<Level[]> {
         return this.http.get<{ levels: Level[] }>(this.dataUrl).pipe(
