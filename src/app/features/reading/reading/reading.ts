@@ -21,6 +21,7 @@ export class ReadingComponent implements OnInit, OnDestroy {
     currentUtterance: SpeechSynthesisUtterance | null = null;
 
     showScrollTop = false;
+    protected Math = Math;
     @ViewChild('mainContainer') mainContainer!: ElementRef;
 
     constructor(private readingService: ReadingService, private cdr: ChangeDetectorRef) { }
@@ -81,6 +82,8 @@ export class ReadingComponent implements OnInit, OnDestroy {
         this.showTranslation = !this.showTranslation;
     }
 
+    activeSentenceIndex = -1;
+
     readConversation() {
         if (!this.selectedConversation) return;
 
@@ -90,18 +93,41 @@ export class ReadingComponent implements OnInit, OnDestroy {
         }
 
         this.isSpeaking = true;
-        const fullText = this.selectedConversation.sentences.map(s => s.en).join('. ');
+        this.activeSentenceIndex = -1;
+        this.playNextSentence();
+    }
 
-        this.currentUtterance = new SpeechSynthesisUtterance(fullText);
+    playNextSentence() {
+        if (!this.selectedConversation || !this.isSpeaking) return;
+
+        this.activeSentenceIndex++;
+
+        if (this.activeSentenceIndex >= this.selectedConversation.sentences.length) {
+            this.stopReading();
+            return;
+        }
+
+        const sentence = this.selectedConversation.sentences[this.activeSentenceIndex];
+        this.currentUtterance = new SpeechSynthesisUtterance(sentence.en);
         this.currentUtterance.lang = 'en-US';
-        this.currentUtterance.rate = 0.8;
+        this.currentUtterance.rate = 0.9; // Slightly slower for better clarity
 
         this.currentUtterance.onend = () => {
-            this.isSpeaking = false;
-            this.currentUtterance = null;
+            // Small pause between sentences
+            setTimeout(() => {
+                if (this.isSpeaking) {
+                    this.playNextSentence();
+                }
+            }, 500);
+        };
+
+        this.currentUtterance.onerror = (e) => {
+            console.error('Speech synthesis error', e);
+            this.stopReading();
         };
 
         window.speechSynthesis.speak(this.currentUtterance);
+        this.cdr.detectChanges();
     }
 
     stopReading() {
@@ -110,6 +136,8 @@ export class ReadingComponent implements OnInit, OnDestroy {
             this.currentUtterance = null;
         }
         this.isSpeaking = false;
+        this.activeSentenceIndex = -1;
+        this.cdr.detectChanges();
     }
 
     onScroll(event: any) {

@@ -9,22 +9,28 @@ export interface Word {
     term: string;
     definition: string; // English definition
     pronunciation: string;
+    ipa?: string; // Added to match API
+    audioUrl?: string; // New field
     example: string; // Example sentence
     image?: string;
 
-    // New fields from ELSA_FULL.json
-    part_of_speech?: string;
-    vietnamese_meaning?: string;
-    example_translation?: string;
-    grammar_analysis?: GrammarAnalysis;
+    // New fields from ELSA_FULL.json -> formatted to camelCase
+    partOfSpeech?: string; // part_of_speech
+    meaning?: string; // vietnamese_meaning
+    exampleTranslation?: string; // example_translation
+    grammarAnalysis?: GrammarAnalysis; // grammar_analysis
     collocations?: string[];
     notes?: string;
-    image_keyword?: string;
+    imageKeyword?: string; // image_keyword
     synonyms?: string[];
     antonyms?: string[];
-    word_family?: string[];
-    common_mistakes?: string;
+    wordFamily?: string[]; // word_family
+    commonMistakes?: string; // common_mistakes
     mnemonic?: string;
+
+    // Progress fields
+    isCompleted?: boolean;
+    progress?: number;
 }
 
 export interface Course {

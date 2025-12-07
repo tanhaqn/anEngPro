@@ -1,0 +1,40 @@
+<div class="flex flex-col h-full bg-[#1e293b] border-r border-white/5 w-64">
+    <!-- Header -->
+    <div class="flex items-center gap-3 px-6 h-16 border-b border-white/5">
+        <div
+            class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold text-lg">
+            A
+        </div>
+        <span class="text-white font-bold text-lg tracking-wide">Admin</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="flex-1 px-4 py-6 space-y-1">
+        <a routerLink="/admin/dashboard" routerLinkActive="bg-white/5 text-white"
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-all group">
+            <span class="material-symbols-outlined group-hover:text-blue-400 transition-colors">dashboard</span>
+            <span class="font-medium">Dashboard</span>
+        </a>
+
+        <a routerLink="/admin/courses" routerLinkActive="bg-white/5 text-white"
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-all group">
+            <span class="material-symbols-outlined group-hover:text-purple-400 transition-colors">library_books</span>
+            <span class="font-medium">Courses</span>
+        </a>
+
+        <a routerLink="/admin/users" routerLinkActive="bg-white/5 text-white"
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-all group">
+            <span class="material-symbols-outlined group-hover:text-green-400 transition-colors">group</span>
+            <span class="font-medium">Users</span>
+        </a>
+    </nav>
+
+    <!-- Footer -->
+    <div class="p-4 border-t border-white/5">
+        <a routerLink="/"
+            class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:text-red-400 hover:bg-red-400/10 transition-all cursor-pointer">
+            <span class="material-symbols-outlined">logout</span>
+            <span class="font-medium">Exit Admin</span>
+        </a>
+    </div>
+</div>

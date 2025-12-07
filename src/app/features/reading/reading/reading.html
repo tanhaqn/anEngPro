@@ -1,166 +1,278 @@
-<div class="flex h-screen w-full flex-col bg-slate-900 font-display text-white">
+<div class="flex h-screen w-full flex-col bg-[#0f172a] font-sans text-white overflow-hidden">
     <!-- Header/Breadcrumb -->
-    <header class="border-b border-white/10 bg-[#111a22] px-4 py-4 md:px-8">
-        <div class="mx-auto max-w-7xl flex items-center gap-2 text-sm text-slate-400">
-            <button (click)="goBackToLevels()" class="hover:text-white transition-colors"
-                [class.text-white]="!selectedLevel" [class.font-bold]="!selectedLevel">
-                Luyện đọc
+    <header class="border-b border-white/5 bg-[#0f172a]/95 backdrop-blur-xl px-4 py-4 md:px-8 z-20 shadow-sm">
+        <div class="mx-auto max-w-7xl flex items-center flex-wrap gap-2 text-sm font-medium">
+            <button (click)="goBackToLevels()"
+                class="flex items-center gap-2 transition-all hover:text-white hover:bg-white/5 px-3 py-1.5 rounded-lg"
+                [class.text-blue-400]="!selectedLevel" [class.bg-blue-400/10]="!selectedLevel"
+                [class.text-slate-400]="selectedLevel">
+                <span class="material-symbols-outlined text-[1.2rem]">library_books</span>
+                <span [class.hidden]="selectedLevel" class="md:inline">Luyện đọc</span>
             </button>
             <ng-container *ngIf="selectedLevel">
-                <span class="material-symbols-outlined text-xs">chevron_right</span>
-                <button (click)="goBackToTopics()" class="hover:text-white transition-colors"
-                    [class.text-white]="!selectedTopic" [class.font-bold]="!selectedTopic">
+                <span class="material-symbols-outlined text-slate-600 text-xs">chevron_right</span>
+                <button (click)="goBackToTopics()"
+                    class="transition-all hover:text-white hover:bg-white/5 px-3 py-1.5 rounded-lg"
+                    [class.text-blue-400]="!selectedTopic" [class.bg-blue-400/10]="!selectedTopic"
+                    [class.text-slate-400]="selectedTopic">
                     {{ selectedLevel.name }}
                 </button>
             </ng-container>
             <ng-container *ngIf="selectedTopic">
-                <span class="material-symbols-outlined text-xs">chevron_right</span>
-                <button (click)="goBackToConversations()" class="hover:text-white transition-colors"
-                    [class.text-white]="!selectedConversation" [class.font-bold]="!selectedConversation">
+                <span class="material-symbols-outlined text-slate-600 text-xs">chevron_right</span>
+                <button (click)="goBackToConversations()"
+                    class="transition-all hover:text-white hover:bg-white/5 px-3 py-1.5 rounded-lg"
+                    [class.text-blue-400]="!selectedConversation" [class.bg-blue-400/10]="!selectedConversation"
+                    [class.text-slate-400]="selectedConversation">
                     {{ selectedTopic.name }}
                 </button>
             </ng-container>
             <ng-container *ngIf="selectedConversation">
-                <span class="material-symbols-outlined text-xs">chevron_right</span>
-                <span class="text-white font-bold truncate">{{ selectedConversation.title }}</span>
+                <span class="material-symbols-outlined text-slate-600 text-xs">chevron_right</span>
+                <span class="text-white bg-white/5 px-3 py-1.5 rounded-lg truncate max-w-[150px] md:max-w-none">{{
+                    selectedConversation.title }}</span>
             </ng-container>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main #mainContainer (scroll)="onScroll($event)" class="flex-1 overflow-y-auto p-4 md:p-8 relative">
-        <div class="mx-auto max-w-7xl">
+    <main #mainContainer (scroll)="onScroll($event)" class="flex-1 overflow-y-auto relative no-scrollbar scroll-smooth">
+        <div class="mx-auto max-w-7xl p-4 md:p-8 min-h-full">
 
             <!-- View 1: Level Selection -->
-            <div *ngIf="!selectedLevel" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                <div *ngFor="let level of levels" (click)="selectLevel(level)"
-                    class="group cursor-pointer rounded-xl border border-white/10 bg-[#1e293b] p-6 transition-all hover:border-primary hover:bg-[#1e293b]/80 hover:shadow-lg hover:shadow-primary/10">
-                    <div
-                        class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                        <span class="material-symbols-outlined text-2xl">school</span>
-                    </div>
-                    <h3 class="mb-2 text-xl font-bold text-white">{{ level.name }}</h3>
-                    <p class="text-sm text-slate-400">{{ level.description }}</p>
-                    <div class="mt-4 flex items-center gap-2 text-sm font-medium text-primary">
-                        <span>{{ level.topics.length }} chủ đề</span>
-                        <span
-                            class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            <div *ngIf="!selectedLevel" class="animate-fadeIn">
+                <div class="mb-8 text-center md:text-left">
+                    <h1
+                        class="text-3xl md:text-4xl font-black mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+                        Chọn trình độ của bạn
+                    </h1>
+                    <p class="text-slate-400 text-lg">Khám phá các bài đọc phù hợp với khả năng của bạn.</p>
+                </div>
+
+                <div class="grid gap-6 md:grid-cols-3">
+                    <!-- Basic -->
+                    <div *ngFor="let level of levels; let i = index" (click)="selectLevel(level)"
+                        class="group cursor-pointer relative overflow-hidden rounded-3xl border border-white/5 bg-[#1e293b]/40 hover:bg-[#1e293b]/60 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
+                        [ngClass]="{
+                            'hover:border-emerald-500/50 hover:shadow-emerald-500/10': i === 0,
+                            'hover:border-blue-500/50 hover:shadow-blue-500/10': i === 1,
+                            'hover:border-purple-500/50 hover:shadow-purple-500/10': i === 2
+                        }">
+                        <!-- Background Glow -->
+                        <div class="absolute -right-10 -top-10 h-64 w-64 rounded-full opacity-10 blur-3xl transition-opacity group-hover:opacity-20"
+                            [ngClass]="{
+                                'bg-emerald-500': i === 0,
+                                'bg-blue-500': i === 1,
+                                'bg-purple-500': i === 2
+                            }">
+                        </div>
+
+                        <div class="relative z-10 p-8 flex flex-col h-full">
+                            <div class="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/5 shadow-inner backdrop-blur-sm"
+                                [ngClass]="{
+                                    'text-emerald-400 bg-emerald-500/10': i === 0,
+                                    'text-blue-400 bg-blue-500/10': i === 1,
+                                    'text-purple-400 bg-purple-500/10': i === 2
+                                }">
+                                <span class="material-symbols-outlined text-3xl">
+                                    {{ i === 0 ? 'sprout' : (i === 1 ? 'school' : 'auto_awesome') }}
+                                </span>
+                            </div>
+
+                            <h3 class="mb-3 text-2xl font-bold text-white group-hover:text-white/90">{{ level.name }}
+                            </h3>
+                            <p class="text-slate-400 mb-8 leading-relaxed">{{ level.description }}</p>
+
+                            <div class="mt-auto flex items-center justify-between border-t border-white/5 pt-6">
+                                <span class="text-sm font-bold text-slate-300">{{ level.topics.length }} Chủ đề</span>
+                                <div class="flex items-center gap-2 text-sm font-bold transition-transform group-hover:translate-x-1"
+                                    [ngClass]="{
+                                        'text-emerald-400': i === 0,
+                                        'text-blue-400': i === 1,
+                                        'text-purple-400': i === 2
+                                    }">
+                                    <span>Khám phá</span>
+                                    <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- View 2: Topic Selection -->
-            <div *ngIf="selectedLevel && !selectedTopic" class="flex flex-col gap-6">
-                <div class="mb-4">
-                    <h2 class="text-2xl font-bold text-white md:text-3xl">{{ selectedLevel.name }}</h2>
-                    <p class="text-slate-400">{{ selectedLevel.description }}</p>
+            <div *ngIf="selectedLevel && !selectedTopic" class="animate-fadeIn">
+                <div class="mb-8 p-8 rounded-3xl bg-gradient-to-r relative overflow-hidden text-center md:text-left"
+                    [ngClass]="{
+                        'from-emerald-900/40 to-slate-900': levels.indexOf(selectedLevel) === 0,
+                        'from-blue-900/40 to-slate-900': levels.indexOf(selectedLevel) === 1,
+                        'from-purple-900/40 to-slate-900': levels.indexOf(selectedLevel) === 2
+                    }">
+                    <div class="relative z-10">
+                        <div class="text-sm font-bold uppercase tracking-wider mb-2 opacity-70">Trình độ</div>
+                        <h2 class="text-3xl md:text-5xl font-black text-white mb-2">{{ selectedLevel.name }}</h2>
+                        <p class="text-white/70 max-w-xl">{{ selectedLevel.description }}</p>
+                    </div>
                 </div>
+
                 <div class="grid gap-4 md:grid-cols-2">
                     <div *ngFor="let topic of selectedLevel.topics" (click)="selectTopic(topic)"
-                        class="group cursor-pointer flex items-center justify-between rounded-xl border border-white/10 bg-[#1e293b] p-5 transition-all hover:border-primary hover:bg-[#1e293b]/80">
-                        <div class="flex items-center gap-4">
-                            <div
-                                class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-700 text-slate-300 group-hover:bg-primary group-hover:text-white transition-colors">
-                                <span class="material-symbols-outlined">topic</span>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-white text-lg">{{ topic.name }}</h3>
-                                <p class="text-sm text-slate-400">{{ topic.conversations.length }} bài hội thoại</p>
-                            </div>
+                        class="group cursor-pointer flex items-center gap-6 rounded-2xl border border-white/5 bg-[#1e293b]/40 p-6 transition-all hover:bg-[#1e293b]/80 hover:border-blue-500/30 hover:scale-[1.01]">
+
+                        <div
+                            class="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-400 transition-colors group-hover:bg-blue-500 group-hover:text-white">
+                            <span class="material-symbols-outlined text-3xl">folder_open</span>
                         </div>
-                        <span
-                            class="material-symbols-outlined text-slate-500 group-hover:text-primary group-hover:translate-x-1 transition-all">chevron_right</span>
+
+                        <div class="flex-1">
+                            <h3 class="text-xl font-bold text-white group-hover:text-blue-300 transition-colors">{{
+                                topic.name }}</h3>
+                            <p class="text-sm text-slate-400 mt-1">{{ topic.conversations.length }} bài học</p>
+                        </div>
+
+                        <div
+                            class="h-10 w-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 group-hover:border-blue-500 group-hover:text-blue-500 transition-all">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- View 3: Conversation Selection -->
-            <div *ngIf="selectedTopic && !selectedConversation" class="flex flex-col gap-6">
-                <div class="mb-4">
-                    <h2 class="text-2xl font-bold text-white md:text-3xl">{{ selectedTopic.name }}</h2>
-                    <p class="text-slate-400">Chọn bài hội thoại để bắt đầu luyện tập</p>
-                </div>
-                <div class="grid gap-4">
-                    <div *ngFor="let conv of selectedTopic.conversations" (click)="selectConversation(conv)"
-                        class="group cursor-pointer flex items-center gap-4 rounded-xl border border-white/10 bg-[#1e293b] p-5 transition-all hover:border-primary hover:bg-[#1e293b]/80">
-                        <div
-                            class="flex h-12 w-12 items-center justify-center rounded-full bg-slate-700 text-slate-300 group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined">forum</span>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="font-bold text-white text-lg">{{ conv.title }}</h3>
-                            <p class="text-sm text-slate-400">{{ conv.sentences.length }} câu thoại</p>
-                        </div>
-                        <button
-                            class="rounded-lg bg-primary/10 px-4 py-2 text-sm font-bold text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            Bắt đầu
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- View 4: Reading/Conversation View -->
-            <div *ngIf="selectedConversation" class="mx-auto max-w-3xl">
-                <!-- Controls -->
+            <div *ngIf="selectedTopic && !selectedConversation" class="animate-fadeIn">
                 <div
-                    class="mb-8 flex flex-col gap-6 border-b border-white/10 pb-8 md:flex-row md:items-center md:justify-between">
+                    class="mb-8 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6">
                     <div>
-                        <h1 class="mb-2 text-2xl font-bold leading-tight text-white md:text-3xl">
-                            {{ selectedConversation.title }}
-                        </h1>
-                        <p class="text-slate-400 font-medium">
-                            {{ selectedTopic?.name }}
-                        </p>
+                        <div class="text-blue-400 font-bold mb-1 uppercase text-sm tracking-wider">Chủ đề</div>
+                        <h2 class="text-3xl md:text-4xl font-black text-white">{{ selectedTopic.name }}</h2>
                     </div>
-
-                    <div class="flex items-center gap-3">
-                        <button (click)="toggleTranslation()"
-                            class="flex h-10 items-center gap-2 rounded-full border border-green-500/30 bg-green-500/10 px-4 text-sm font-bold text-green-400 transition-colors hover:bg-green-500/20">
-                            <span class="material-symbols-outlined text-lg">
-                                {{ showTranslation ? 'visibility_off' : 'visibility' }}
-                            </span>
-                            {{ showTranslation ? 'Ẩn dịch' : 'Hiện dịch' }}
-                        </button>
-
-                        <button (click)="readConversation()"
-                            class="flex h-10 items-center gap-2 rounded-full bg-primary px-4 text-sm font-bold text-white transition-colors hover:bg-primary/90"
-                            [class.bg-red-500]="isSpeaking" [class.hover:bg-red-500/90]="isSpeaking">
-                            <span class="material-symbols-outlined text-lg">
-                                {{ isSpeaking ? 'stop' : 'volume_up' }}
-                            </span>
-                            {{ isSpeaking ? 'Dừng đọc' : 'Đọc cả bài' }}
-                        </button>
-                    </div>
+                    <div class="text-slate-400">{{ selectedTopic.conversations.length }} bài hội thoại</div>
                 </div>
 
-                <!-- Conversation Content -->
-                <div class="flex flex-col gap-6">
-                    <div *ngFor="let sentence of selectedConversation.sentences; let i = index"
-                        class="group relative rounded-xl border border-transparent bg-[#1e293b]/50 p-4 hover:border-white/10 hover:bg-[#1e293b] transition-all">
-
-                        <!-- Speaker Icon (Alternating for visual variety, though data doesn't specify speaker) -->
+                <div class="grid gap-4">
+                    <div *ngFor="let conv of selectedTopic.conversations; let i = index"
+                        (click)="selectConversation(conv)"
+                        class="group cursor-pointer relative overflow-hidden rounded-2xl border border-white/5 bg-[#1e293b]/40 p-1 transition-all hover:bg-[#1e293b]/60">
+                        <!-- Progress/Active Indicator Strip -->
                         <div
-                            class="absolute -left-3 top-4 flex h-6 w-6 items-center justify-center rounded-full border border-white/10 bg-[#111a22] text-xs font-bold text-slate-400 shadow-sm md:-left-10 md:h-8 md:w-8 md:text-sm">
-                            {{ i % 2 === 0 ? 'A' : 'B' }}
+                            class="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity">
                         </div>
 
-                        <p class="mb-2 text-lg leading-relaxed text-slate-200 md:text-xl font-medium">
-                            {{ sentence.en }}
-                        </p>
-                        <p *ngIf="showTranslation"
-                            class="text-base italic leading-relaxed text-slate-400 transition-all md:text-lg">
-                            {{ sentence.vi }}
-                        </p>
+                        <div class="flex items-center gap-6 p-5 pl-7">
+                            <div
+                                class="font-black text-4xl text-white/5 group-hover:text-blue-500/20 transition-colors">
+                                {{ i + 1 < 10 ? '0' + (i + 1) : i + 1 }} </div>
+                                    <div class="flex-1">
+                                        <h3
+                                            class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors mb-1">
+                                            {{ conv.title }}</h3>
+                                        <div class="flex items-center gap-4 text-xs font-medium text-slate-400">
+                                            <span class="flex items-center gap-1">
+                                                <span class="material-symbols-outlined text-sm">chat_bubble</span>
+                                                {{ conv.sentences.length }} câu
+                                            </span>
+                                            <span class="flex items-center gap-1">
+                                                <span class="material-symbols-outlined text-sm">schedule</span>
+                                                ~{{ Math.ceil(conv.sentences.length * 0.5) }} phút
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="h-10 px-6 rounded-full bg-white/5 text-white font-bold text-sm group-hover:bg-blue-600 transition-all shadow-lg">
+                                        Bắt đầu
+                                    </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- View 4: Conversation View -->
+                <div *ngIf="selectedConversation" class="max-w-4xl mx-auto pb-32 animate-fadeIn">
+                    <!-- Title Header -->
+                    <div class="text-center mb-10 mt-4">
+                        <div
+                            class="inline-block px-3 py-1 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold mb-4 border border-blue-500/20">
+                            {{ selectedTopic?.name }}
+                        </div>
+                        <h1 class="text-2xl md:text-4xl font-black text-white mb-2">{{ selectedConversation.title }}
+                        </h1>
+                        <p class="text-slate-400">Luyện nghe và đọc theo đoạn hội thoại bên dưới</p>
+                    </div>
+
+                    <!-- Conversation Content Styles as Chat -->
+                    <div class="space-y-6">
+                        <div *ngFor="let sentence of selectedConversation.sentences; let i = index"
+                            class="flex gap-4 group transition-all duration-500" [ngClass]="{
+                                'flex-row-reverse': i % 2 !== 0,
+                                'opacity-40 blur-[1px] scale-[0.98]': isSpeaking && activeSentenceIndex !== i,
+                                'opacity-100 scale-100': !isSpeaking || activeSentenceIndex === i
+                             }">
+
+                            <!-- Avatar -->
+                            <div class="shrink-0 flex flex-col items-center">
+                                <div class="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-sm font-bold shadow-lg border-2"
+                                    [ngClass]="{
+                                        'bg-blue-600 border-blue-400 text-white': i % 2 === 0,
+                                        'bg-purple-600 border-purple-400 text-white': i % 2 !== 0
+                                     }">
+                                    {{ i % 2 === 0 ? 'A' : 'B' }}
+                                </div>
+                            </div>
+
+                            <!-- Bubble -->
+                            <div class="flex-1 max-w-[85%]">
+                                <div class="rounded-3xl p-5 md:p-6 shadow-xl border w-full transition-all duration-300"
+                                    [ngClass]="{
+                                        'bg-slate-800/80 border-slate-700': !isSpeaking || activeSentenceIndex !== i,
+                                        'bg-blue-900/30 border-blue-500/50 shadow-blue-500/10 ring-1 ring-blue-500/30': isSpeaking && activeSentenceIndex === i && i % 2 === 0,
+                                        'bg-purple-900/30 border-purple-500/50 shadow-purple-500/10 ring-1 ring-purple-500/30': isSpeaking && activeSentenceIndex === i && i % 2 !== 0,
+                                        'rounded-tl-none': i % 2 === 0,
+                                        'rounded-tr-none': i % 2 !== 0
+                                     }">
+                                    <p class="text-lg md:text-xl font-medium text-slate-100 leading-relaxed mb-2">
+                                        {{ sentence.en }}
+                                    </p>
+                                    <p *ngIf="showTranslation"
+                                        class="text-base text-slate-400 font-serif italic border-t border-white/5 pt-2 mt-2"
+                                        [ngClass]="{'text-blue-300/70': isSpeaking && activeSentenceIndex === i && i % 2 === 0, 'text-purple-300/70': isSpeaking && activeSentenceIndex === i && i % 2 !== 0}">
+                                        {{ sentence.vi }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Control Bar -->
+                    <div class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-lg">
+                        <div
+                            class="backdrop-blur-xl bg-[#0f172a]/80 border border-white/10 rounded-full p-2 shadow-2xl flex items-center justify-between gap-2">
+
+                            <button (click)="toggleTranslation()"
+                                class="h-12 px-6 rounded-full flex items-center gap-2 font-bold transition-all text-sm flex-1 justify-center whitespace-nowrap"
+                                [ngClass]="showTranslation ? 'bg-white/10 text-white hover:bg-white/20' : 'text-slate-400 hover:text-white hover:bg-white/5'">
+                                <span class="material-symbols-outlined text-[1.2rem]">{{ showTranslation ? 'visibility'
+                                    : 'visibility_off' }}</span>
+                                <span class="hidden sm:inline">{{ showTranslation ? 'Ẩn dịch' : 'Hiện dịch' }}</span>
+                            </button>
+
+                            <button (click)="readConversation()"
+                                class="h-14 px-8 rounded-full flex items-center gap-2 font-bold text-white transition-all shadow-lg hover:scale-105 active:scale-95 min-w-[140px] justify-center"
+                                [ngClass]="isSpeaking ? 'bg-red-500 hover:bg-red-600 shadow-red-500/30' : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 shadow-blue-500/30'">
+                                <span class="material-symbols-outlined text-[1.5rem]">{{ isSpeaking ? 'pause' :
+                                    'play_arrow' }}</span>
+                                <span>{{ isSpeaking ? 'Dừng lại' : 'Nghe' }}</span>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
 
-        </div>
-
-        <!-- Scroll to Top Button -->
-        <button *ngIf="showScrollTop" (click)="scrollToTop()"
-            class="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shadow-lg transition-all hover:bg-primary/90 hover:scale-110 animate-bounce">
-            <span class="material-symbols-outlined">arrow_upward</span>
-        </button>
+            <!-- Scroll to Top Button -->
+            <button *ngIf="showScrollTop" (click)="scrollToTop()"
+                class="fixed bottom-24 right-6 z-40 h-12 w-12 rounded-full bg-slate-700/80 backdrop-blur text-white shadow-lg border border-white/10 flex items-center justify-center hover:bg-slate-600 transition-all">
+                <span class="material-symbols-outlined">arrow_upward</span>
+            </button>
     </main>
 </div>

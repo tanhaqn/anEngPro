@@ -10,10 +10,17 @@ import { Quiz } from './features/vocabulary/exercises/quiz/quiz';
 import { FillInBlank } from './features/vocabulary/exercises/fill-in-blank/fill-in-blank';
 import { ListenWrite } from './features/vocabulary/exercises/listen-write/listen-write';
 import { GrammarList } from './features/grammar/grammar-list/grammar-list';
-import { Dashboard } from './features/dashboard/dashboard/dashboard';
+
 
 import { ReadingComponent } from './features/reading/reading/reading';
 import { Review } from './features/review/review';
+
+// Admin Imports
+import { AdminLayoutComponent } from './features/admin/layout/admin-layout';
+import { AdminDashboardComponent } from './features/admin/dashboard/dashboard';
+import { CourseManagerComponent } from './features/admin/courses/course-manager';
+import { CourseDetailComponent } from './features/admin/courses/course-detail';
+import { UserManagerComponent } from './features/admin/users/user-manager';
 
 export const routes: Routes = [
     { path: '', component: Home },
@@ -28,7 +35,20 @@ export const routes: Routes = [
     { path: 'vocabulary/:id/exercises/listen-write', component: ListenWrite },
     { path: 'grammar', component: GrammarList },
     { path: 'reading', component: ReadingComponent },
-    { path: 'dashboard', component: Dashboard },
     { path: 'review', component: Review },
+
+    // Admin Routes
+    {
+        path: 'admin',
+        component: AdminLayoutComponent,
+        children: [
+            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+            { path: 'dashboard', component: AdminDashboardComponent },
+            { path: 'courses', component: CourseManagerComponent },
+            { path: 'courses/:id', component: CourseDetailComponent },
+            { path: 'users', component: UserManagerComponent }
+        ]
+    },
+
     { path: '**', redirectTo: '' }
 ];

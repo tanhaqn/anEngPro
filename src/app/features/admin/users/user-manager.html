@@ -1,0 +1,85 @@
+<div class="space-y-6">
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-2xl font-bold text-white">User Management</h1>
+            <p class="text-slate-400 text-sm mt-1">Manage user roles and permissions</p>
+        </div>
+        <button
+            class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-xl transition-all font-medium">
+            <span class="material-symbols-outlined text-xl">person_add</span>
+            <span>Add User</span>
+        </button>
+    </div>
+
+    <!-- Filters -->
+    <div class="flex items-center gap-4 bg-[#1e293b] p-4 rounded-xl border border-white/5">
+        <div class="flex-1 relative">
+            <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+            <input type="text" placeholder="Search users by name or email..."
+                class="w-full bg-slate-900 border border-slate-700 rounded-lg pl-10 pr-4 py-2 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors">
+        </div>
+        <select
+            class="bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors">
+            <option value="">All Roles</option>
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+        </select>
+    </div>
+
+    <!-- User Table -->
+    <div class="bg-[#1e293b] rounded-2xl border border-white/5 overflow-hidden">
+        <table class="w-full text-left">
+            <thead class="bg-slate-900/50 border-b border-white/5">
+                <tr>
+                    <th class="p-4 text-slate-400 font-medium text-sm">User</th>
+                    <th class="p-4 text-slate-400 font-medium text-sm">Role</th>
+                    <th class="p-4 text-slate-400 font-medium text-sm">Status</th>
+                    <th class="p-4 text-slate-400 font-medium text-sm">Joined</th>
+                    <th class="p-4 text-slate-400 font-medium text-sm text-right">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+                <tr *ngFor="let user of users" class="group hover:bg-white/5 transition-colors">
+                    <td class="p-4">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-gradient-to-tr from-indigo-500 to-purple-500 flex items-center justify-center text-white font-bold">
+                                {{user.name.charAt(0)}}
+                            </div>
+                            <div>
+                                <h3 class="text-white font-medium">{{user.name}}</h3>
+                                <p class="text-slate-500 text-xs">{{user.email}}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="p-4">
+                        <span [class.bg-purple-500-10]="user.role === 'Admin'"
+                            [class.text-purple-400]="user.role === 'Admin'" [class.bg-slate-800]="user.role === 'User'"
+                            [class.text-slate-300]="user.role === 'User'"
+                            class="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium border border-white/5 box-border">
+                            <!-- Note: Tailwind needs explicit classes or safelist, assume common ones work -->
+                            {{user.role}}
+                        </span>
+                    </td>
+                    <td class="p-4">
+                        <span
+                            class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-green-500/10 text-green-400 text-xs font-medium">
+                            <span class="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+                            Active
+                        </span>
+                    </td>
+                    <td class="p-4 text-slate-400 text-sm">
+                        {{user.joinedDate}}
+                    </td>
+                    <td class="p-4 text-right">
+                        <button class="text-slate-400 hover:text-white transition-colors" title="Settings">
+                            <span class="material-symbols-outlined">more_vert</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

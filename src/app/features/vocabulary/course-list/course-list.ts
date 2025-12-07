@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { VocabularyService } from '../../../core/services/vocabulary.service';
+import { VocabularyService } from '../../../core/services/vocabulary';
 import { Course } from '../../../core/models/vocabulary.model';
 
 @Component({
@@ -55,13 +55,13 @@ export class CourseList implements OnInit {
 
   // A simple helper to extract a category from the title
   private extractCategory(title: string): string {
-      const parts = title.split('(');
-      if (parts.length > 1) {
-          return parts[1].replace(')', '').trim();
-      }
-      // Fallback for titles without parenthesis
-      const words = title.split(' ');
-      return words[words.length - 1];
+    const parts = title.split('(');
+    if (parts.length > 1) {
+      return parts[1].replace(')', '').trim();
+    }
+    // Fallback for titles without parenthesis
+    const words = title.split(' ');
+    return words[words.length - 1];
   }
 }
 

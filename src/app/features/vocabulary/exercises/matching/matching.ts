@@ -64,7 +64,7 @@ export class MatchingComponent implements OnInit {
     const shuffledWords = [...words].sort(() => Math.random() - 0.5);
     this.rightColumn = shuffledWords.map((w, i) => ({
       id: w.id,
-      text: w.vietnamese_meaning || '',
+      text: w.meaning || '',
       matched: false,
       selected: false,
       index: i

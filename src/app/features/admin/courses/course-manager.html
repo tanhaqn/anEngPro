@@ -1,0 +1,160 @@
+<div class="space-y-6">
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+        <div>
+            <h1 class="text-2xl font-bold text-white">Course Management</h1>
+            <p class="text-slate-400 text-sm mt-1">Manage courses and vocabulary content</p>
+        </div>
+        <button (click)="onAddCourse()"
+            class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-xl transition-all font-medium">
+            <span class="material-symbols-outlined text-xl">add</span>
+            <span>Add Course</span>
+        </button>
+    </div>
+
+    <!-- Filters -->
+    <div class="flex items-center gap-4 bg-[#1e293b] p-4 rounded-xl border border-white/5">
+        <div class="flex-1 relative">
+            <span
+                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+            <input type="text" placeholder="Search courses..."
+                class="w-full bg-slate-900 border border-slate-700 rounded-lg pl-10 pr-4 py-2 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 transition-colors">
+        </div>
+        <select
+            class="bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors">
+            <option value="">All Levels</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select>
+    </div>
+
+    <!-- Course Table -->
+    <div class="bg-[#1e293b] rounded-2xl border border-white/5 overflow-hidden">
+        <table class="w-full text-left">
+            <thead class="bg-slate-900/50 border-b border-white/5">
+                <tr>
+                    <th class="p-4 text-slate-400 font-medium text-sm">Course info</th>
+                    <th class="p-4 text-slate-400 font-medium text-sm">Words</th>
+                    <th class="p-4 text-slate-400 font-medium text-sm">Level</th>
+                    <th class="p-4 text-slate-400 font-medium text-sm text-right">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+                <tr *ngFor="let course of courses" class="group hover:bg-white/5 transition-colors">
+                    <td class="p-4">
+                        <div class="flex items-center gap-4">
+                            <img [src]="course.thumbnail" alt="" class="w-12 h-12 rounded-lg object-cover bg-slate-800">
+                            <div>
+                                <h3 class="text-white font-medium group-hover:text-blue-400 transition-colors">
+                                    {{course.title}}</h3>
+                                <p class="text-slate-500 text-xs truncate max-w-[200px]">{{course.description}}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="p-4">
+                        <span [routerLink]="['/admin/courses', course.id]"
+                            class="cursor-pointer hover:text-blue-400 hover:underline transition-colors inline-flex items-center px-2 py-1 rounded-md bg-slate-800 text-slate-300 text-xs font-medium">
+                            {{course.words.length || 0}} words
+                        </span>
+                    </td>
+                    <td class="p-4">
+                        <span [class.bg-green-500-10]="course.level === 'Beginner'"
+                            [class.text-green-400]="course.level === 'Beginner'"
+                            [class.bg-yellow-500-10]="course.level === 'Intermediate'"
+                            [class.text-yellow-400]="course.level === 'Intermediate'"
+                            [class.bg-red-500-10]="course.level === 'Advanced'"
+                            [class.text-red-400]="course.level === 'Advanced'"
+                            class="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-slate-800 text-slate-300">
+                            {{course.level || 'Intermediate'}}
+                        </span>
+                    </td>
+                    <td class="p-4 text-right">
+                        <div
+                            class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button [routerLink]="['/admin/courses', course.id]"
+                                class="p-2 hover:bg-green-500/10 hover:text-green-400 rounded-lg transition-colors"
+                                title="Manage Words">
+                                <span class="material-symbols-outlined text-lg">visibility</span>
+                            </button>
+                            <button (click)="onEditCourse(course)"
+                                class="p-2 hover:bg-blue-500/10 hover:text-blue-400 rounded-lg transition-colors"
+                                title="Edit">
+                                <span class="material-symbols-outlined text-lg">edit</span>
+                            </button>
+                            <button (click)="onDeleteCourse(course)"
+                                class="p-2 hover:bg-red-500/10 hover:text-red-400 rounded-lg transition-colors"
+                                title="Delete">
+                                <span class="material-symbols-outlined text-lg">delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add/Edit Modal -->
+<div *ngIf="showModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+    <div
+        class="bg-[#1e293b] rounded-2xl w-full max-w-lg border border-white/10 shadow-xl overflow-hidden animate-in fade-in zoom-in duration-200">
+        <!-- Modal Header -->
+        <div class="px-6 py-4 border-b border-white/5 flex items-center justify-between">
+            <h2 class="text-xl font-bold text-white">{{ isEditing ? 'Edit Course' : 'New Course' }}</h2>
+            <button (click)="closeModal()" class="text-slate-400 hover:text-white transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="p-6 space-y-4">
+            <!-- Title -->
+            <div>
+                <label class="block text-sm font-medium text-slate-400 mb-1">Course Title</label>
+                <input type="text" [(ngModel)]="currentCourse.title"
+                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder="e.g., Business English">
+            </div>
+
+            <!-- Description -->
+            <div>
+                <label class="block text-sm font-medium text-slate-400 mb-1">Description</label>
+                <textarea rows="3" [(ngModel)]="currentCourse.description"
+                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    placeholder="Brief description of the course..."></textarea>
+            </div>
+
+            <!-- Level -->
+            <div>
+                <label class="block text-sm font-medium text-slate-400 mb-1">Level</label>
+                <select [(ngModel)]="currentCourse.level"
+                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors">
+                    <option value="Beginner">Beginner</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+
+            <!-- Thumbnail URL -->
+            <div>
+                <label class="block text-sm font-medium text-slate-400 mb-1">Thumbnail URL</label>
+                <input type="text" [(ngModel)]="currentCourse.thumbnail"
+                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder="https://...">
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="px-6 py-4 bg-slate-900/50 border-t border-white/5 flex justify-end gap-3">
+            <button (click)="closeModal()"
+                class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors font-medium">
+                Cancel
+            </button>
+            <button (click)="onSave()"
+                class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white transition-colors font-medium">
+                {{ isEditing ? 'Save Changes' : 'Create Course' }}
+            </button>
+        </div>
+    </div>
+</div>

@@ -34,7 +34,7 @@ import { TranslationService } from '../../../core/services/translation.service';
         </div>
 
         <div class="mb-3">
-            <p class="text-gray-300 font-medium">{{wordData.vietnamese_meaning || wordData.definition}}</p>
+            <p class="text-gray-300 font-medium">{{wordData.meaning || wordData.definition}}</p>
         </div>
 
         <div *ngIf="wordData.example" class="text-sm text-gray-400 italic border-t border-gray-800 pt-2">
@@ -111,7 +111,7 @@ export class QuickLookupComponent implements OnInit {
                     definition: translatedText,
                     pronunciation: '', // API doesn't return IPA easily
                     example: '',
-                    vietnamese_meaning: translatedText
+                    meaning: translatedText
                 } as any;
                 this.loading = false;
             }).catch(err => {

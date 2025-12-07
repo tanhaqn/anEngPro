@@ -23,8 +23,7 @@ export class Navbar {
     { path: '/vocabulary', label: 'Từ vựng' },
     { path: '/grammar', label: 'Ngữ pháp' },
     { path: '/reading', label: 'Luyện đọc' },
-    { path: '/review', label: 'Ôn tập' },
-    { path: '/dashboard', label: 'Tiến độ' }
+    { path: '/review', label: 'Ôn tập' }
   ];
 
   toggleMobileMenu() {

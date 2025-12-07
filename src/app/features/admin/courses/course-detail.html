@@ -1,0 +1,164 @@
+<div class="space-y-6">
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <button routerLink="/admin/courses"
+                class="p-2 hover:bg-white/5 rounded-xl text-slate-400 hover:text-white transition-colors">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <div>
+                <h1 class="text-2xl font-bold text-white">{{ course?.title }}</h1>
+                <p class="text-slate-400 text-sm mt-1">{{ course?.words?.length || 0 }} words • {{ course?.level }}</p>
+            </div>
+        </div>
+        <button (click)="onAddWord()"
+            class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-xl transition-all font-medium">
+            <span class="material-symbols-outlined text-xl">add</span>
+            <span>Add Word</span>
+        </button>
+    </div>
+
+    <!-- Word Table -->
+    <div class="bg-[#1e293b] rounded-2xl border border-white/5 overflow-hidden">
+        <table class="w-full text-left">
+            <thead class="bg-slate-900/50 border-b border-white/5">
+                <tr>
+                    <th class="p-4 text-slate-400 font-medium text-sm">Term</th>
+                    <th class="p-4 text-slate-400 font-medium text-sm">Meaning</th>
+                    <th class="p-4 text-slate-400 font-medium text-sm">Part of Speech</th>
+                    <th class="p-4 text-slate-400 font-medium text-sm">IPA</th>
+                    <th class="p-4 text-slate-400 font-medium text-sm text-right">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="divide-y divide-white/5">
+                <tr *ngFor="let word of course?.words" class="group hover:bg-white/5 transition-colors">
+                    <td class="p-4">
+                        <span class="text-white font-medium block">{{ word.term }}</span>
+                    </td>
+                    <td class="p-4 text-slate-300">
+                        {{ word.meaning }}
+                    </td>
+                    <td class="p-4">
+                        <span
+                            class="inline-flex items-center px-2 py-1 rounded-md bg-slate-800 text-slate-400 text-xs font-mono">
+                            {{ word.partOfSpeech || 'N/A' }}
+                        </span>
+                    </td>
+                    <td class="p-4 text-slate-400 text-sm font-mono">
+                        {{ word.pronunciation || word.ipa }}
+                    </td>
+                    <td class="p-4 text-right">
+                        <div
+                            class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button (click)="onEditWord(word)"
+                                class="p-2 hover:bg-blue-500/10 hover:text-blue-400 rounded-lg transition-colors"
+                                title="Edit">
+                                <span class="material-symbols-outlined text-lg">edit</span>
+                            </button>
+                            <button (click)="onDeleteWord(word)"
+                                class="p-2 hover:bg-red-500/10 hover:text-red-400 rounded-lg transition-colors"
+                                title="Delete">
+                                <span class="material-symbols-outlined text-lg">delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr *ngIf="!course?.words?.length">
+                    <td colspan="5" class="p-8 text-center text-slate-500">
+                        No words in this course yet. Add one to get started!
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Add/Edit Modal -->
+<div *ngIf="showModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+    <div
+        class="bg-[#1e293b] rounded-2xl w-full max-w-lg border border-white/10 shadow-xl overflow-hidden animate-in fade-in zoom-in duration-200 h-[80vh] flex flex-col">
+        <!-- Modal Header -->
+        <div class="px-6 py-4 border-b border-white/5 flex items-center justify-between shrink-0">
+            <h2 class="text-xl font-bold text-white">{{ isEditing ? 'Edit Word' : 'New Word' }}</h2>
+            <button (click)="closeModal()" class="text-slate-400 hover:text-white transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="p-6 space-y-4 overflow-y-auto flex-1">
+            <!-- Term & IPA -->
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-slate-400 mb-1">Term</label>
+                    <input type="text" [(ngModel)]="currentWord.term"
+                        class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                        placeholder="e.g. Hello">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-400 mb-1">IPA</label>
+                    <input type="text" [(ngModel)]="currentWord.ipa"
+                        class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                        placeholder="/həˈləʊ/">
+                </div>
+            </div>
+
+            <!-- Meaning -->
+            <div>
+                <label class="block text-sm font-medium text-slate-400 mb-1">Meaning (Vietnamese)</label>
+                <input type="text" [(ngModel)]="currentWord.meaning"
+                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder="e.g. Xin chào">
+            </div>
+
+            <!-- Definition -->
+            <div>
+                <label class="block text-sm font-medium text-slate-400 mb-1">Definition (English)</label>
+                <textarea rows="2" [(ngModel)]="currentWord.definition"
+                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors resize-none"
+                    placeholder="English definition..."></textarea>
+            </div>
+
+            <!-- Part of Speech -->
+            <div>
+                <label class="block text-sm font-medium text-slate-400 mb-1">Part of Speech</label>
+                <select [(ngModel)]="currentWord.partOfSpeech"
+                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors">
+                    <option value="noun">Noun</option>
+                    <option value="verb">Verb</option>
+                    <option value="adjective">Adjective</option>
+                    <option value="adverb">Adverb</option>
+                    <option value="phrase">Phrase</option>
+                </select>
+            </div>
+
+            <!-- Example -->
+            <div>
+                <label class="block text-sm font-medium text-slate-400 mb-1">Example Sentence</label>
+                <input type="text" [(ngModel)]="currentWord.example"
+                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder="e.g. Hello world">
+            </div>
+
+            <!-- Example Translation -->
+            <div>
+                <label class="block text-sm font-medium text-slate-400 mb-1">Example Translation</label>
+                <input type="text" [(ngModel)]="currentWord.exampleTranslation"
+                    class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-blue-500 transition-colors"
+                    placeholder="e.g. Chào thế giới">
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="px-6 py-4 bg-slate-900/50 border-t border-white/5 flex justify-end gap-3 shrink-0">
+            <button (click)="closeModal()"
+                class="px-4 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/5 transition-colors font-medium">
+                Cancel
+            </button>
+            <button (click)="onSave()"
+                class="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white transition-colors font-medium">
+                {{ isEditing ? 'Save Word' : 'Add Word' }}
+            </button>
+        </div>
+    </div>
+</div>

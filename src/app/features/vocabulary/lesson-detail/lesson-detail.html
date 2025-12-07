@@ -58,7 +58,7 @@
                         class="absolute inset-0 h-full w-full backface-hidden rotate-y-180 rounded-2xl bg-[#293649] p-6 flex flex-col items-center justify-center text-center border border-white/10 overflow-y-auto">
                         <div class="flex flex-col items-center gap-4">
                             <h3 class="text-2xl font-bold text-yellow-400">{{
-                                currentWord?.vietnamese_meaning }}</h3>
+                                currentWord?.meaning }}</h3>
                             <div class="w-12 h-1 bg-primary/50 rounded-full my-2"></div>
                             <div class="flex flex-col gap-1 mb-4">
                                 <div class="flex items-center justify-center gap-2">
@@ -69,7 +69,7 @@
                                         <span class="material-symbols-outlined text-2xl">volume_up</span>
                                     </button>
                                 </div>
-                                <p class="text-slate-400 text-sm">→ {{ currentWord?.example_translation
+                                <p class="text-slate-400 text-sm">→ {{ currentWord?.exampleTranslation
                                     }}</p>
                             </div>
                             <div class="flex gap-4">
@@ -100,37 +100,37 @@
         </div>
 
         <div class="px-4 space-y-8">
-            <div class="bg-[#1e293b]/50 rounded-2xl p-6 border border-white/5" *ngIf="currentWord?.grammar_analysis">
+            <div class="bg-[#1e293b]/50 rounded-2xl p-6 border border-white/5" *ngIf="currentWord?.grammarAnalysis">
                 <h3 class="text-lg font-bold text-blue-400 mb-4 uppercase tracking-wider flex items-center gap-2">
                     <span class="material-symbols-outlined">school</span>
                     Phân tích ngữ pháp
                 </h3>
                 <div class="bg-[#0f172a] rounded-xl p-4 border border-white/5 mb-4">
-                    <p class="font-mono text-blue-300 text-sm">{{ currentWord?.term }} ({{ currentWord?.part_of_speech
+                    <p class="font-mono text-blue-300 text-sm">{{ currentWord?.term }} ({{ currentWord?.partOfSpeech
                         }})
                     </p>
                 </div>
                 <h4 class="text-sm font-bold text-blue-500 uppercase mb-2">GIẢI THÍCH</h4>
-                <p class="text-slate-300 leading-relaxed mb-4">"{{ currentWord?.grammar_analysis?.explanation }}"
+                <p class="text-slate-300 leading-relaxed mb-4">"{{ currentWord?.grammarAnalysis?.explanation }}"
                 </p>
             </div>
 
-            <div class="bg-[#1e293b]/50 rounded-2xl p-6 border border-white/5" *ngIf="currentWord?.common_mistakes">
+            <div class="bg-[#1e293b]/50 rounded-2xl p-6 border border-white/5" *ngIf="currentWord?.commonMistakes">
                 <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
                     <span class="material-symbols-outlined text-red-500">warning</span>
                     Lỗi thường gặp
                 </h3>
-                <p class="text-slate-300 leading-relaxed">{{ currentWord?.common_mistakes }}</p>
+                <p class="text-slate-300 leading-relaxed">{{ currentWord?.commonMistakes }}</p>
             </div>
 
             <div class="bg-[#1e293b]/50 rounded-2xl p-6 border border-white/5"
-                *ngIf="currentWord?.word_family && currentWord?.word_family?.length">
+                *ngIf="currentWord?.wordFamily && currentWord?.wordFamily?.length">
                 <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
                     <span class="material-symbols-outlined text-blue-500">family_history</span>
                     Từ liên quan
                 </h3>
                 <div class="flex flex-wrap gap-2">
-                    <span *ngFor="let wf of currentWord?.word_family"
+                    <span *ngFor="let wf of currentWord?.wordFamily"
                         class="px-4 py-2 rounded-lg bg-[#0f172a] border border-white/5 text-sm text-slate-300">
                         {{ wf }}
                     </span>
@@ -232,7 +232,7 @@
                 <div
                     class="absolute inset-0 h-full w-full backface-hidden rotate-y-180 rounded-2xl bg-[#1e293b] p-8 flex flex-col items-center justify-center text-center border border-white/5">
                     <div class="flex flex-col items-center gap-4">
-                        <h3 class="text-3xl font-bold text-yellow-400">{{ currentWord?.vietnamese_meaning }}</h3>
+                        <h3 class="text-3xl font-bold text-yellow-400">{{ currentWord?.meaning }}</h3>
 
                         <div class="w-12 h-1 bg-primary/50 rounded-full my-2"></div>
 
@@ -244,7 +244,7 @@
                                     <span class="material-symbols-outlined text-2xl">volume_up</span>
                                 </button>
                             </div>
-                            <p class="text-slate-400 text-base">→ {{ currentWord?.example_translation }}</p>
+                            <p class="text-slate-400 text-base">→ {{ currentWord?.exampleTranslation }}</p>
                         </div>
 
                         <div class="flex gap-6 mt-4">
@@ -273,41 +273,41 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         <div class="flex flex-col gap-6">
             <div class="bg-[#1e293b]/50 rounded-2xl p-6 border border-white/5 h-full"
-                *ngIf="currentWord?.grammar_analysis">
+                *ngIf="currentWord?.grammarAnalysis">
                 <h3 class="text-lg font-bold text-blue-400 mb-4 uppercase tracking-wider flex items-center gap-2">
                     <span class="material-symbols-outlined">school</span>
                     Phân tích ngữ pháp
                 </h3>
                 <div class="bg-[#0f172a] rounded-xl p-4 border border-white/5 mb-4">
                     <p class="font-mono text-blue-300 text-sm">{{ currentWord?.term }} ({{
-                        currentWord?.part_of_speech }})</p>
+                        currentWord?.partOfSpeech }})</p>
                 </div>
                 <h4 class="text-sm font-bold text-blue-500 uppercase mb-2">GIẢI THÍCH</h4>
                 <p class="text-slate-300 leading-relaxed mb-4">"{{
-                    currentWord?.grammar_analysis?.explanation
+                    currentWord?.grammarAnalysis?.explanation
                     }}"
                 </p>
             </div>
 
             <div class="bg-[#1e293b]/50 rounded-2xl p-6 border border-white/5 h-full"
-                *ngIf="currentWord?.common_mistakes">
+                *ngIf="currentWord?.commonMistakes">
                 <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
                     <span class="material-symbols-outlined text-red-500">warning</span>
                     Lỗi thường gặp
                 </h3>
-                <p class="text-slate-300 leading-relaxed">{{ currentWord?.common_mistakes }}</p>
+                <p class="text-slate-300 leading-relaxed">{{ currentWord?.commonMistakes }}</p>
             </div>
         </div>
 
         <div class="flex flex-col gap-6">
             <div class="bg-[#1e293b]/50 rounded-2xl p-6 border border-white/5 h-full"
-                *ngIf="currentWord?.word_family && currentWord?.word_family?.length">
+                *ngIf="currentWord?.wordFamily && currentWord?.wordFamily?.length">
                 <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
                     <span class="material-symbols-outlined text-blue-500">family_history</span>
                     Từ liên quan
                 </h3>
                 <div class="flex flex-wrap gap-2">
-                    <span *ngFor="let wf of currentWord?.word_family"
+                    <span *ngFor="let wf of currentWord?.wordFamily"
                         class="px-4 py-2 rounded-lg bg-[#0f172a] border border-white/5 text-sm text-slate-300">
                         {{ wf }}
                     </span>
