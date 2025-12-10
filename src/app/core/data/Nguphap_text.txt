@@ -1,0 +1,628 @@
+TỔNG HỢP KIẾN THỨC TIẾNG ANH TOÀN TẬP
+(Bản gộp đầy đủ 4 phần - Có ví dụ song ngữ chi tiết)
+PHẦN 1: 12 THÌ VÀ SỰ PHỐI HỢP THÌ
+I. NHÓM HIỆN TẠI (PRESENT)
+1. Hiện tại đơn (Present Simple)
+Công thức:
+(+) Khẳng định: $S + V_{1/s/es}$
+(-) Phủ định: $S + do/does + NOT + V_0$
+(?) Nghi vấn: $Do/Does + S + V_0...?$
+Cách dùng & Ví dụ:
+Diễn tả chân lý, sự thật hiển nhiên.
+Ex: The sun rises in the East. (Mặt trời mọc ở đằng Đông.)
+Ex: Water boils at 100 degrees Celsius. (Nước sôi ở 100 độ C.)
+Thói quen hằng ngày ở hiện tại.
+Ex: She usually gets up at 6 a.m. (Cô ấy thường thức dậy lúc 6 giờ sáng.)
+Ex: I play football every Sunday. (Tôi chơi bóng đá mỗi Chủ nhật.)
+Lịch trình tàu xe, máy bay, lịch học (theo thời gian biểu).
+Ex: The train leaves at 7 p.m tonight. (Chuyến tàu rời đi lúc 7 giờ tối nay.)
+Dùng trong mệnh đề chỉ thời gian (tương lai giả định).
+Ex: I will wait here until he comes. (Tôi sẽ đợi ở đây cho đến khi anh ấy đến.)
+Từ nhận biết (Signal words):
+always (luôn luôn), usually (thường xuyên), often (thường), sometimes (thỉnh thoảng), occasionally (thỉnh thoảng), frequently (thường xuyên), normally (thông thường).
+seldom (hiếm khi), rarely (hiếm khi), never (không bao giờ).
+every day/week/month/year (mỗi ngày/tuần/tháng/năm).
+once/twice/three times a week (một/hai/ba lần một tuần).
+as a rule (như một quy luật).
+2. Hiện tại tiếp diễn (Present Continuous)
+Công thức:
+(+) Khẳng định: $S + am/is/are + V_{ing}$
+(-) Phủ định: $S + am/is/are + NOT + V_{ing}$
+(?) Nghi vấn: $Am/Is/Are + S + V_{ing}...?$
+Cách dùng & Ví dụ:
+Đang xảy ra ngay lúc nói.
+Ex: She is cooking in the kitchen now. (Bây giờ cô ấy đang nấu ăn trong bếp.)
+Ex: Look! It is raining. (Nhìn kìa! Trời đang mưa.)
+Sắp xảy ra trong tương lai gần (có kế hoạch, dự định sẵn).
+Ex: He is flying to Paris tomorrow. (Anh ấy sẽ bay đi Paris vào ngày mai.)
+Phàn nàn về một thói quen xấu (thường đi với "always").
+Ex: He is always coming late. (Anh ta lúc nào cũng đến trễ.)
+Từ nhận biết (Signal words):
+now (bây giờ), right now (ngay bây giờ), at present (hiện tại), at the moment (ngay lúc này).
+Câu mệnh lệnh: Look! (Nhìn kìa!), Listen! (Nghe kìa!), Be quiet! (Im lặng nào!), Keep silent! (Giữ trật tự!), Watch out! (Coi chừng!).
+3. Hiện tại hoàn thành (Present Perfect)
+Công thức:
+(+) Khẳng định: $S + have/has + V_{3/ed}$
+(-) Phủ định: $S + have/has + NOT + V_{3/ed}$
+(?) Nghi vấn: $Have/Has + S + V_{3/ed}...?$
+Cách dùng & Ví dụ:
+Hành động vừa mới xảy ra.
+Ex: I have just finished my homework. (Tôi vừa mới làm xong bài tập.)
+Hành động xảy ra trong quá khứ nhưng không rõ thời gian.
+Ex: She has lost her keys. (Cô ấy đã làm mất chìa khóa.)
+Hành động lặp đi lặp lại nhiều lần.
+Ex: I have seen this movie three times. (Tôi đã xem phim này 3 lần rồi.)
+Hành động bắt đầu ở quá khứ và kéo dài đến hiện tại.
+Ex: We have lived here for 10 years. (Chúng tôi đã sống ở đây được 10 năm.)
+Từ nhận biết (Signal words):
+just, recently, lately (gần đây, vừa mới).
+already (rồi), yet (chưa - dùng cuối câu phủ định/nghi vấn).
+ever (đã từng), never (chưa từng).
+so far, up to now, until now (cho đến nay).
+since + mốc thời gian (từ khi...), for + khoảng thời gian (trong khoảng...).
+This is the first/second... time (Đây là lần đầu/thứ hai...).
+4. Hiện tại hoàn thành tiếp diễn (Present Perfect Continuous)
+Công thức:
+(+) Khẳng định: $S + have/has + been + V_{ing}$
+(-) Phủ định: $S + have/has + not + been + V_{ing}$
+(?) Nghi vấn: $Have/Has + S + been + V_{ing}...?$
+Cách dùng & Ví dụ:
+Nhấn mạnh tính liên tục của hành động từ quá khứ đến hiện tại (thường để lại kết quả hiện hữu ở hiện tại như mệt, thở hổn hển, quần áo bẩn...).
+Ex: I have been waiting for you all day. (Tôi đã đợi bạn cả ngày nay rồi.)
+Ex: She is tired because she has been working hard. (Cô ấy mệt vì cô ấy đã làm việc vất vả liên tục.)
+Từ nhận biết (Signal words):
+all day (cả ngày), all week (cả tuần).
+for a long time (trong một thời gian dài).
+almost every day (hầu như mỗi ngày).
+II. NHÓM QUÁ KHỨ (PAST)
+5. Quá khứ đơn (Past Simple)
+Công thức:
+(+) Khẳng định: $S + V_{2/ed}$ (Tobe: was/were)
+(-) Phủ định: $S + did + NOT + V_0$
+(?) Nghi vấn: $Did + S + V_0...?$
+Cách dùng & Ví dụ:
+Hành động đã xảy ra và chấm dứt hoàn toàn trong quá khứ.
+Ex: I bought a new car yesterday. (Tôi đã mua một chiếc xe mới hôm qua.)
+Chuỗi hành động liên tiếp trong quá khứ.
+Ex: He came home, took a shower, and went to bed. (Anh ấy về nhà, tắm rửa rồi đi ngủ.)
+Từ nhận biết (Signal words):
+yesterday (hôm qua).
+ago (cách đây - VD: 2 days ago).
+last night/week/month/year (tối qua/tuần trước...).
+in + năm quá khứ (VD: in 1990, in 2000).
+in the past (trong quá khứ).
+6. Quá khứ tiếp diễn (Past Continuous)
+Công thức:
+(+) Khẳng định: $S + was/were + V_{ing}$
+(-) Phủ định: $S + was/were + NOT + V_{ing}$
+(?) Nghi vấn: $Was/Were + S + V_{ing}...?$
+Cách dùng & Ví dụ:
+Đang xảy ra tại một thời điểm xác định trong quá khứ.
+Ex: At 7 p.m yesterday, I was watching TV. (Lúc 7 giờ tối qua, tôi đang xem TV.)
+Một hành động đang xảy ra (dài) thì hành động khác xen vào (ngắn).
+Ex: When I was cooking, the phone rang. (Khi tôi đang nấu ăn thì điện thoại reo.)
+Từ nhận biết (Signal words):
+at + giờ + quá khứ (VD: at 5pm yesterday).
+at this time last night (vào giờ này tối qua).
+when (khi), while (trong khi), as (khi).
+7. Quá khứ hoàn thành (Past Perfect)
+Công thức:
+(+) Khẳng định: $S + had + V_{3/ed}$
+(-) Phủ định: $S + had + NOT + V_{3/ed}$
+(?) Nghi vấn: $Had + S + V_{3/ed}...?$
+Cách dùng & Ví dụ:
+Diễn tả hành động xảy ra trước một hành động khác trong quá khứ hoặc trước một thời điểm trong quá khứ.
+Ex: Before she went to bed, she had finished her work. (Trước khi cô ấy đi ngủ, cô ấy đã làm xong việc.)
+Ex: By the time the police arrived, the thief had escaped. (Vào lúc cảnh sát đến thì tên trộm đã tẩu thoát.)
+Từ nhận biết (Signal words):
+before (trước khi), after (sau khi).
+by the time (vào lúc).
+as soon as (ngay khi).
+when (khi).
+8. Quá khứ hoàn thành tiếp diễn (Past Perfect Continuous)
+Công thức: $S + had + been + V_{ing}$
+Cách dùng & Ví dụ:
+Nhấn mạnh tính liên tục của hành động trước một hành động khác trong quá khứ.
+Ex: I had been waiting for 2 hours when he finally came. (Tôi đã đợi suốt 2 tiếng đồng hồ thì cuối cùng anh ta mới đến.)
+Từ nhận biết (Signal words):
+until then (cho đến lúc đó).
+by the time (vào lúc).
+prior to that time (trước thời điểm đó).
+III. NHÓM TƯƠNG LAI (FUTURE)
+9. Tương lai đơn (Future Simple)
+Công thức:
+(+) Khẳng định: $S + will/shall + V_0$
+(-) Phủ định: $S + will/shall + NOT + V_0$
+(?) Nghi vấn: $Will/Shall + S + V_0...?$
+Cách dùng & Ví dụ:
+Quyết định ngay lúc nói.
+Ex: I will open the door for you. (Tôi sẽ mở cửa cho bạn.)
+Dự đoán không có căn cứ.
+Ex: I think it will rain. (Tôi nghĩ trời sẽ mưa.)
+Lời hứa, lời đe dọa, lời đề nghị.
+Ex: I promise I will come back. (Tôi hứa tôi sẽ quay lại.)
+Từ nhận biết (Signal words):
+tomorrow (ngày mai).
+next week/month/year (tuần/tháng/năm tới).
+in + thời gian tới (VD: in 5 minutes - trong 5 phút nữa).
+Các động từ chỉ quan điểm: think (nghĩ), promise (hứa), hope (hy vọng), expect (mong đợi).
+10. Tương lai tiếp diễn (Future Continuous)
+Công thức: $S + will + be + V_{ing}$
+Cách dùng & Ví dụ:
+Đang xảy ra tại một thời điểm cụ thể trong tương lai.
+Ex: At 8 a.m tomorrow, I will be taking an exam. (Lúc 8 giờ sáng mai, tôi sẽ đang làm bài thi.)
+Từ nhận biết (Signal words):
+at + giờ + tương lai (VD: at 8am tomorrow).
+at this time next week (vào giờ này tuần sau).
+11. Tương lai hoàn thành (Future Perfect)
+Công thức: $S + will + have + V_{3/ed}$
+Cách dùng & Ví dụ:
+Hoàn thành trước một thời điểm hoặc một hành động khác trong tương lai.
+Ex: By next year, I will have built my house. (Trước năm sau, tôi sẽ xây xong nhà.)
+Ex: By the time you come back, I will have finished it. (Trước lúc bạn quay lại, tôi sẽ làm xong nó.)
+Từ nhận biết (Signal words):
+by + thời gian tương lai (VD: by next week).
+by the time (trước lúc).
+12. Tương lai hoàn thành tiếp diễn (Future Perfect Continuous)
+Công thức: $S + will + have + been + V_{ing}$
+Cách dùng & Ví dụ:
+Nhấn mạnh tính liên tục của hành động tính đến một thời điểm trong tương lai.
+Ex: By next month, we will have been living here for 5 years. (Tính đến tháng sau là chúng tôi sẽ sống ở đây được tròn 5 năm.)
+IV. SỰ PHỐI HỢP THÌ (SEQUENCE OF TENSES)
+1. Trong Quá khứ:
+Hành động xảy ra trước: Dùng QK Hoàn thành ($Had \ V_3$).
+Hành động xảy ra sau: Dùng QK Đơn ($V_2$).
+Ex: When I arrived (sau), the train had left (trước). (Khi tôi đến thì tàu đã chạy rồi.)
+Hai hành động xảy ra song song: Dùng QK Tiếp diễn ($Was/Were \ V_{ing}$).
+Ex: While I was reading, she was cooking. (Trong khi tôi đang đọc sách thì cô ấy đang nấu ăn.)
+Một hành động đang xảy ra (QKTD) thì hành động khác xen vào (QKĐ).
+Ex: When we were having dinner, the light went out. (Khi chúng tôi đang ăn tối thì đèn tắt.)
+2. Trong Tương lai:
+Hành động xảy ra trước: Dùng TL Hoàn thành ($Will \ have \ V_3$).
+Hành động xảy ra sau: Dùng Hiện tại đơn ($V_1$).
+Ex: I will wait here until you come. (Tôi sẽ đợi ở đây cho đến khi bạn đến.)
+Lưu ý quan trọng: Trong các mệnh đề trạng ngữ chỉ thời gian (bắt đầu bằng When, While, As soon as, Before, After, By the time...), KHÔNG bao giờ dùng thì Tương lai. Phải chuyển về Hiện tại đơn hoặc Hiện tại hoàn thành.
+Sai: When I ~~will come~~ home, I will call you.
+Đúng: When I come home, I will call you.
+PHẦN 2: CÁC CẤU TRÚC NGỮ PHÁP QUAN TRỌNG
+I. CÂU BỊ ĐỘNG (PASSIVE VOICE)
+1. Công thức chung
+Chủ động: $S + V + O$
+Bị động: $S \ (O \ cũ) + BE + V_{3/ed} + (by \ S \ cũ)$
+Ví dụ:
+Chủ động: My mother cooks dinner every day. (Mẹ tôi nấu bữa tối mỗi ngày.)
+Bị động: Dinner is cooked by my mother every day. (Bữa tối được nấu bởi mẹ tôi mỗi ngày.)
+2. Các dạng đặc biệt
+a. Nhờ vả (Causative Form)
+Công thức:
+Chủ động: $Have + sb + V_0 + sth$ / $Get + sb + TO \ V_0 + sth$
+Bị động: Have / Get + sth + DONE ($V_{3/ed}$) + (by sb)
+Ví dụ:
+Chủ động: I had the mechanic fix my car. (Tôi đã nhờ thợ sửa xe của mình.)
+Bị động: I had my car fixed (by the mechanic). (Tôi đã để xe mình được sửa.)
+b. Tường thuật (People say that...)
+Dùng cho các động từ chỉ quan điểm: say, think, believe, report, rumor, expect...
+Câu gốc: $People/They + say/think + (that) + S + V...$
+Cách 1 (Dùng chủ ngữ giả "It"):
+It is + said/thought... + that + S + V...
+Ex: People say that he is rich. $\rightarrow$ It is said that he is rich.
+Cách 2 (Dùng chủ ngữ thật):
+Nếu động từ sau cùng thì với động từ tường thuật:
+S + be + said/thought... + TO $V_0$
+Ex: He is said to be rich. (Người ta nói anh ấy giàu.)
+Nếu động từ sau xảy ra trước động từ tường thuật:
+S + be + said/thought... + TO HAVE $V_{3/ed}$
+Ex: People said that he stole the money. $\rightarrow$ He was said to have stolen the money. (Người ta nói anh ấy đã trộm tiền.)
+c. Bị động với NEED
+Với người (Chủ động): Người + need + to $V_0$.
+Ex: I need to cut my hair. (Tôi cần cắt tóc.)
+Với vật (Bị động): Vật + need + V-ing (hoặc to be $V_{3/ed}$).
+Ex: My hair needs cutting. (Tóc tôi cần được cắt.)
+Ex: The house needs cleaning. (Ngôi nhà cần được dọn dẹp.)
+II. CÂU ĐIỀU KIỆN (CONDITIONAL SENTENCES)
+
+
+
+Loại
+Công thức
+Cách dùng & Ví dụ
+Loại 1
+If + S + V (ht), S + Will/Can + $V_0$
+Có thể xảy ra ở hiện tại hoặc tương lai.
+Ex: If it rains, I will stay at home. (Nếu trời mưa, tôi sẽ ở nhà.)
+Loại 2
+If + S + $V_{2/ed}$ (were), S + Would/Could + $V_0$
+Không có thật ở hiện tại (giả định).
+Ex: If I were you, I would buy that car. (Nếu tôi là bạn, tôi sẽ mua chiếc xe đó.)
+Ex: If I had money, I would travel around the world. (Nếu tôi có tiền, tôi sẽ đi vòng quanh thế giới - thực tế là tôi không có.)
+Loại 3
+If + S + Had $V_3$, S + Would/Could + Have $V_3$
+Không có thật ở quá khứ (tiếc nuối).
+Ex: If I had known the truth, I would have told you. (Nếu tôi biết sự thật, tôi đã nói với bạn rồi - thực tế là tôi không biết.)
+
+* Đảo ngữ câu điều kiện (Inversion)
+Nhấn mạnh hơn và trang trọng hơn.
+Loại 1: Should + S + $V_0$...
+Ex: Should you need help, call me. (Nếu bạn cần giúp đỡ, hãy gọi tôi.)
+Loại 2: Were + S + (to $V_0$)...
+Ex: Were I you, I wouldn't do that. (Nếu tôi là bạn...)
+Loại 3: Had + S + $V_{3/ed}$...
+Ex: Had I studied harder, I would have passed. (Nếu tôi học chăm hơn...)
+III. CÂU TƯỜNG THUẬT (REPORTED SPEECH)
+1. Quy tắc chuyển đổi chung
+Đổi ngôi: I $\rightarrow$ He/She, My $\rightarrow$ His/Her, You $\rightarrow$ I/We/They...
+Lùi thì: HT Đơn $\rightarrow$ QK Đơn; QK Đơn $\rightarrow$ QK Hoàn thành; TL Đơn (Will) $\rightarrow$ TL trong QK (Would).
+Đổi trạng từ:
+Here $\rightarrow$ There
+Now $\rightarrow$ Then
+Today $\rightarrow$ That day
+Yesterday $\rightarrow$ The day before / The previous day
+Tomorrow $\rightarrow$ The following day / The next day
+2. Các dạng câu cụ thể
+a. Câu trần thuật (Statements)
+Công thức: $S + said (that) + S + V(lùi \ thì)$
+Ví dụ:
+Trực tiếp: "I am busy now," he said.
+Gián tiếp: He said (that) he was busy then. (Anh ấy nói lúc đó anh ấy đang bận.)
+b. Câu hỏi Yes/No (Yes/No Questions)
+Công thức: $S + asked + O +$ IF / WHETHER $+ S + V(lùi \ thì)$
+Ví dụ:
+Trực tiếp: "Do you love English?" she asked me.
+Gián tiếp: She asked me if I loved English. (Cô ấy hỏi tôi xem tôi có yêu tiếng Anh không.)
+c. Câu hỏi có từ để hỏi (Wh-Questions)
+Công thức: $S + asked + O +$ WH- $+ S + V(lùi \ thì)$
+Ví dụ:
+Trực tiếp: "Where are you going?" he asked.
+Gián tiếp: He asked me where I was going. (Anh ấy hỏi tôi đang đi đâu.)
+d. Câu mệnh lệnh (Commands)
+Công thức: $S + told/asked/ordered + O +$ TO $V_0$ (hoặc NOT TO $V_0$)
+Ví dụ:
+Trực tiếp: "Open the door, please," teacher said.
+Gián tiếp: The teacher told me to open the door. (Giáo viên bảo tôi mở cửa.)
+Trực tiếp: "Don't talk in class," he said.
+Gián tiếp: He asked us not to talk in class. (Ông ấy yêu cầu chúng tôi không nói chuyện.)
+IV. MỆNH ĐỀ QUAN HỆ (RELATIVE CLAUSES)
+1. Đại từ quan hệ
+WHO: Thay cho danh từ chỉ người, làm chủ ngữ.
+Ex: The man who is standing there is my father.
+WHOM: Thay cho danh từ chỉ người, làm tân ngữ.
+Ex: The woman whom you saw yesterday is my aunt.
+WHICH: Thay cho danh từ chỉ vật.
+Ex: The book which I bought is interesting.
+THAT: Thay thế cho Who/Whom/Which trong mệnh đề xác định (không có dấu phẩy). Bắt buộc dùng sau: so sánh nhất, all, every, none, only...
+Ex: He is the kindest person that I have ever met.
+WHOSE: Chỉ sở hữu ($N_1 + WHOSE + N_2$).
+Ex: The boy whose eyes are blue is Tom. (Cậu bé có đôi mắt màu xanh là Tom.)
+2. Trạng từ quan hệ
+WHERE (= in/at/on which): Chỉ nơi chốn.
+Ex: This is the house where I was born.
+WHEN (= in/on/at which): Chỉ thời gian.
+Ex: I remember the day when we first met.
+WHY (= for which): Chỉ lý do.
+Ex: That is the reason why I left.
+3. Rút gọn mệnh đề quan hệ
+Dùng V-ing: Khi động từ trong mệnh đề ở thể chủ động.
+Ex: The man standing over there is my boss. (= who is standing)
+Dùng V3/ed: Khi động từ trong mệnh đề ở thể bị động.
+Ex: The book written by To Hoai is popular. (= which was written)
+Dùng To V0: Khi danh từ đứng trước có số thứ tự (the first, the second...), so sánh nhất, hoặc the only.
+Ex: She was the last person to leave the room. (= who left)
+V. ĐẢO NGỮ (INVERSION)
+1. Đảo ngữ với từ phủ định đầu câu
+Từ nhận biết: Never, Rarely, Seldom, Little, Hardly...
+Công thức: $Từ \ phủ \ định + Trợ \ động \ từ + S + V...$
+Ví dụ:
+Never have I seen such a beautiful flower. (Chưa bao giờ tôi thấy bông hoa đẹp như thế.)
+Rarely does she go out at night. (Hiếm khi cô ấy ra ngoài vào buổi tối.)
+2. Đảo ngữ "Vừa mới... thì..."
+Công thức 1: $No \ sooner + had \ S \ V_3 + THAN + S \ V_2$
+
+
+Ex: No sooner had I arrived home than it rained. (Tôi vừa về đến nhà thì trời mưa.)
+Công thức 2: $Hardly/Scarcely + had \ S \ V_3 + WHEN + S \ V_2$
+
+
+Ex: Hardly had she started speaking when he interrupted. (Cô ấy vừa bắt đầu nói thì anh ta ngắt lời.)
+3. Đảo ngữ "Không những... mà còn..."
+Công thức: $Not \ only + Trợ \ từ + S + V + BUT + S + ALSO + V...$
+Ví dụ: Not only is she beautiful but she is also intelligent. (Cô ấy không những đẹp mà còn thông minh.)
+4. Đảo ngữ với So / Such
+Với SO: $So + Adj/Adv + Trợ \ từ + S + (V) + that...$
+
+
+Ex: So fast did he run that nobody could catch him. (Anh ấy chạy nhanh đến nỗi không ai bắt kịp.)
+Với SUCH: $Such + be + N + that...$
+
+
+Ex: Such was the storm that the bridge collapsed. (Cơn bão lớn đến mức cây cầu sập.)
+PHẦN 3: CÁC CÔNG THỨC VIẾT LẠI CÂU (SENTENCE TRANSFORMATION)
+I. CẤU TRÚC "QUÁ... ĐẾN NỖI MÀ" & "ĐỦ... ĐỂ"
+1. Cấu trúc TOO... TO (Quá... đến nỗi không thể)
+Công thức: $S + V + too + Adj/Adv + (for \ O) + to \ V_0$
+Ý nghĩa: Quá ... để làm gì (mang nghĩa phủ định - không làm được).
+Ví dụ:
+Ex: The coffee is too hot for me to drink. (Cà phê quá nóng để tôi có thể uống = nóng quá tôi không uống được.)
+2. Cấu trúc SO... THAT (Quá... đến nỗi mà)
+Dùng để viết lại câu với TOO... TO.
+Công thức: $S + V + so + Adj/Adv + that + S + can't/couldn't + V_0$
+Ví dụ:
+Gốc: The box is too heavy for him to lift.
+Viết lại: The box is so heavy that he can't lift it. (Cái hộp quá nặng đến nỗi anh ấy không nhấc nổi.)
+3. Cấu trúc ENOUGH (Đủ... để)
+Thường dùng để viết lại câu TOO... TO (dùng tính từ trái nghĩa).
+Công thức: $S + V + Adj/Adv + enough + (for \ O) + to \ V_0$
+Lưu ý: Tính từ/Trạng từ đứng trước enough. Danh từ đứng sau enough.
+Ví dụ:
+Gốc: He is too young to drive a car. (Cậu ấy quá trẻ để lái xe.)
+Viết lại: He isn't old enough to drive a car. (Cậu ấy chưa đủ tuổi để lái xe.)
+II. CẤU TRÚC CHỈ NGUYÊN NHÂN & NHƯỢNG BỘ
+1. BECAUSE $\leftrightarrow$ BECAUSE OF (Bởi vì)
+Công thức:
+$Because / As / Since + S + V$ (Mệnh đề)
+$\leftrightarrow Because \ of / Due \ to + Noun / V-ing$ (Cụm từ)
+Quy tắc chuyển đổi:
+Nếu 2 chủ ngữ giống nhau: Bỏ chủ ngữ, động từ thêm đuôi -ing.
+Ex: Because he was lazy, he failed. $\rightarrow$ Because of being lazy, he failed.
+Nếu là "S + be + Adj": Đổi thành "The + Adj (thành Noun) + of + S".
+Ex: Because the rain is heavy... $\rightarrow$ Because of the heavy rain...
+Cách an toàn nhất: Dùng The fact that + S + V.
+Ex: Because of the fact that he was lazy...
+2. ALTHOUGH $\leftrightarrow$ IN SPITE OF (Mặc dù)
+Công thức:
+$Although / Even \ though / Though + S + V$
+$\leftrightarrow In \ spite \ of / Despite + Noun / V-ing$
+Ví dụ:
+Gốc: Although she was tired, she finished the work. (Mặc dù cô ấy mệt, cô ấy vẫn hoàn thành công việc.)
+Viết lại: In spite of being tired, she finished the work. (Mặc dù mệt...)
+Viết lại: Despite her tiredness, she finished the work.
+III. CẤU TRÚC CHỈ THỜI GIAN & TIỀN BẠC
+1. IT TAKES $\leftrightarrow$ SPEND (Mất bao lâu / Dành bao lâu)
+Công thức 1: $It + takes/took + O + Time + to \ V_0$
+Công thức 2: $S + spend/spent + Time + V-ing$ (hoặc on + Noun)
+Ví dụ:
+Gốc: It took me 2 hours to do this homework. (Tôi mất 2 tiếng để làm bài tập này.)
+Viết lại: I spent 2 hours doing this homework. (Tôi dành 2 tiếng để làm bài tập này.)
+2. CHUYỂN ĐỔI THÌ (QKĐ $\leftrightarrow$ HTHT) (Rất quan trọng)
+a. Lần cuối làm gì... cách đây...
+Gốc: $S + last + V_2 + Time + ago$
+Viết lại: $S + haven't/hasn't + V_3 + for + Time$
+Ví dụ:
+Gốc: I last saw him 5 years ago. (Lần cuối tôi gặp anh ấy là 5 năm trước.)
+Viết lại: I haven't seen him for 5 years. (Tôi đã không gặp anh ấy được 5 năm rồi.)
+b. Lần cuối làm gì... là vào...
+Gốc: $The \ last \ time + S + V_2 + was + Time$
+Viết lại: $S + haven't/hasn't + V_3 + since + Time$
+Ví dụ:
+Gốc: The last time we met was in 2010.
+Viết lại: We haven't met since 2010.
+c. Bắt đầu làm gì... cách đây...
+Gốc: $S + started/began + V-ing/to \ V_0 + Time + ago$
+Viết lại: $S + have/has + V_3 + for + Time$
+Ví dụ:
+Gốc: She started teaching here 3 years ago.
+Viết lại: She has taught here for 3 years. (Cô ấy đã dạy ở đây được 3 năm.)
+d. Câu hỏi Khi nào $\leftrightarrow$ Bao lâu
+Gốc: $When \ did + S + V_0...?$
+Viết lại: $How \ long \ have/has + S + V_3...?$
+Ví dụ:
+Gốc: When did you buy this car? (Bạn mua xe này khi nào?)
+Viết lại: How long have you had this car? (Bạn có chiếc xe này bao lâu rồi?)
+IV. CẤU TRÚC SO SÁNH (COMPARISON)
+1. So sánh hơn $\leftrightarrow$ So sánh không bằng
+Quy tắc: A hơn B $\Leftrightarrow$ B không bằng A.
+Ví dụ:
+Gốc: Tom is taller than Jerry. (Tom cao hơn Jerry.)
+Viết lại: Jerry is not as tall as Tom. (Jerry không cao bằng Tom.)
+2. So sánh nhất $\leftrightarrow$ So sánh bằng
+Quy tắc: A là nhất $\Leftrightarrow$ Không ai/cái gì bằng A.
+Ví dụ:
+Gốc: Nile River is the longest river in the world. (Sông Nin là sông dài nhất thế giới.)
+Viết lại: No river in the world is as long as Nile River. (Không sông nào trên thế giới dài bằng sông Nin.)
+V. CÁC CẤU TRÚC KHÁC
+1. Thích hơn (PREFER $\leftrightarrow$ WOULD RATHER)
+Prefer: $S + prefer + V-ing/N + TO + V-ing/N$
+Would rather: $S + would \ rather + V_0 + THAN + V_0$
+Ví dụ:
+Gốc: I prefer staying home to going out. (Tôi thích ở nhà hơn đi chơi.)
+Viết lại: I would rather stay home than go out.
+2. Đề nghị (SUGGESTION)
+Các cấu trúc tương đương nhau để đưa ra gợi ý:
+Let's + $V_0$
+Why don't we + $V_0$?
+What about / How about + V-ing?
+I suggest + V-ing (hoặc that S should $V_0$)
+Ví dụ:
+Gốc: Let's go to the cinema. (Hãy đi xem phim đi.)
+Viết lại: Why don't we go to the cinema?
+Viết lại: What about going to the cinema?
+3. Đã đến lúc (IT'S TIME)
+Công thức 1: $It's \ time + for \ O + to \ V_0$
+
+
+Ex: It's time for us to go home. (Đến lúc chúng ta phải về nhà rồi.)
+Công thức 2 (Giả định): $It's \ (high) \ time + S + V_{2/ed}$
+
+
+Ex: It's high time you went to bed. (Đã đến lúc con phải đi ngủ rồi - thực tế là trễ giờ ngủ.)
+4. Nếu không... thì (UNLESS)
+Quy tắc: Unless = If... not (Trừ khi).
+Ví dụ:
+Gốc: If you don't study hard, you will fail. (Nếu bạn không học chăm, bạn sẽ trượt.)
+Viết lại: Unless you study hard, you will fail. (Trừ khi bạn học chăm, bạn sẽ trượt.)
+PHẦN 4: NGỮ ÂM, TỪ VỰNG VÀ TỪ LOẠI
+I. NGỮ ÂM (PHONETICS)
+1. Quy tắc phát âm đuôi -ED
+Phát âm
+Quy tắc & Mẹo ghi nhớ
+Ví dụ
+/id/
+Động từ tận cùng là t, d.
+wanted (muốn), needed (cần)
+/t/
+Động từ tận cùng là p, k, f, s, sh, ch, gh, ce, ge.
+(Mẹo: Phong kiến phương tây thật sang shịn chảnh)
+stopped, cooked, laughed, washed, watched
+/d/
+Các trường hợp còn lại (nguyên âm và phụ âm hữu thanh).
+played, loved, cleaned, studied
+Ngoại lệ
+Một số tính từ tận cùng là -ed luôn đọc là /id/:
+naked (trần truồng), wicked (gian ác), beloved (yêu quý), sacred (thiêng liêng)...
+
+2. Quy tắc phát âm đuôi -S/-ES
+Phát âm
+Quy tắc & Mẹo ghi nhớ
+Ví dụ
+/iz/
+Tận cùng là s, ss, ch, sh, x, z, ge, ce.
+(Mẹo: Sóng gió chơi xuân zui ghê cơ)
+misses, watches, washes, boxes, languages
+/s/
+Tận cùng là p, k, f, t, th.
+(Mẹo: Thời phong kiến phương tây)
+stops, books, roofs, hats, months
+/z/
+Các trường hợp còn lại (thường là nguyên âm và phụ âm hữu thanh như b, d, g, l, m, n, r, v, y...).
+plays, bags, speeds, runs, sees
+
+3. Mẹo phát âm các chữ cái đặc biệt (Từ tài liệu)
+CH:
+/tʃ/: teacher, children (phổ biến nhất).
+/k/: school, chemistry, mechanic (gốc Hy Lạp).
+/ʃ/: machine, chef, champagne (gốc Pháp).
+G:
+/dʒ/: Khi đứng trước e, i, y (page, gym, giant).
+/g/: Khi đứng trước a, o, u (ga**me, go, gun).
+EA:
+/i:/: meat, tea, sea (phổ biến).
+/e/: head, bread, breakfast.
+/ei/: great, break, steak.
+OO:
+/u:/: moon, food, school.
+/ʊ/: book, look, good, foot.
+/ʌ/: blood, flood.
+TH:
+/θ/: th**ank, think, thin (vô thanh).
+/ð/: this, that, these, fath**er (hữu thanh).
+4. Quy tắc Trọng âm (Stress)
+Từ 2 âm tiết:
+Danh từ / Tính từ: Thường nhấn âm 1.
+Ex: table, happy, teacher.
+Động từ: Thường nhấn âm 2.
+Ex: begin, relax, invite.
+Ngoại lệ: visit (V - âm 1), machine (N - âm 2)...
+Từ 3 âm tiết trở lên: Thường nhấn âm thứ 3 từ cuối lên.
+Ex: economy, geography.
+Quy tắc hậu tố (Suffixes):
+Nhấn vào chính nó: -ee, -eer, -ese, -ain, -oo, -oon, -ique.
+Ex: engineer, japanese, balloon.
+Nhấn vào âm ngay trước nó: -tion, -sion, -ic, -ial, -ian, -ity, -logy, -graphy.
+Ex: nation, economic, musician, ability.
+Nhấn vào âm cách nó 1 âm: -ate, -ry, -fy, -ise/ize.
+Ex: communicate, satisfy.
+II. VỊ TRÍ VÀ DẤU HIỆU TỪ LOẠI (WORD FORMS)
+1. Bảng nhận biết Từ loại
+Từ loại
+Hậu tố (Đuôi từ) phổ biến
+Ví dụ
+Danh từ (N)
+-tion, -sion, -ment, -ness, -ity, -ance, -ence
+-er, -or, -ist, -ee (chỉ người)
+-ship, -hood, -dom
+information, happiness, teacher, freedom
+Tính từ (Adj)
+-ful, -less, -ive, -able, -ous, -al, -ic
+-ing, -ed, -y, -ent, -ant
+useful, active, famous, interesting
+Trạng từ (Adv)
+-ly (thường là Adj + ly)
+quickly, happily, carefully
+Động từ (V)
+-ize, -ise, -ate, -fy, -en
+realize, educate, satisfy, widen
+
+2. Vị trí trong câu
+Danh từ (Noun):
+Sau mạo từ (a, an, the): a cat, the sun.
+Sau tính từ (adj + N): a good student.
+Sau giới từ (in, on, at, of...): interested in music.
+Làm chủ ngữ (S) hoặc tân ngữ (O).
+Tính từ (Adjective):
+Trước danh từ: a beautiful girl.
+Sau động từ TO BE: She is happy.
+Sau Linking Verbs (động từ nối): look, seem, feel, taste, smell, become, get...
+Ex: You look tired. (Bạn trông có vẻ mệt.)
+Ex: The soup tastes good. (Món súp có vị ngon.)
+Trạng từ (Adverb):
+Sau động từ thường (V + Adv): He runs fast. She sings beautifully.
+Trước tính từ (Adv + Adj): It is extremely cold.
+Đầu câu hoặc cuối câu để bổ nghĩa cho cả câu.
+Động từ (Verb):
+Sau chủ ngữ: I learn English.
+Sau trạng từ chỉ tần suất (always, usually...): I usually go to school.
+III. GIỚI TỪ (PREPOSITIONS)
+1. Giới từ chỉ Thời gian (Time)
+IN (+ Tháng/Năm/Mùa/Buổi):
+in May, in 2024, in Summer, in the morning, in the 21st century.
+ON (+ Ngày/Thứ):
+on Monday, on May 1st, on Christmas Day, on my birthday.
+AT (+ Giờ/Lễ hội/Thời điểm):
+at 7 o'clock, at Christmas (dịp lễ), at night, at noon, at the moment.
+2. Giới từ chỉ Nơi chốn (Place)
+IN: Bên trong (in the room, in the box, in London, in the water).
+ON: Trên bề mặt (on the table, on the wall, on the floor).
+AT: Tại một điểm xác định (at the bus stop, at the door, at home, at school).
+ABOVE / OVER: Bên trên (cao hơn, không chạm).
+BELOW / UNDER: Bên dưới.
+BETWEEN: Ở giữa (2 vật/người).
+AMONG: Ở giữa (nhiều vật/người).
+IN FRONT OF: Đằng trước.
+BEHIND: Đằng sau.
+3. Tính từ đi kèm Giới từ (Adjective + Preposition)
+(Từ Hình 9)
+excited ABOUT: hào hứng về...
+good / bad AT: giỏi / dở về...
+frightened / afraid OF: sợ...
+responsible FOR: chịu trách nhiệm về...
+interested IN: quan tâm đến...
+full OF: đầy...
+satisfied WITH: hài lòng với...
+famous FOR: nổi tiếng vì...
+different FROM: khác với...
+IV. CỤM ĐỘNG TỪ & THÀNH NGỮ (PHRASAL VERBS & IDIOMS)
+1. Cụm động từ thông dụng (Phrasal Verbs)
+(Tổng hợp từ Hình 9, 12, 17)
+Give up: từ bỏ. (Don't give up hope.)
+Look for: tìm kiếm. (I'm looking for my keys.)
+Look after: chăm sóc. (She looks after her baby.)
+Look forward to (+ Ving): mong đợi. (I look forward to seeing you.)
+Put on: mặc vào. (Put on your coat.)
+Take off: cởi ra / cất cánh. (Take off your shoes.)
+Turn on / Turn off: bật / tắt.
+Run out of: cạn kiệt. (We ran out of gas.)
+Keep pace with: theo kịp.
+Keep in touch with: giữ liên lạc.
+2. Thành ngữ với Giới từ (Idioms)
+(Từ Hình 12, 18)
+at the age of: ở độ tuổi. (He died at the age of 90.)
+in case of: trong trường hợp. (In case of fire, call 114.)
+out of order: bị hư hỏng (máy móc). (The elevator is out of order.)
+out of work: thất nghiệp.
+by means of: bằng cách.
+in charge of: chịu trách nhiệm / phụ trách.
+3. Động từ + V-ing / To V (Verb Patterns)
+(Từ Hình 7, 18)
+Động từ + V-ing:
+admit, avoid, deny, enjoy, finish, keep, mind, miss, practice, suggest, risk...
+Ex: I enjoy reading books.
+Động từ + To V:
+agree, decide, expect, hope, learn, offer, plan, promise, refuse, want, wish...
+Ex: I want to buy a car.
+Các từ dùng cả 2 (nghĩa khác nhau):
+Stop V-ing: Dừng việc đang làm. (Stop smoking - Cai thuốc).
+Stop To V: Dừng lại để làm việc khác. (Stop to smoke - Dừng xe lại để hút thuốc).
+Remember / Forget V-ing: Nhớ/Quên việc đã xảy ra.
+Remember / Forget To V: Nhớ/Quên việc phải làm.
+Try V-ing: Thử làm gì.
+Try To V: Cố gắng làm gì.
+

@@ -1,7 +1,26 @@
-select {
-    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%239ca3af" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>');
-    background-position: right 0.75rem center;
-    background-repeat: no-repeat;
-    background-size: 1.25em;
-    padding-right: 2.5rem;
+:host {
+    display: block;
+    width: 100%;
+}
+
+/* Card Border Gradient Effect */
+.card-border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    padding: 1px;
+    background: linear-gradient(135deg, #2c2c2c, #2dd4bf);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0.2;
+    transition: opacity 300ms ease-in-out;
+}
+
+.card-border-gradient:hover::before {
+    opacity: 0.6;
 }

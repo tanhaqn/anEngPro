@@ -10,6 +10,8 @@ import { Quiz } from './features/vocabulary/exercises/quiz/quiz';
 import { FillInBlank } from './features/vocabulary/exercises/fill-in-blank/fill-in-blank';
 import { ListenWrite } from './features/vocabulary/exercises/listen-write/listen-write';
 import { GrammarList } from './features/grammar/grammar-list/grammar-list';
+import { GrammarDetail } from './features/grammar/grammar-detail/grammar-detail';
+import { GrammarExercise } from './features/grammar/grammar-exercise/grammar-exercise';
 
 
 import { ReadingComponent } from './features/reading/reading/reading';
@@ -34,6 +36,8 @@ export const routes: Routes = [
     { path: 'vocabulary/:id/exercises/fill-in-blank', component: FillInBlank },
     { path: 'vocabulary/:id/exercises/listen-write', component: ListenWrite },
     { path: 'grammar', component: GrammarList },
+    { path: 'grammar/:id', component: GrammarDetail },
+    { path: 'grammar/:id/exercise', component: GrammarExercise },
     { path: 'reading', component: ReadingComponent },
     { path: 'review', component: Review },
 

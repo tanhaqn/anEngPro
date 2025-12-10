@@ -1,0 +1,176 @@
+<div class="min-h-screen bg-[#102220] font-sans text-white">
+    <main class="flex-grow pt-8 sm:pt-12 px-4 sm:px-10 md:px-20 lg:px-40 max-w-[960px] mx-auto">
+        <!-- Breadcrumb Navigation -->
+        <div class="flex flex-wrap gap-2 mb-6">
+            <a class="text-white/60 hover:text-white text-sm font-medium leading-normal transition-colors"
+                routerLink="/">Trang chủ</a>
+            <span class="text-white/60 text-sm font-medium leading-normal">/</span>
+            <a class="text-white/60 hover:text-white text-sm font-medium leading-normal transition-colors"
+                routerLink="/grammar">Ngữ pháp</a>
+            <span class="text-white/60 text-sm font-medium leading-normal">/</span>
+            <a class="text-white/60 hover:text-white text-sm font-medium leading-normal transition-colors"
+                [routerLink]="['/grammar', 1]">{{ grammarTitle }}</a>
+            <span class="text-white/60 text-sm font-medium leading-normal">/</span>
+            <span class="text-white text-sm font-medium leading-normal">Bài tập</span>
+        </div>
+
+        <!-- Page Heading -->
+        <div class="flex flex-wrap justify-between gap-3">
+            <div class="flex min-w-72 flex-col gap-2">
+                <p class="text-white text-3xl sm:text-4xl font-black leading-tight tracking-[-0.033em]">Bài tập: {{
+                    grammarTitle }}</p>
+                <p class="text-[#92c9c5] text-base font-normal leading-normal">Câu {{ currentQuestionIndex + 1 }}/{{
+                    totalQuestions }}</p>
+            </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="flex flex-col gap-3 py-6 mt-4">
+            <div class="rounded-full bg-[#326762]">
+                <div class="h-2 rounded-full bg-[#2beede]" [style.width.%]="progress"></div>
+            </div>
+        </div>
+
+        <!-- Question Container -->
+        <div class="flex flex-col gap-8">
+
+            <!-- Multiple Choice Question -->
+            <div *ngIf="currentQuestion?.type === 'multiple-choice'"
+                class="flex flex-col gap-4 py-6 border-b border-white/10">
+                <p class="text-white text-base font-normal leading-normal">Câu {{ currentQuestionIndex + 1 }}: {{
+                    currentQuestion?.instruction }}</p>
+                <div class="p-4 rounded-lg bg-white/5 border border-white/10">
+                    <p class="text-lg text-white font-medium">{{ currentQuestion?.question }}</p>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <label *ngFor="let option of currentQuestion?.options; let i = index"
+                        class="flex items-center gap-4 rounded-lg border border-solid p-[15px] cursor-pointer transition-colors"
+                        [ngClass]="{
+                   'border-[#2beede] bg-[#2beede]/10': showAnswer && option === currentQuestion?.correctAnswer,
+                   'border-[#FF5B5B] bg-[#FF5B5B]/10': showAnswer && selectedAnswer === option && option !== currentQuestion?.correctAnswer,
+                   'border-white/20 hover:bg-white/5': !showAnswer
+                 }">
+                        <input
+                            class="h-5 w-5 border-2 border-[#326762] bg-transparent text-transparent rounded-full checked:border-[#2beede] checked:bg-[#2beede] focus:outline-none focus:ring-0"
+                            type="radio" [name]="'question-' + currentQuestionIndex" [value]="option"
+                            [(ngModel)]="selectedAnswer" [disabled]="showAnswer" />
+                        <div class="flex grow flex-col">
+                            <p class="text-white text-sm font-medium leading-normal">{{ option }}</p>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- Answer Explanation -->
+                <div *ngIf="showAnswer" class="mt-4 p-5 rounded-xl bg-[#1A3431] border border-[#326762]">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#2beede]/20">
+                                <span class="material-symbols-outlined text-[#2beede] text-xl">check_circle</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Đáp án đúng & Giải thích</h3>
+                        </div>
+                        <div class="h-px w-full bg-[#326762]"></div>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-white">Đáp án đúng là <span class="font-bold text-[#2beede]">"{{
+                                    currentQuestion?.correctAnswer }}"</span>.</p>
+                            <p class="text-[#92c9c5] leading-relaxed">{{ currentQuestion?.explanation }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fill in the Blank Question -->
+            <div *ngIf="currentQuestion?.type === 'fill-blank'"
+                class="flex flex-col gap-4 py-6 border-b border-white/10">
+                <p class="text-white text-base font-normal leading-normal">Câu {{ currentQuestionIndex + 1 }}: {{
+                    currentQuestion?.instruction }}</p>
+                <div class="flex flex-wrap items-center gap-2 p-4 rounded-lg bg-white/5 border border-white/10">
+                    <span *ngFor="let part of currentQuestion?.sentenceParts; let i = index">
+                        <span *ngIf="part.type === 'text'" class="text-lg text-white font-medium">{{ part.content
+                            }}</span>
+                        <input *ngIf="part.type === 'blank'"
+                            class="w-32 bg-transparent border-b text-white text-lg font-medium text-center focus:outline-none focus:border-[#2beede]"
+                            [ngClass]="{'border-white/50': !showAnswer, 'border-[#FF5B5B] text-[#FF5B5B]': showAnswer && userAnswer !== currentQuestion?.correctAnswer}"
+                            type="text" [(ngModel)]="userAnswer" [disabled]="showAnswer" placeholder="your answer" />
+                    </span>
+                </div>
+
+                <!-- Answer Explanation -->
+                <div *ngIf="showAnswer" class="mt-4 p-5 rounded-xl bg-[#1A3431] border border-[#326762]">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#2beede]/20">
+                                <span class="material-symbols-outlined text-[#2beede] text-xl">check_circle</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Đáp án đúng & Giải thích</h3>
+                        </div>
+                        <div class="h-px w-full bg-[#326762]"></div>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-white">Đáp án đúng là <span class="font-bold text-[#2beede]">"{{
+                                    currentQuestion?.correctAnswer }}"</span>.</p>
+                            <p class="text-[#92c9c5] leading-relaxed">{{ currentQuestion?.explanation }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Word Arrangement Question -->
+            <div *ngIf="currentQuestion?.type === 'word-order'" class="flex flex-col gap-4 py-6">
+                <p class="text-white text-base font-normal leading-normal">Câu {{ currentQuestionIndex + 1 }}: {{
+                    currentQuestion?.instruction }}</p>
+
+                <!-- Answer Area -->
+                <div
+                    class="p-4 rounded-lg min-h-20 bg-white/5 border border-dashed border-white/20 flex flex-wrap gap-3">
+                    <div *ngFor="let word of arrangedWords; let i = index" (click)="removeWord(i)"
+                        class="bg-[#326762] text-white py-2 px-4 rounded-lg cursor-pointer hover:bg-[#2beede] hover:text-[#102220] transition-colors">
+                        {{ word }}
+                    </div>
+                </div>
+
+                <!-- Available Words -->
+                <div class="flex flex-wrap gap-3">
+                    <div *ngFor="let word of availableWords" (click)="addWord(word)"
+                        class="bg-[#326762] text-white py-2 px-4 rounded-lg cursor-pointer hover:bg-[#2beede] hover:text-[#102220] transition-colors">
+                        {{ word }}
+                    </div>
+                </div>
+
+                <!-- Answer Explanation -->
+                <div *ngIf="showAnswer" class="mt-4 p-5 rounded-xl bg-[#1A3431] border border-[#326762]">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-3">
+                            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-[#2beede]/20">
+                                <span class="material-symbols-outlined text-[#2beede] text-xl">check_circle</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Đáp án đúng & Giải thích</h3>
+                        </div>
+                        <div class="h-px w-full bg-[#326762]"></div>
+                        <div class="flex flex-col gap-2">
+                            <p class="text-white">Câu đúng: <span class="font-bold text-[#2beede]">"{{
+                                    currentQuestion?.correctAnswer }}"</span></p>
+                            <p class="text-[#92c9c5] leading-relaxed">{{ currentQuestion?.explanation }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex justify-end gap-4 py-8 mt-4">
+            <button *ngIf="!showAnswer" (click)="skipQuestion()"
+                class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-[#326762] text-[#2beede] text-sm font-bold hover:bg-[#2beede]/30 transition-colors">
+                <span class="truncate">Bỏ qua</span>
+            </button>
+            <button *ngIf="!showAnswer" (click)="checkAnswer()"
+                class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-[#2beede] text-[#102220] text-sm font-bold hover:opacity-90 transition-opacity">
+                <span class="truncate">Kiểm tra đáp án</span>
+            </button>
+            <button *ngIf="showAnswer" (click)="nextQuestion()"
+                class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-[#2beede] text-[#102220] text-sm font-bold hover:opacity-90 transition-opacity">
+                <span class="truncate">{{ currentQuestionIndex < totalQuestions - 1 ? 'Bài tiếp theo' : 'Hoàn thành'
+                        }}</span>
+            </button>
+        </div>
+    </main>
+</div>

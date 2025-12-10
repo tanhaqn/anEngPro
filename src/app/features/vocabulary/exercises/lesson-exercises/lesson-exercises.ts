@@ -40,7 +40,12 @@ export class LessonExercisesComponent implements OnInit {
     }
 
     nextLesson(): void {
-        // Logic for next lesson/topic would go here.
-        console.log('Next lesson clicked');
+        if (!this.courseId) return;
+        const nextId = this.vocabularyService.getNextCourseId(this.courseId);
+        if (nextId) {
+            this.router.navigate(['/vocabulary', nextId]);
+        } else {
+            alert('Bạn đã hoàn thành tất cả các bài học!');
+        }
     }
 }

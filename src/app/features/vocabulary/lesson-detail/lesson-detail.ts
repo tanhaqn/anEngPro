@@ -130,4 +130,9 @@ export class LessonDetail implements OnInit {
       this.isFlipped = false;
     }
   }
+
+  startPractice() {
+    if (!this.course) return;
+    this.router.navigate(['/vocabulary', this.course.id, 'exercises']);
+  }
 }

@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { VocabularyService } from '../../../core/services/vocabulary';
 import { Course } from '../../../core/models/vocabulary.model';
+import { ContentCard } from '../../../shared/components/content-card/content-card';
 
 @Component({
   selector: 'app-course-list',
   standalone: true,
-  imports: [RouterLink, CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, ContentCard],
   templateUrl: './course-list.html',
   styleUrl: './course-list.css',
 })
@@ -23,6 +23,8 @@ export class CourseList implements OnInit {
   searchTerm: string = '';
   selectedLevel: string = 'all';
   selectedCategory: string = 'all';
+
+  protected readonly Math = Math;
 
   private initialLoadSize = 9;
   private loadMoreSize = 6;

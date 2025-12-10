@@ -1,0 +1,47 @@
+<div [routerLink]="[data.routePath, data.id]"
+    class="group relative flex flex-col bg-[#1e1e1e] rounded-xl overflow-hidden hover:bg-[#1e1e1e] transition-all duration-300 hover:shadow-2xl hover:shadow-teal-500/20 hover:-translate-y-1 cursor-pointer">
+
+    <!-- Card Gradient Header -->
+    <div class="h-32 w-full bg-gradient-to-br relative overflow-hidden" [ngClass]="gradientClass">
+
+        <!-- Decorative blur circle -->
+        <div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full blur-2xl opacity-40" [ngClass]="blurCircleClass">
+        </div>
+
+        <div class="absolute inset-0 p-6 flex flex-col justify-between">
+            <!-- Badge (Level or English Name) -->
+            <span
+                class="inline-flex self-start px-2 py-1 rounded text-xs font-bold uppercase tracking-wider backdrop-blur-md bg-white/10 text-white border border-white/10">
+                {{ data.badge }}
+            </span>
+        </div>
+    </div>
+
+    <!-- Card Content -->
+    <div class="p-6 flex-1 flex flex-col">
+        <h3 class="text-xl font-bold text-white mb-2 line-clamp-2 group-hover:text-[#2dd4bf] transition-colors">
+            {{ data.title }}
+        </h3>
+        <p class="text-[#a0a0a0] text-sm mb-6 line-clamp-2 flex-1 leading-relaxed">
+            {{ data.description }}
+        </p>
+
+        <!-- Meta Info -->
+        <div *ngIf="data.metaInfo && data.metaInfo.length > 0"
+            class="flex items-center gap-4 text-xs font-medium text-[#a0a0a0] mb-6">
+            <span *ngFor="let meta of data.metaInfo" class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-sm">{{ meta.icon }}</span>
+                {{ meta.text }}
+            </span>
+        </div>
+
+        <!-- Action Button -->
+        <div class="mt-auto">
+            <div
+                class="flex w-full items-center justify-center gap-2 py-3 rounded-xl font-bold transition-all text-sm bg-[#2c2c2c] hover:bg-[#2dd4bf] hover:text-[#121212] text-white border border-white/5">
+                <span>Bắt đầu ngay</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -32,7 +32,7 @@ export class VocabularyService {
         id: topic.topic_id.toString(),
         title: topic.topic_name,
         description: `Học từ vựng về chủ đề ${topic.topic_name}`,
-        level: 'Intermediate', // Default level
+        level: this.assignLevel(index), // Assign level based on index
         thumbnail: thumbnails[index % thumbnails.length],
         words: topic.words.map((w: any, wIndex: number) => ({
           id: `${topic.topic_id}-${wIndex}`,
@@ -57,6 +57,21 @@ export class VocabularyService {
     });
   }
 
+  private assignLevel(index: number): string {
+    // Distribute courses across three levels
+    const levelIndex = index % 3;
+    switch (levelIndex) {
+      case 0:
+        return 'Beginner';
+      case 1:
+        return 'Intermediate';
+      case 2:
+        return 'Advanced';
+      default:
+        return 'Intermediate';
+    }
+  }
+
   getCourses(): Course[] {
     return this.courses;
   }
@@ -69,6 +84,13 @@ export class VocabularyService {
     for (const course of this.courses) {
       const word = course.words.find(w => w.id === id);
       if (word) return word;
+    }
+    return undefined;
+  }
+  getNextCourseId(id: string): string | undefined {
+    const index = this.courses.findIndex(c => c.id === id);
+    if (index !== -1 && index < this.courses.length - 1) {
+      return this.courses[index + 1].id;
     }
     return undefined;
   }

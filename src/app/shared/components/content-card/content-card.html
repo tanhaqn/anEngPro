@@ -1,0 +1,37 @@
+<div [routerLink]="[data.routePath, data.id]"
+    class="group relative flex flex-col h-full bg-[#252525] border border-white/5 rounded-xl overflow-hidden transition-all duration-300 hover:bg-[#2f2f2f] hover:border-[#2dd4bf]/50 hover:shadow-2xl hover:shadow-teal-500/20 hover:-translate-y-1 cursor-pointer">
+
+    <!-- Card Content -->
+    <div class="p-6 flex-1 flex flex-col">
+        <!-- Badge -->
+        <span
+            class="inline-flex self-start px-2 py-1 rounded text-xs font-bold uppercase tracking-wider bg-[#2dd4bf]/10 text-[#2dd4bf] border border-[#2dd4bf]/20 mb-4">
+            {{ data.badge }}
+        </span>
+
+        <h3 class="text-xl font-bold text-white mb-2 line-clamp-2 group-hover:text-[#2dd4bf] transition-colors">
+            {{ data.title }}
+        </h3>
+        <p class="text-[#a0a0a0] text-sm mb-6 line-clamp-2 flex-1 leading-relaxed">
+            {{ data.description }}
+        </p>
+
+        <!-- Meta Info -->
+        <div *ngIf="data.metaInfo && data.metaInfo.length > 0"
+            class="flex items-center gap-4 text-xs font-medium text-[#a0a0a0] mb-6">
+            <span *ngFor="let meta of data.metaInfo" class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-sm text-[#2dd4bf]">{{ meta.icon }}</span>
+                {{ meta.text }}
+            </span>
+        </div>
+
+        <!-- Action Button -->
+        <div class="mt-auto">
+            <div
+                class="flex w-full items-center justify-center gap-2 py-3 rounded-xl font-bold transition-all text-sm bg-[#2dd4bf] hover:bg-[#5eead4] text-[#121212] shadow-lg shadow-teal-500/20">
+                <span>Bắt đầu ngay</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 import { Injectable, NgZone } from '@angular/core';
-import { BehaviorSubject, Observable, fromEvent } from 'rxjs';
+import { BehaviorSubject, Observable, fromEvent, merge } from 'rxjs';
 import { debounceTime, filter, map } from 'rxjs/operators';
 
 export interface TextSelection {
@@ -20,8 +20,12 @@ export class TextSelectionService {
 
     private initListener() {
         this.ngZone.runOutsideAngular(() => {
-            fromEvent(document, 'mouseup').pipe(
-                debounceTime(200)
+            merge(
+                fromEvent(document, 'selectionchange'),
+                fromEvent(document, 'mouseup'),
+                fromEvent(document, 'keyup')
+            ).pipe(
+                debounceTime(150)
             ).subscribe(() => {
                 this.checkSelection();
             });

@@ -18,8 +18,13 @@ import { TranslationService } from '../../../core/services/translation.service';
         <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
       </div>
 
-      <div *ngIf="error" class="text-red-400 text-sm text-center py-2">
-        {{error}}
+      <div *ngIf="showFallback" class="flex flex-col items-center gap-3 py-4">
+        <p class="text-gray-300 text-sm text-center">Xem bản dịch chi tiết trên Google</p>
+        <button (click)="openGoogleTranslate()" 
+                class="flex items-center gap-2 text-sm bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-full transition-all shadow-lg hover:shadow-blue-500/30">
+            <span class="material-symbols-outlined text-[18px]">translate</span>
+            Mở Google Dịch
+        </button>
       </div>
 
       <div *ngIf="!loading && !error && wordData">
@@ -55,6 +60,8 @@ export class QuickLookupComponent implements OnInit {
     error: string | null = null;
     position = { top: 0, left: 0 };
     wordData: Word | undefined;
+    currentSearchTerm: string = '';
+    showFallback = false;
 
     constructor(
         private selectionService: TextSelectionService,
@@ -92,6 +99,7 @@ export class QuickLookupComponent implements OnInit {
 
         if (foundWord) {
             this.wordData = foundWord;
+            this.currentSearchTerm = text;
             this.loading = false;
             this.error = null;
             this.setPosition(selection.rect);
@@ -101,6 +109,7 @@ export class QuickLookupComponent implements OnInit {
             this.loading = true;
             this.error = null;
             this.wordData = undefined;
+            this.currentSearchTerm = text;
             this.setPosition(selection.rect);
             this.visible = true;
 
@@ -114,10 +123,12 @@ export class QuickLookupComponent implements OnInit {
                     meaning: translatedText
                 } as any;
                 this.loading = false;
+                this.showFallback = false;
             }).catch(err => {
                 console.error(err);
                 this.loading = false;
                 this.error = 'Không thể dịch từ này (Lỗi kết nối)';
+                this.showFallback = true;
             });
         }
     }
@@ -159,6 +170,12 @@ export class QuickLookupComponent implements OnInit {
             // If clicked outside tooltip, close it (unless it's the selection itself, handled by service)
             // Actually service handles clearing on new selection, but clicking blank space clears selection too.
             // We rely on service emitting null for that.
+        }
+    }
+
+    openGoogleTranslate() {
+        if (this.currentSearchTerm) {
+            window.open(`https://translate.google.com/?sl=en&tl=vi&text=${encodeURIComponent(this.currentSearchTerm)}&op=translate`, '_blank');
         }
     }
 }
