@@ -1,65 +1,85 @@
 <div class="flex h-[calc(100vh-65px)] w-full flex-col bg-[#121212] font-sans text-white overflow-hidden">
     <!-- Main Content -->
-    <main class="flex-1 overflow-y-auto relative no-scrollbar scroll-smooth p-4 md:p-8">
+    <main class="flex-1 overflow-y-auto relative no-scrollbar scroll-smooth">
 
-        <!-- Intro Section -->
-        <div class="mb-12 md:mb-16">
-            <div class="text-center mb-10">
-                <h1 class="text-4xl md:text-5xl font-bold text-white mb-3 tracking-tight">
-                    Khóa học Ngữ pháp
-                </h1>
-                <p class="text-lg text-[#a0a0a0] max-w-2xl mx-auto">
-                    Bắt đầu hành trình chinh phục ngữ pháp tiếng Anh theo chủ đề và cấp độ.
-                </p>
+        <!-- Header Section - Responsive -->
+        <div class="px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+            <div class="max-w-7xl mx-auto">
+                <!-- Title - Responsive Size -->
+                <div class="text-center mb-6 sm:mb-8">
+                    <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 tracking-tight">
+                        Khóa học Ngữ pháp
+                    </h1>
+                    <p class="text-sm sm:text-base text-[#a0a0a0] max-w-xl mx-auto">
+                        Bắt đầu hành trình chinh phục ngữ pháp tiếng Anh theo chủ đề và cấp độ.
+                    </p>
+                </div>
+
+                <!-- Search & Filter - Mobile Optimized -->
+                <div class="flex flex-col gap-4">
+                    <!-- Search Input -->
+                    <div class="relative w-full">
+                        <span
+                            class="material-symbols-outlined absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-teal-400/70 text-xl sm:text-2xl">search</span>
+                        <input type="search" placeholder="Tìm kiếm chủ đề ngữ pháp..."
+                            class="w-full bg-[#1e1e1e] border border-[#2c2c2c] rounded-xl pl-10 sm:pl-12 pr-4 py-3 text-base text-white placeholder:text-[#a0a0a0]/70 focus:ring-2 focus:ring-[#2dd4bf] focus:outline-none focus:border-[#2dd4bf] transition-all duration-300">
+                    </div>
+
+                    <!-- Category Filter - Horizontal Scroll on Mobile -->
+                    <div class="overflow-x-auto no-scrollbar -mx-4 px-4">
+                        <div class="flex items-center gap-2 min-w-max">
+                            <button *ngFor="let filter of filters" (click)="setFilter(filter.id)"
+                                class="flex-shrink-0 px-4 py-2 text-sm font-semibold rounded-full transition-all duration-200"
+                                [ngClass]="activeFilter === filter.id 
+                                    ? 'bg-[#2dd4bf] text-[#121212] shadow-lg shadow-[#2dd4bf]/20' 
+                                    : 'bg-[#1e1e1e] text-[#a0a0a0] hover:bg-[#2c2c2c] hover:text-white border border-[#2c2c2c]'">
+                                {{ filter.label }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Search & Filter Section -->
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
-                <!-- Large Search Input -->
-                <div class="relative w-full md:flex-1">
+            <!-- Loading State -->
+            <div *ngIf="isLoading" class="px-4 sm:px-6 lg:px-8 pb-20">
+                <div class="max-w-7xl mx-auto">
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 animate-pulse">
+                        <div *ngFor="let i of [1,2,3,4,5,6]" class="w-full h-64 bg-[#1e1e1e] rounded-xl"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grammar Cards Grid -->
+            <div *ngIf="!isLoading" class="px-4 sm:px-6 lg:px-8 pb-20">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+                        <ng-container *ngFor="let category of displayCategories">
+                            <ng-container *ngFor="let topic of category.topics">
+                                <app-content-card *ngFor="let rule of topic.rules; let i = index" [data]="{
+                                id: rule.id.toString(),
+                                title: rule.name_vi,
+                                description: (rule.usages && rule.usages.length > 0 ? rule.usages[0].title : rule.structure) || '',
+                                badge: rule.name_en,
+                                metaInfo: [
+                                    { icon: 'schedule', text: '10 phút' }
+                                ],
+                                routePath: '/grammar'
+                            }" [index]="i">
+                                </app-content-card>
+                            </ng-container>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Empty State -->
+            <div *ngIf="!isLoading && displayCategories.length === 0" class="text-center py-16 px-4">
+                <div class="max-w-sm mx-auto">
                     <span
-                        class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-teal-400/70 text-2xl">search</span>
-                    <input type="search" placeholder="Tìm kiếm chủ đề ngữ pháp..."
-                        class="w-full bg-[#1e1e1e] border border-[#2c2c2c] rounded-lg pl-14 pr-4 py-3 text-lg text-white placeholder:text-[#a0a0a0]/70 focus:ring-2 focus:ring-[#2dd4bf] focus:outline-none focus:border-[#2dd4bf] transition-all duration-300 shadow-lg shadow-teal-500/5">
-                </div>
-
-                <!-- Category Filter Pills -->
-                <div
-                    class="flex flex-wrap justify-center space-x-1 bg-[#1e1e1e] p-1.5 rounded-lg shadow-lg border border-[#2c2c2c]">
-                    <button *ngFor="let filter of filters" (click)="setFilter(filter.id)"
-                        class="px-4 py-2 text-sm font-semibold rounded-md transition-colors whitespace-nowrap"
-                        [ngClass]="activeFilter === filter.id 
-              ? 'text-[#121212] bg-[#2dd4bf]' 
-              : 'text-[#a0a0a0] hover:bg-[#2c2c2c] hover:text-white'">
-                        {{ filter.label }}
-                    </button>
+                        class="material-symbols-outlined text-5xl sm:text-6xl text-[#2c2c2c] mb-4 block">search_off</span>
+                    <p class="text-base sm:text-lg text-[#a0a0a0]">Không tìm thấy nội dung</p>
                 </div>
             </div>
-        </div>
-
-        <!-- Loading State -->
-        <div *ngIf="isLoading"
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 animate-pulse pb-20">
-            <div *ngFor="let i of [1,2,3,4,5,6,7,8]" class="w-full h-80 bg-[#1e1e1e] rounded-xl"></div>
-        </div>
-
-        <!-- Grammar Cards Grid -->
-        <div *ngIf="!isLoading" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 pb-20">
-            <ng-container *ngFor="let category of displayCategories">
-                <ng-container *ngFor="let topic of category.topics">
-                    <app-content-card *ngFor="let rule of topic.rules; let i = index" [data]="{
-              id: rule.id.toString(),
-              title: rule.name_vi,
-              description: (rule.usages && rule.usages.length > 0 ? rule.usages[0].title : rule.structure) || '',
-              badge: rule.name_en,
-              metaInfo: [
-                { icon: 'schedule', text: '10 phút' }
-              ],
-              routePath: '/grammar'
-            }" [index]="i">
-                    </app-content-card>
-                </ng-container>
-            </ng-container>
-        </div>
     </main>
 </div>
