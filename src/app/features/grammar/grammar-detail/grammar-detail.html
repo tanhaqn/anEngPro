@@ -1,9 +1,39 @@
 <div class="min-h-screen bg-[#102220] font-sans text-white">
-    <main *ngIf="rule" class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+    <main *ngIf="rule" class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-12">
+
+        <!-- Mobile Quick Navigation Bar -->
+        <div
+            class="lg:hidden sticky top-0 z-20 bg-[#102220]/95 backdrop-blur-lg -mx-4 px-4 py-3 mb-4 border-b border-white/10">
+            <div class="flex items-center justify-between gap-3">
+                <!-- Back Button -->
+                <a routerLink="/grammar"
+                    class="flex items-center gap-1 text-white/60 hover:text-white text-sm transition-colors">
+                    <span class="material-symbols-outlined text-lg">arrow_back</span>
+                    <span>Ngữ pháp</span>
+                </a>
+
+                <!-- Quick Nav Pills -->
+                <div class="flex items-center gap-1 overflow-x-auto no-scrollbar">
+                    <button (click)="scrollToSection('cong-thuc')"
+                        class="flex-shrink-0 px-3 py-1.5 text-xs font-medium rounded-full bg-[#2beede]/20 text-[#2beede] hover:bg-[#2beede]/30 transition-colors">
+                        Công thức
+                    </button>
+                    <button (click)="scrollToSection('cach-dung')"
+                        class="flex-shrink-0 px-3 py-1.5 text-xs font-medium rounded-full bg-white/10 text-white/80 hover:bg-white/20 transition-colors">
+                        Cách dùng
+                    </button>
+                    <button (click)="scrollToSection('dau-hieu')"
+                        class="flex-shrink-0 px-3 py-1.5 text-xs font-medium rounded-full bg-white/10 text-white/80 hover:bg-white/20 transition-colors">
+                        Dấu hiệu
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
 
-            <!-- Sidebar -->
-            <aside class="lg:col-span-3 lg:sticky lg:top-28 self-start">
+            <!-- Desktop Sidebar - Hidden on Mobile -->
+            <aside class="hidden lg:block lg:col-span-3 lg:sticky lg:top-28 self-start">
                 <div
                     class="flex h-full flex-col justify-between gap-6 bg-transparent p-4 rounded-xl border border-white/10">
                     <div class="flex flex-col gap-4">
@@ -38,107 +68,128 @@
             </aside>
 
             <!-- Main Content -->
-            <div class="lg:col-span-9 flex flex-col gap-8">
-                <!-- Breadcrumb & Title -->
-                <div class="flex flex-col gap-4">
-                    <div class="flex flex-wrap gap-2">
-                        <a class="text-white/60 hover:text-white text-sm font-medium leading-normal transition-colors"
-                            routerLink="/">Trang chủ</a>
-                        <span class="text-white/60 text-sm font-medium leading-normal">/</span>
-                        <a class="text-white/60 hover:text-white text-sm font-medium leading-normal transition-colors"
-                            routerLink="/grammar">Ngữ pháp</a>
-                        <span class="text-white/60 text-sm font-medium leading-normal">/</span>
-                        <span class="text-white text-sm font-medium leading-normal">{{ cleanTitle(rule.name_vi)
-                            }}</span>
-                    </div>
-                    <div class="flex flex-wrap justify-between gap-3">
-                        <h1 class="text-white text-4xl lg:text-5xl font-black leading-tight tracking-[-0.033em]">
-                            {{ cleanTitle(rule.name_vi) }} - {{ rule.name_en }}
-                        </h1>
-                    </div>
+            <div class="lg:col-span-9 flex flex-col gap-6 lg:gap-8">
+                <!-- Breadcrumb - Desktop Only -->
+                <div class="hidden lg:flex flex-wrap gap-2">
+                    <a class="text-white/60 hover:text-white text-sm font-medium leading-normal transition-colors"
+                        routerLink="/">Trang chủ</a>
+                    <span class="text-white/60 text-sm font-medium leading-normal">/</span>
+                    <a class="text-white/60 hover:text-white text-sm font-medium leading-normal transition-colors"
+                        routerLink="/grammar">Ngữ pháp</a>
+                    <span class="text-white/60 text-sm font-medium leading-normal">/</span>
+                    <span class="text-white text-sm font-medium leading-normal">{{ cleanTitle(rule.name_vi) }}</span>
+                </div>
+
+                <!-- Title -->
+                <div class="flex flex-col gap-2">
+                    <h1
+                        class="text-white text-2xl sm:text-3xl lg:text-5xl font-black leading-tight tracking-[-0.033em]">
+                        {{ cleanTitle(rule.name_vi) }} - {{ rule.name_en }}
+                    </h1>
                 </div>
 
                 <!-- 1. Công thức (Formulas) -->
-                <section class="flex flex-col gap-4 p-6 bg-[#182C2A] rounded-xl border border-white/10" id="cong-thuc">
-                    <h2 class="text-2xl font-bold text-[#2beede]">1. Công thức (Formulas)</h2>
+                <section class="flex flex-col gap-4 p-4 sm:p-6 bg-[#182C2A] rounded-xl border border-white/10"
+                    id="cong-thuc">
+                    <h2 class="text-xl sm:text-2xl font-bold text-[#2beede]">1. Công thức (Formulas)</h2>
 
                     <div *ngIf="rule.formulas" class="flex flex-col gap-3">
                         <!-- Khẳng định -->
-                        <details class="flex flex-col rounded-lg bg-white/5 px-4 py-2 group" open>
-                            <summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
-                                <p class="text-white text-base font-medium leading-normal">Khẳng định</p>
+                        <details class="flex flex-col rounded-lg bg-white/5 px-3 sm:px-4 py-2 group" open>
+                            <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
+                                <p class="text-white text-sm sm:text-base font-medium leading-normal">Khẳng định</p>
                                 <span
-                                    class="material-symbols-outlined text-white group-open:rotate-180 transition-transform">expand_more</span>
+                                    class="material-symbols-outlined text-white group-open:rotate-180 transition-transform text-lg">expand_more</span>
                             </summary>
                             <div class="text-white/80 text-sm font-normal leading-normal pb-2 space-y-2">
-                                <p class="font-mono bg-[#102220] p-3 rounded-md">{{ rule.formulas.affirmative }}</p>
+                                <p class="font-mono bg-[#102220] p-3 rounded-md text-xs sm:text-sm overflow-x-auto">{{
+                                    rule.formulas.affirmative }}</p>
                             </div>
                         </details>
 
                         <!-- Phủ định -->
-                        <details class="flex flex-col rounded-lg bg-white/5 px-4 py-2 group">
-                            <summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
-                                <p class="text-white text-base font-medium leading-normal">Phủ định</p>
+                        <details class="flex flex-col rounded-lg bg-white/5 px-3 sm:px-4 py-2 group">
+                            <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
+                                <p class="text-white text-sm sm:text-base font-medium leading-normal">Phủ định</p>
                                 <span
-                                    class="material-symbols-outlined text-white group-open:rotate-180 transition-transform">expand_more</span>
+                                    class="material-symbols-outlined text-white group-open:rotate-180 transition-transform text-lg">expand_more</span>
                             </summary>
                             <div class="text-white/80 text-sm font-normal leading-normal pb-2 space-y-2">
-                                <p class="font-mono bg-[#102220] p-3 rounded-md">{{ rule.formulas.negative }}</p>
+                                <p class="font-mono bg-[#102220] p-3 rounded-md text-xs sm:text-sm overflow-x-auto">{{
+                                    rule.formulas.negative }}</p>
                             </div>
                         </details>
 
                         <!-- Nghi vấn -->
-                        <details class="flex flex-col rounded-lg bg-white/5 px-4 py-2 group">
-                            <summary class="flex cursor-pointer items-center justify-between gap-6 py-2 list-none">
-                                <p class="text-white text-base font-medium leading-normal">Nghi vấn</p>
+                        <details class="flex flex-col rounded-lg bg-white/5 px-3 sm:px-4 py-2 group">
+                            <summary class="flex cursor-pointer items-center justify-between gap-4 py-2 list-none">
+                                <p class="text-white text-sm sm:text-base font-medium leading-normal">Nghi vấn</p>
                                 <span
-                                    class="material-symbols-outlined text-white group-open:rotate-180 transition-transform">expand_more</span>
+                                    class="material-symbols-outlined text-white group-open:rotate-180 transition-transform text-lg">expand_more</span>
                             </summary>
                             <div class="text-white/80 text-sm font-normal leading-normal pb-2 space-y-2">
-                                <p class="font-mono bg-[#102220] p-3 rounded-md">{{ rule.formulas.interrogative }}</p>
+                                <p class="font-mono bg-[#102220] p-3 rounded-md text-xs sm:text-sm overflow-x-auto">{{
+                                    rule.formulas.interrogative }}</p>
                             </div>
                         </details>
                     </div>
 
                     <!-- Fallback for simple structure -->
                     <div *ngIf="!rule.formulas && rule.structure"
-                        class="font-mono bg-[#102220] p-4 rounded-md text-white/80">
+                        class="font-mono bg-[#102220] p-4 rounded-md text-white/80 text-sm overflow-x-auto">
                         {{ rule.structure }}
                     </div>
                 </section>
 
                 <!-- 2. Cách dùng & Ví dụ (Usage & Examples) -->
-                <section class="flex flex-col gap-4 p-6 bg-[#182C2A] rounded-xl border border-white/10" id="cach-dung">
-                    <h2 class="text-2xl font-bold text-[#2beede]">2. Cách dùng & Ví dụ (Usage & Examples)</h2>
+                <section class="flex flex-col gap-4 p-4 sm:p-6 bg-[#182C2A] rounded-xl border border-white/10"
+                    id="cach-dung">
+                    <h2 class="text-xl sm:text-2xl font-bold text-[#2beede]">2. Cách dùng & Ví dụ (Usage & Examples)
+                    </h2>
 
                     <div *ngIf="rule.usages" class="text-white/80 space-y-4 leading-relaxed">
                         <div *ngFor="let usage of rule.usages">
-                            <h3 class="text-white font-semibold mb-1">{{ usage.title }}</h3>
+                            <h3 class="text-white font-semibold mb-1 text-sm sm:text-base">{{ usage.title }}</h3>
                             <div *ngFor="let example of usage.examples"
-                                class="mt-1 pl-4 border-l-2 border-[#2beede]/50 italic">
-                                <p><span class="text-[#2beede] font-semibold">Ví dụ:</span> {{ example.sentence }}</p>
-                                <p class="text-white/60 text-sm">{{ example.translation }}</p>
+                                class="mt-2 pl-3 sm:pl-4 border-l-2 border-[#2beede]/50 italic">
+                                <p class="text-sm"><span class="text-[#2beede] font-semibold">Ví dụ:</span> {{
+                                    example.sentence }}</p>
+                                <p class="text-white/60 text-xs sm:text-sm">{{ example.translation }}</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Fallback for simple usage -->
-                    <div *ngIf="!rule.usages && rule.usage" class="text-white/80 leading-relaxed whitespace-pre-line">
+                    <div *ngIf="!rule.usages && rule.usage"
+                        class="text-white/80 leading-relaxed whitespace-pre-line text-sm">
                         {{ rule.usage }}
                     </div>
                 </section>
 
                 <!-- 3. Dấu hiệu nhận biết (Signal Words) -->
                 <section *ngIf="rule.signal_words && rule.signal_words.length > 0"
-                    class="flex flex-col gap-4 p-6 bg-[#182C2A] rounded-xl border border-white/10" id="dau-hieu">
-                    <h2 class="text-2xl font-bold text-[#2beede]">3. Dấu hiệu nhận biết (Signal Words)</h2>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-white/90">
+                    class="flex flex-col gap-4 p-4 sm:p-6 bg-[#182C2A] rounded-xl border border-white/10" id="dau-hieu">
+                    <h2 class="text-xl sm:text-2xl font-bold text-[#2beede]">3. Dấu hiệu nhận biết (Signal Words)</h2>
+                    <div class="flex flex-wrap gap-2">
                         <span *ngFor="let word of rule.signal_words"
-                            class="bg-white/5 text-center p-2 rounded-md text-sm">
+                            class="bg-white/10 text-center px-3 py-1.5 rounded-full text-xs sm:text-sm text-white/90">
                             {{ word }}
                         </span>
                     </div>
                 </section>
+
+                <!-- Mobile Practice Button - Fixed at Bottom -->
+                <div
+                    class="lg:hidden fixed bottom-0 left-0 right-0 p-4 bg-[#102220]/95 backdrop-blur-lg border-t border-white/10 z-20">
+                    <button [routerLink]="['/grammar', rule.id, 'exercise']"
+                        class="w-full flex items-center justify-center gap-2 rounded-xl h-12 px-6 bg-[#2beede] text-[#102220] text-sm font-bold hover:opacity-90 transition-opacity">
+                        <span>Làm bài tập ngay</span>
+                        <span class="material-symbols-outlined text-lg">arrow_forward</span>
+                    </button>
+                </div>
+
+                <!-- Spacer for fixed button on mobile -->
+                <div class="lg:hidden h-20"></div>
             </div>
         </div>
     </main>
