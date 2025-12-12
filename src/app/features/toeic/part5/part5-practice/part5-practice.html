@@ -1,0 +1,170 @@
+<!-- 
+    Part 5 Practice - Quiz Interface
+    Flow: Answer questions → See result → Next or Complete
+-->
+<div class="flex h-[calc(100vh-65px)] w-full flex-col bg-[#0f172a] font-sans text-white overflow-hidden">
+    <!-- Header -->
+    <header class="border-b border-white/5 bg-[#0f172a]/95 backdrop-blur-xl px-4 py-4 md:px-8 z-20 shadow-sm">
+        <div class="mx-auto w-full flex items-center gap-2 text-sm font-medium">
+            <a routerLink="/" class="text-slate-400 hover:text-white transition-colors">Trang chủ</a>
+            <span class="material-symbols-outlined text-slate-600 text-xs">chevron_right</span>
+            <a routerLink="/toeic" class="text-slate-400 hover:text-white transition-colors">TOEIC</a>
+            <span class="material-symbols-outlined text-slate-600 text-xs">chevron_right</span>
+            <a routerLink="/toeic/part5" class="text-slate-400 hover:text-white transition-colors">Part 5</a>
+            <span class="material-symbols-outlined text-slate-600 text-xs">chevron_right</span>
+            <span class="text-white">{{ topic?.name_vi }}</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto relative no-scrollbar scroll-smooth">
+        <div class="mx-auto w-full max-w-3xl p-4 md:p-8 min-h-full">
+
+            <!-- Loading State -->
+            <div *ngIf="isLoading" class="flex items-center justify-center h-64">
+                <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
+            </div>
+
+            <!-- Quiz Content -->
+            <div *ngIf="!isLoading && !isCompleted && currentQuestion">
+
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-slate-400 text-sm">Câu {{ currentQuestionIndex + 1 }}/{{ allQuestions.length
+                            }}</span>
+                        <span class="text-blue-400 text-sm font-medium">{{ score }} điểm</span>
+                    </div>
+                    <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-300"
+                            [style.width.%]="progress"></div>
+                    </div>
+                </div>
+
+                <!-- Question Card -->
+                <div class="bg-white/5 rounded-2xl border border-white/10 p-6 md:p-8 mb-6">
+                    <!-- Grammar Point Tag -->
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-blue-500/20 rounded-full mb-4">
+                        <span class="material-symbols-outlined text-blue-400 text-sm">local_offer</span>
+                        <span class="text-blue-400 text-xs font-medium">{{ currentQuestion.grammarPoint }}</span>
+                    </div>
+
+                    <!-- Sentence -->
+                    <p class="text-lg md:text-xl text-white leading-relaxed mb-6">
+                        {{ currentQuestion.sentence }}
+                    </p>
+
+                    <!-- Options -->
+                    <div class="space-y-3">
+                        <button *ngFor="let option of currentQuestion.options; let i = index" (click)="selectAnswer(i)"
+                            [disabled]="isAnswered"
+                            class="w-full flex items-center gap-4 p-4 rounded-xl border transition-all duration-200 text-left"
+                            [ngClass]="{
+                                    'bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20': !isAnswered,
+                                    'bg-emerald-500/20 border-emerald-500/50': isAnswered && isCorrectAnswer(i),
+                                    'bg-red-500/20 border-red-500/50': isWrongAnswer(i),
+                                    'bg-white/5 border-white/10 opacity-50': isAnswered && !isCorrectAnswer(i) && !isWrongAnswer(i)
+                                }">
+
+                            <!-- Option Letter -->
+                            <span class="flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold"
+                                [ngClass]="{
+                                      'bg-white/10 text-white': !isAnswered,
+                                      'bg-emerald-500 text-white': isAnswered && isCorrectAnswer(i),
+                                      'bg-red-500 text-white': isWrongAnswer(i),
+                                      'bg-white/10 text-slate-400': isAnswered && !isCorrectAnswer(i) && !isWrongAnswer(i)
+                                  }">
+                                {{ getOptionLetter(i) }}
+                            </span>
+
+                            <!-- Option Text -->
+                            <span class="flex-1" [ngClass]="{
+                                      'text-white': !isAnswered || isCorrectAnswer(i),
+                                      'text-red-400': isWrongAnswer(i),
+                                      'text-slate-400': isAnswered && !isCorrectAnswer(i) && !isWrongAnswer(i)
+                                  }">
+                                {{ option }}
+                            </span>
+
+                            <!-- Correct/Wrong Icon -->
+                            <span *ngIf="isAnswered && isCorrectAnswer(i)"
+                                class="material-symbols-outlined text-emerald-400">check_circle</span>
+                            <span *ngIf="isWrongAnswer(i)" class="material-symbols-outlined text-red-400">cancel</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Explanation (shown after answer) -->
+                <div *ngIf="isAnswered"
+                    class="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 mb-6 animate-fadeIn">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-blue-400 text-xl">lightbulb</span>
+                        <div>
+                            <h4 class="text-blue-400 font-semibold mb-2">Giải thích</h4>
+                            <p class="text-slate-300">{{ currentQuestion.explanation }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Next Button -->
+                <div *ngIf="isAnswered" class="flex justify-end">
+                    <button (click)="nextQuestion()"
+                        class="flex items-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-xl transition-colors">
+                        <span>{{ currentQuestionIndex < allQuestions.length - 1 ? 'Câu tiếp theo' : 'Xem kết quả'
+                                }}</span>
+                                <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Completion Screen -->
+            <div *ngIf="isCompleted"
+                class="flex flex-col items-center justify-center min-h-[60vh] text-center animate-fadeIn">
+                <!-- Score Circle -->
+                <div class="relative w-40 h-40 mb-8">
+                    <svg class="w-full h-full transform -rotate-90">
+                        <circle cx="80" cy="80" r="70" stroke="rgba(255,255,255,0.1)" stroke-width="12" fill="none" />
+                        <circle cx="80" cy="80" r="70"
+                            [attr.stroke]="getScorePercentage() >= 70 ? '#10b981' : getScorePercentage() >= 50 ? '#f59e0b' : '#ef4444'"
+                            stroke-width="12" fill="none" stroke-linecap="round" [attr.stroke-dasharray]="440"
+                            [attr.stroke-dashoffset]="440 - (440 * getScorePercentage() / 100)" />
+                    </svg>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                        <span class="text-4xl font-bold text-white">{{ getScorePercentage() }}%</span>
+                        <span class="text-slate-400 text-sm">{{ score }}/{{ allQuestions.length }}</span>
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <h2 class="text-2xl font-bold text-white mb-2">
+                    {{ getScorePercentage() >= 70 ? 'Xuất sắc!' : getScorePercentage() >= 50 ? 'Khá tốt!' : 'Cần cố gắng
+                    thêm!' }}
+                </h2>
+                <p class="text-slate-400 mb-8">
+                    Bạn đã hoàn thành bài tập {{ topic?.name_vi }}.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <button (click)="restartQuiz()"
+                        class="flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl transition-colors">
+                        <span class="material-symbols-outlined">refresh</span>
+                        <span>Làm lại</span>
+                    </button>
+                    <a routerLink="/toeic/part5"
+                        class="flex items-center gap-2 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-xl transition-colors">
+                        <span>Chọn chủ đề khác</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- No Questions -->
+            <div *ngIf="!isLoading && allQuestions.length === 0" class="text-center py-16">
+                <span class="material-symbols-outlined text-slate-600 text-6xl mb-4">quiz</span>
+                <p class="text-slate-400 mb-4">Chưa có câu hỏi cho chủ đề này</p>
+                <a routerLink="/toeic/part5" class="text-blue-400 hover:text-blue-300">← Quay lại danh sách</a>
+            </div>
+        </div>
+    </main>
+</div>

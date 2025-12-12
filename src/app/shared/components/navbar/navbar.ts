@@ -23,6 +23,7 @@ export class Navbar {
     { path: '/vocabulary', label: 'Từ vựng' },
     { path: '/grammar', label: 'Ngữ pháp' },
     { path: '/reading', label: 'Luyện đọc' },
+    { path: '/toeic', label: 'TOEIC' },
     { path: '/review', label: 'Ôn tập' }
   ];
 

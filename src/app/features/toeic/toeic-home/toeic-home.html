@@ -1,0 +1,126 @@
+<!-- 
+    TOEIC Home - Entry Point
+    Flow: User lands here → Chooses Part 5 (Grammar) or Part 7 (Reading)
+-->
+<div class="flex h-[calc(100vh-65px)] w-full flex-col bg-[#0f172a] font-sans text-white overflow-hidden">
+    <!-- Header -->
+    <header class="border-b border-white/5 bg-[#0f172a]/95 backdrop-blur-xl px-4 py-4 md:px-8 z-20 shadow-sm">
+        <div class="mx-auto w-full flex items-center gap-2 text-sm font-medium">
+            <a routerLink="/" class="text-slate-400 hover:text-white transition-colors">Trang chủ</a>
+            <span class="material-symbols-outlined text-slate-600 text-xs">chevron_right</span>
+            <span class="text-white">TOEIC Practice</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto relative no-scrollbar scroll-smooth">
+        <div class="mx-auto w-full max-w-6xl p-4 md:p-8 min-h-full">
+
+            <!-- Title Section -->
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-amber-500/10 rounded-full mb-4">
+                    <span class="material-symbols-outlined text-amber-400">school</span>
+                    <span class="text-amber-400 text-sm font-medium">Luyện thi TOEIC</span>
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">TOEIC Practice</h1>
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+                    Luyện tập Part 5 (Ngữ pháp) và Part 7 (Đọc hiểu) với hệ thống bài học được thiết kế từ cơ bản đến
+                    nâng cao.
+                </p>
+            </div>
+
+            <!-- Part Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+                <!-- Part 5 Card -->
+                <a routerLink="/toeic/part5"
+                    class="group relative flex flex-col gap-6 p-8 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-2xl border border-white/10 shadow-lg hover:border-blue-500/50 hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer overflow-hidden">
+
+                    <!-- Decorative Blob -->
+                    <div
+                        class="absolute -top-20 -right-20 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl group-hover:bg-blue-500/30 transition-colors">
+                    </div>
+
+                    <!-- Icon -->
+                    <div
+                        class="flex items-center justify-center w-16 h-16 bg-blue-500/20 rounded-2xl group-hover:bg-blue-500/30 transition-colors">
+                        <span class="material-symbols-outlined text-blue-400 text-3xl">edit_note</span>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="flex-grow z-10">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-blue-400 text-sm font-medium">Part 5</span>
+                            <span class="px-2 py-0.5 bg-blue-500/20 rounded text-blue-300 text-xs">{{
+                                part5Info.topicCount }} chủ đề</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white mb-3">Ngữ Pháp</h2>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            {{ part5Info.description }}
+                        </p>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="flex items-center gap-2 text-blue-400 font-medium group-hover:gap-3 transition-all">
+                        <span>Bắt đầu học</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </a>
+
+                <!-- Part 7 Card -->
+                <a routerLink="/toeic/part7"
+                    class="group relative flex flex-col gap-6 p-8 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-2xl border border-white/10 shadow-lg hover:border-emerald-500/50 hover:shadow-emerald-500/10 transition-all duration-300 cursor-pointer overflow-hidden">
+
+                    <!-- Decorative Blob -->
+                    <div
+                        class="absolute -top-20 -right-20 w-40 h-40 bg-emerald-500/20 rounded-full blur-3xl group-hover:bg-emerald-500/30 transition-colors">
+                    </div>
+
+                    <!-- Icon -->
+                    <div
+                        class="flex items-center justify-center w-16 h-16 bg-emerald-500/20 rounded-2xl group-hover:bg-emerald-500/30 transition-colors">
+                        <span class="material-symbols-outlined text-emerald-400 text-3xl">menu_book</span>
+                    </div>
+
+                    <!-- Content -->
+                    <div class="flex-grow z-10">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="text-emerald-400 text-sm font-medium">Part 7</span>
+                            <span class="px-2 py-0.5 bg-emerald-500/20 rounded text-emerald-300 text-xs">{{
+                                part7Info.passageCount }} bài đọc</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white mb-3">Đọc Hiểu</h2>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            {{ part7Info.description }}
+                        </p>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="flex items-center gap-2 text-emerald-400 font-medium group-hover:gap-3 transition-all">
+                        <span>Bắt đầu luyện</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="mt-16 text-center">
+                <h3 class="text-lg font-semibold text-white mb-4">💡 Mẹo học TOEIC hiệu quả</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+                    <div class="p-4 bg-white/5 rounded-xl">
+                        <span class="text-2xl mb-2 block">📚</span>
+                        <p class="text-slate-300 text-sm">Học lý thuyết trước, làm bài tập sau</p>
+                    </div>
+                    <div class="p-4 bg-white/5 rounded-xl">
+                        <span class="text-2xl mb-2 block">⏱️</span>
+                        <p class="text-slate-300 text-sm">Luyện tập đều đặn mỗi ngày 30 phút</p>
+                    </div>
+                    <div class="p-4 bg-white/5 rounded-xl">
+                        <span class="text-2xl mb-2 block">📝</span>
+                        <p class="text-slate-300 text-sm">Ghi chú lại những lỗi thường gặp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

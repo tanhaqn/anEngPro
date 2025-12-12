@@ -46,10 +46,11 @@
 
             <!-- Word Display Card -->
             <div *ngIf="currentWord" class="flashcard-container mb-8">
+                <!-- Desktop: Buttons inside card | Mobile: Hidden here, shown below -->
                 <div class="bg-surface-light dark:bg-surface-dark rounded-lg p-6 md:p-8 shadow-lg relative">
-                    <!-- Previous Button -->
+                    <!-- Previous Button - Desktop Only -->
                     <button *ngIf="prevWord" (click)="prevCard()"
-                        class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-white/10 dark:hover:bg-black/20 transition-colors cursor-pointer z-10">
+                        class="hidden md:block absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-white/10 dark:hover:bg-black/20 transition-colors cursor-pointer z-10">
                         <span
                             class="material-icons-outlined text-text-secondary-light dark:text-text-secondary-dark">arrow_back</span>
                     </button>
@@ -127,12 +128,38 @@
                         </div>
                     </div>
 
-                    <!-- Next Button -->
+                    <!-- Next Button - Desktop Only -->
                     <button *ngIf="nextWord" (click)="nextCard()"
-                        class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-white/10 dark:hover:bg-black/20 transition-colors cursor-pointer z-10">
+                        class="hidden md:block absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-2 rounded-full hover:bg-white/10 dark:hover:bg-black/20 transition-colors cursor-pointer z-10">
                         <span
                             class="material-icons-outlined text-text-secondary-light dark:text-text-secondary-dark">arrow_forward</span>
                     </button>
+                </div>
+
+                <!-- Mobile Navigation Buttons - Below Card -->
+                <div class="flex md:hidden justify-between items-center mt-4 px-4">
+                    <button *ngIf="prevWord; else prevPlaceholder" (click)="prevCard()"
+                        class="flex items-center gap-2 px-4 py-3 bg-surface-light dark:bg-surface-dark rounded-xl shadow-md border border-border-light dark:border-border-dark hover:bg-primary/10 transition-colors cursor-pointer">
+                        <span class="material-icons-outlined text-primary">arrow_back</span>
+                        <span
+                            class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">Trước</span>
+                    </button>
+                    <ng-template #prevPlaceholder>
+                        <div class="w-24"></div>
+                    </ng-template>
+
+                    <span class="text-sm font-bold text-primary">{{ currentWordIndex + 1 }}/{{ course.words.length
+                        }}</span>
+
+                    <button *ngIf="nextWord; else nextPlaceholder" (click)="nextCard()"
+                        class="flex items-center gap-2 px-4 py-3 bg-surface-light dark:bg-surface-dark rounded-xl shadow-md border border-border-light dark:border-border-dark hover:bg-primary/10 transition-colors cursor-pointer">
+                        <span
+                            class="text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark">Tiếp</span>
+                        <span class="material-icons-outlined text-primary">arrow_forward</span>
+                    </button>
+                    <ng-template #nextPlaceholder>
+                        <div class="w-24"></div>
+                    </ng-template>
                 </div>
             </div>
 

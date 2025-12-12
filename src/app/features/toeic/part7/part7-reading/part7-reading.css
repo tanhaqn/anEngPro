@@ -1,0 +1,20 @@
+/* Part 7 Reading Styles */
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Custom styling for passage content */
+.whitespace-pre-line {
+    white-space: pre-line;
+}

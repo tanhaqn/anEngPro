@@ -17,6 +17,13 @@ import { GrammarExercise } from './features/grammar/grammar-exercise/grammar-exe
 import { ReadingComponent } from './features/reading/reading/reading';
 import { Review } from './features/review/review';
 
+// TOEIC Imports
+import { ToeicHomeComponent } from './features/toeic/toeic-home/toeic-home';
+import { Part5ListComponent } from './features/toeic/part5/part5-list/part5-list';
+import { Part5PracticeComponent } from './features/toeic/part5/part5-practice/part5-practice';
+import { Part7ListComponent } from './features/toeic/part7/part7-list/part7-list';
+import { Part7ReadingComponent } from './features/toeic/part7/part7-reading/part7-reading';
+
 // Admin Imports
 import { AdminLayoutComponent } from './features/admin/layout/admin-layout';
 import { AdminDashboardComponent } from './features/admin/dashboard/dashboard';
@@ -40,6 +47,13 @@ export const routes: Routes = [
     { path: 'grammar/:id/exercise', component: GrammarExercise },
     { path: 'reading', component: ReadingComponent },
     { path: 'review', component: Review },
+
+    // TOEIC Routes
+    { path: 'toeic', component: ToeicHomeComponent },
+    { path: 'toeic/part5', component: Part5ListComponent },
+    { path: 'toeic/part5/:id', component: Part5PracticeComponent },
+    { path: 'toeic/part7', component: Part7ListComponent },
+    { path: 'toeic/part7/:id', component: Part7ReadingComponent },
 
     // Admin Routes
     {

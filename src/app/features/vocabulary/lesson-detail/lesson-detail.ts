@@ -93,7 +93,24 @@ export class LessonDetail implements OnInit {
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(this.currentWord.term);
     utterance.lang = 'en-US';
-    utterance.rate = 0.5;
+    utterance.rate = 0.8;
+    utterance.pitch = 0.9;
+
+    // Try to find a male voice for better clarity
+    const voices = window.speechSynthesis.getVoices();
+    const maleVoice = voices.find(v =>
+      v.lang.startsWith('en') &&
+      (v.name.toLowerCase().includes('male') ||
+        v.name.toLowerCase().includes('daniel') ||
+        v.name.toLowerCase().includes('alex') ||
+        v.name.toLowerCase().includes('fred') ||
+        v.name.toLowerCase().includes('tom'))
+    ) || voices.find(v => v.lang.startsWith('en-US'));
+
+    if (maleVoice) {
+      utterance.voice = maleVoice;
+    }
+
     window.speechSynthesis.speak(utterance);
   }
 
@@ -103,7 +120,24 @@ export class LessonDetail implements OnInit {
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(this.currentWord.example);
     utterance.lang = 'en-US';
-    utterance.rate = 0.5;
+    utterance.rate = 0.85;
+    utterance.pitch = 0.9;
+
+    // Try to find a male voice for better clarity
+    const voices = window.speechSynthesis.getVoices();
+    const maleVoice = voices.find(v =>
+      v.lang.startsWith('en') &&
+      (v.name.toLowerCase().includes('male') ||
+        v.name.toLowerCase().includes('daniel') ||
+        v.name.toLowerCase().includes('alex') ||
+        v.name.toLowerCase().includes('fred') ||
+        v.name.toLowerCase().includes('tom'))
+    ) || voices.find(v => v.lang.startsWith('en-US'));
+
+    if (maleVoice) {
+      utterance.voice = maleVoice;
+    }
+
     window.speechSynthesis.speak(utterance);
   }
 
