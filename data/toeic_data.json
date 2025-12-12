@@ -1,0 +1,657 @@
+{
+    "part5": {
+        "title": "Part 5: Ngữ Pháp TOEIC",
+        "description": "Hệ thống bài học ngữ pháp TOEIC từ cơ bản đến nâng cao",
+        "topics": [
+            {
+                "id": "nouns",
+                "name_vi": "Danh từ",
+                "name_en": "Nouns",
+                "icon": "description",
+                "description": "Danh từ đếm được, không đếm được, cụm danh từ và vị trí danh từ",
+                "lessons": [
+                    {
+                        "id": "noun_intro",
+                        "title": "Giới thiệu câu từ loại Part 5",
+                        "content": "Trong Part 5 TOEIC, câu hỏi về từ loại chiếm khoảng 30-40% tổng số câu. Bạn cần xác định đúng loại từ (danh từ, động từ, tính từ, trạng từ) để điền vào chỗ trống.",
+                        "examples": [
+                            {
+                                "sentence": "The _____ of the project was completed on time.",
+                                "translation": "Việc hoàn thành dự án đã được thực hiện đúng hạn."
+                            }
+                        ],
+                        "questions": [
+                            {
+                                "id": "noun_q1",
+                                "sentence": "The company announced the _____ of a new CEO.",
+                                "options": [
+                                    "appoint",
+                                    "appointed",
+                                    "appointment",
+                                    "appointing"
+                                ],
+                                "correctAnswer": 2,
+                                "explanation": "Sau 'the' cần một danh từ. 'Appointment' (sự bổ nhiệm) là danh từ phù hợp.",
+                                "grammarPoint": "Noun Position"
+                            },
+                            {
+                                "id": "noun_q2",
+                                "sentence": "Please submit your _____ before the deadline.",
+                                "options": [
+                                    "apply",
+                                    "application",
+                                    "applicable",
+                                    "applicant"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Sau 'your' (tính từ sở hữu) cần một danh từ. 'Application' (đơn ứng tuyển) là đáp án đúng.",
+                                "grammarPoint": "Noun after Possessive"
+                            },
+                            {
+                                "id": "noun_q3",
+                                "sentence": "The _____ between the two companies was successful.",
+                                "options": [
+                                    "negotiate",
+                                    "negotiation",
+                                    "negotiable",
+                                    "negotiator"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Sau mạo từ 'The' và trước giới từ 'between' cần một danh từ. 'Negotiation' (cuộc đàm phán) là đáp án đúng.",
+                                "grammarPoint": "Noun Position"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "noun_countable",
+                        "title": "Danh từ đếm được & không đếm được",
+                        "content": "Danh từ đếm được có thể dùng với số đếm (one, two, three) và có dạng số nhiều. Danh từ không đếm được không có dạng số nhiều và không dùng với a/an.",
+                        "examples": [
+                            {
+                                "sentence": "I need some information about the project.",
+                                "translation": "Tôi cần một số thông tin về dự án."
+                            },
+                            {
+                                "sentence": "There are three chairs in the room.",
+                                "translation": "Có ba chiếc ghế trong phòng."
+                            }
+                        ],
+                        "questions": [
+                            {
+                                "id": "count_q1",
+                                "sentence": "The manager provided useful _____ during the meeting.",
+                                "options": [
+                                    "advices",
+                                    "advice",
+                                    "advising",
+                                    "advise"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Advice' là danh từ không đếm được, không có dạng số nhiều 'advices'.",
+                                "grammarPoint": "Uncountable Nouns"
+                            },
+                            {
+                                "id": "count_q2",
+                                "sentence": "We need to buy new _____ for the office.",
+                                "options": [
+                                    "furniture",
+                                    "furnitures",
+                                    "furnish",
+                                    "furnished"
+                                ],
+                                "correctAnswer": 0,
+                                "explanation": "'Furniture' (đồ nội thất) là danh từ không đếm được.",
+                                "grammarPoint": "Uncountable Nouns"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "verb_tenses",
+                "name_vi": "Chia thì",
+                "name_en": "Verb Tenses",
+                "icon": "schedule",
+                "description": "12 thì trong tiếng Anh và cách chia động từ số ít/số nhiều",
+                "lessons": [
+                    {
+                        "id": "tense_present",
+                        "title": "Hiện tại đơn & Hiện tại tiếp diễn",
+                        "content": "Hiện tại đơn dùng cho thói quen, sự thật. Hiện tại tiếp diễn dùng cho hành động đang xảy ra.",
+                        "examples": [
+                            {
+                                "sentence": "She works at a bank.",
+                                "translation": "Cô ấy làm việc ở ngân hàng."
+                            },
+                            {
+                                "sentence": "They are working on a new project.",
+                                "translation": "Họ đang làm một dự án mới."
+                            }
+                        ],
+                        "questions": [
+                            {
+                                "id": "tense_q1",
+                                "sentence": "The train _____ at 9:00 a.m. every day.",
+                                "options": [
+                                    "leave",
+                                    "leaves",
+                                    "leaving",
+                                    "is leaving"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Dùng hiện tại đơn với 'every day'. Chủ ngữ 'The train' số ít nên động từ thêm -s.",
+                                "grammarPoint": "Present Simple"
+                            },
+                            {
+                                "id": "tense_q2",
+                                "sentence": "Look! The children _____ in the garden.",
+                                "options": [
+                                    "play",
+                                    "plays",
+                                    "are playing",
+                                    "played"
+                                ],
+                                "correctAnswer": 2,
+                                "explanation": "'Look!' cho thấy hành động đang xảy ra -> dùng hiện tại tiếp diễn.",
+                                "grammarPoint": "Present Continuous"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "tense_past",
+                        "title": "Quá khứ đơn & Quá khứ tiếp diễn",
+                        "content": "Quá khứ đơn dùng cho hành động đã hoàn thành trong quá khứ. Quá khứ tiếp diễn dùng cho hành động đang xảy ra tại một thời điểm trong quá khứ.",
+                        "examples": [
+                            {
+                                "sentence": "I visited Paris last year.",
+                                "translation": "Tôi đã đến Paris năm ngoái."
+                            }
+                        ],
+                        "questions": [
+                            {
+                                "id": "past_q1",
+                                "sentence": "The meeting _____ at 3 p.m. yesterday.",
+                                "options": [
+                                    "start",
+                                    "starts",
+                                    "started",
+                                    "starting"
+                                ],
+                                "correctAnswer": 2,
+                                "explanation": "'Yesterday' chỉ quá khứ -> dùng quá khứ đơn 'started'.",
+                                "grammarPoint": "Past Simple"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "active_passive",
+                "name_vi": "Chủ động & Bị động",
+                "name_en": "Active & Passive Voice",
+                "icon": "swap_horiz",
+                "description": "Cách chuyển câu chủ động sang bị động và nhận biết câu bị động",
+                "lessons": [
+                    {
+                        "id": "passive_intro",
+                        "title": "Cấu trúc câu bị động",
+                        "content": "Công thức: S + be + V3/ed (+ by O). Câu bị động dùng khi muốn nhấn mạnh đối tượng chịu tác động.",
+                        "examples": [
+                            {
+                                "sentence": "The report was written by the manager.",
+                                "translation": "Báo cáo được viết bởi người quản lý."
+                            }
+                        ],
+                        "questions": [
+                            {
+                                "id": "passive_q1",
+                                "sentence": "The documents _____ to the head office yesterday.",
+                                "options": [
+                                    "sent",
+                                    "were sent",
+                                    "sending",
+                                    "are sending"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Tài liệu được gửi (bị gửi) -> bị động. 'Yesterday' -> quá khứ. Đáp án: were sent.",
+                                "grammarPoint": "Passive Voice"
+                            },
+                            {
+                                "id": "passive_q2",
+                                "sentence": "New employees _____ trained before starting work.",
+                                "options": [
+                                    "must be",
+                                    "must",
+                                    "must being",
+                                    "must to be"
+                                ],
+                                "correctAnswer": 0,
+                                "explanation": "Modal + be + V3 cho câu bị động với động từ khuyết thiếu. 'Must be trained'.",
+                                "grammarPoint": "Passive with Modals"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "adjectives",
+                "name_vi": "Tính từ",
+                "name_en": "Adjectives",
+                "icon": "palette",
+                "description": "Vị trí tính từ trước danh từ và sau động từ nối",
+                "lessons": [
+                    {
+                        "id": "adj_position",
+                        "title": "Vị trí tính từ trước danh từ",
+                        "content": "Tính từ đứng trước danh từ để bổ nghĩa. Công thức: (Adv) + Adj + N",
+                        "examples": [
+                            {
+                                "sentence": "She is a successful businesswoman.",
+                                "translation": "Cô ấy là một nữ doanh nhân thành đạt."
+                            }
+                        ],
+                        "questions": [
+                            {
+                                "id": "adj_q1",
+                                "sentence": "The company needs _____ employees.",
+                                "options": [
+                                    "experience",
+                                    "experienced",
+                                    "experiencing",
+                                    "experiential"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Trước danh từ 'employees' cần tính từ. 'Experienced' (có kinh nghiệm) là tính từ.",
+                                "grammarPoint": "Adjective Position"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "adverbs",
+                "name_vi": "Trạng từ",
+                "name_en": "Adverbs",
+                "icon": "bolt",
+                "description": "Trạng từ bổ nghĩa động từ, tính từ và các vị trí của trạng từ",
+                "lessons": [
+                    {
+                        "id": "adv_position",
+                        "title": "Vị trí trạng từ",
+                        "content": "Trạng từ có thể đứng trước tính từ, sau động từ, hoặc cuối câu.",
+                        "examples": [
+                            {
+                                "sentence": "She speaks English fluently.",
+                                "translation": "Cô ấy nói tiếng Anh trôi chảy."
+                            }
+                        ],
+                        "questions": [
+                            {
+                                "id": "adv_q1",
+                                "sentence": "The project was _____ completed ahead of schedule.",
+                                "options": [
+                                    "success",
+                                    "successful",
+                                    "successfully",
+                                    "succeed"
+                                ],
+                                "correctAnswer": 2,
+                                "explanation": "Cần trạng từ bổ nghĩa động từ 'completed'. 'Successfully' là trạng từ.",
+                                "grammarPoint": "Adverb Position"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "pronouns",
+                "name_vi": "Đại từ",
+                "name_en": "Pronouns",
+                "icon": "person",
+                "description": "Đại từ nhân xưng, sở hữu và phản thân",
+                "lessons": [
+                    {
+                        "id": "pronoun_types",
+                        "title": "Các loại đại từ",
+                        "content": "Đại từ nhân xưng (I, you, he), đại từ sở hữu (mine, yours), đại từ phản thân (myself, yourself).",
+                        "examples": [
+                            {
+                                "sentence": "This book is mine.",
+                                "translation": "Cuốn sách này là của tôi."
+                            }
+                        ],
+                        "questions": [
+                            {
+                                "id": "pron_q1",
+                                "sentence": "The CEO _____ attended the conference.",
+                                "options": [
+                                    "him",
+                                    "his",
+                                    "himself",
+                                    "he"
+                                ],
+                                "correctAnswer": 2,
+                                "explanation": "Đại từ phản thân 'himself' nhấn mạnh chủ ngữ 'The CEO' tự làm việc đó.",
+                                "grammarPoint": "Reflexive Pronouns"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "comparisons",
+                "name_vi": "So sánh",
+                "name_en": "Comparisons",
+                "icon": "bar_chart",
+                "description": "So sánh bằng, so sánh hơn và so sánh nhất",
+                "lessons": [
+                    {
+                        "id": "compare_types",
+                        "title": "Ba dạng so sánh",
+                        "content": "So sánh bằng: as...as. So sánh hơn: -er/more. So sánh nhất: -est/most.",
+                        "examples": [
+                            {
+                                "sentence": "This phone is more expensive than that one.",
+                                "translation": "Điện thoại này đắt hơn cái kia."
+                            }
+                        ],
+                        "questions": [
+                            {
+                                "id": "comp_q1",
+                                "sentence": "This year's sales are _____ than last year's.",
+                                "options": [
+                                    "high",
+                                    "higher",
+                                    "highest",
+                                    "highly"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'Than' là dấu hiệu của so sánh hơn. Đáp án: 'higher'.",
+                                "grammarPoint": "Comparative"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "conjunctions",
+                "name_vi": "Liên từ & Giới từ",
+                "name_en": "Conjunctions & Prepositions",
+                "icon": "link",
+                "description": "Liên từ tương quan, liên từ phụ thuộc và giới từ",
+                "lessons": [
+                    {
+                        "id": "conj_types",
+                        "title": "Các loại liên từ",
+                        "content": "Liên từ kết hợp (and, but, or), liên từ phụ thuộc (because, although, when).",
+                        "examples": [
+                            {
+                                "sentence": "Although it was raining, we went out.",
+                                "translation": "Mặc dù trời mưa, chúng tôi vẫn ra ngoài."
+                            }
+                        ],
+                        "questions": [
+                            {
+                                "id": "conj_q1",
+                                "sentence": "_____ the weather was bad, the event was successful.",
+                                "options": [
+                                    "Despite",
+                                    "Although",
+                                    "Because",
+                                    "However"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Sau chỗ trống là một mệnh đề hoàn chỉnh -> cần liên từ 'Although'.",
+                                "grammarPoint": "Subordinating Conjunctions"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "relative_clauses",
+                "name_vi": "Mệnh đề quan hệ",
+                "name_en": "Relative Clauses",
+                "icon": "account_tree",
+                "description": "Mệnh đề quan hệ với who, which, that và cách rút gọn",
+                "lessons": [
+                    {
+                        "id": "relative_intro",
+                        "title": "Mệnh đề quan hệ cơ bản",
+                        "content": "Who/That cho người, Which/That cho vật, Whose cho sở hữu.",
+                        "examples": [
+                            {
+                                "sentence": "The man who called you is my boss.",
+                                "translation": "Người đàn ông đã gọi cho bạn là sếp của tôi."
+                            }
+                        ],
+                        "questions": [
+                            {
+                                "id": "rel_q1",
+                                "sentence": "The report _____ was submitted yesterday contains errors.",
+                                "options": [
+                                    "who",
+                                    "which",
+                                    "whose",
+                                    "whom"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "'The report' là vật -> dùng 'which' hoặc 'that'.",
+                                "grammarPoint": "Relative Pronouns"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "part7": {
+        "title": "Part 7: Đọc Hiểu TOEIC",
+        "description": "Luyện tập đọc hiểu với các bài đọc từ cơ bản đến nâng cao",
+        "sets": [
+            {
+                "id": "basic_set_1",
+                "name": "Cơ bản 1",
+                "description": "Bài đọc ngắn dạng thông báo và memo - Mức điểm 150-200/495 RC",
+                "passages": [
+                    {
+                        "id": "passage_1",
+                        "title": "Lunch Break Policy",
+                        "type": "notice",
+                        "difficulty": "basic",
+                        "content": "At ABC Company, lunch break starts at 12:00 p.m. and ends at 1:00 p.m. All workers must take their lunch during this time. They can eat in the break room or go outside. Food is not allowed at the work desk. After lunch, everyone must return to work on time. Late returners may get a warning from their manager.",
+                        "questions": [
+                            {
+                                "id": "p1_q1",
+                                "question": "When does the lunch break end?",
+                                "options": [
+                                    "11:00 a.m.",
+                                    "12:00 p.m.",
+                                    "1:00 p.m.",
+                                    "2:00 p.m."
+                                ],
+                                "correctAnswer": 2,
+                                "explanation": "Đoạn văn nói: 'lunch break starts at 12:00 p.m. and ends at 1:00 p.m.'"
+                            },
+                            {
+                                "id": "p1_q2",
+                                "question": "Where can workers eat their lunch?",
+                                "options": [
+                                    "At their work desk",
+                                    "In the manager's office",
+                                    "In the break room or outside",
+                                    "Only outside"
+                                ],
+                                "correctAnswer": 2,
+                                "explanation": "Đoạn văn nói: 'They can eat in the break room or go outside.'"
+                            },
+                            {
+                                "id": "p1_q3",
+                                "question": "What happens to late returners?",
+                                "options": [
+                                    "They get a bonus",
+                                    "They may get a warning",
+                                    "They can leave early",
+                                    "Nothing happens"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Đoạn văn nói: 'Late returners may get a warning from their manager.'"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "passage_2",
+                        "title": "Company Meeting Notice",
+                        "type": "notice",
+                        "difficulty": "basic",
+                        "content": "There will be a company meeting on Monday morning. The meeting starts at 9:00 a.m. in the main conference room. All office workers must join the meeting. The manager will talk about new projects and safety rules. Coffee and snacks will be ready before the meeting. The meeting will finish at 10:00 a.m.",
+                        "questions": [
+                            {
+                                "id": "p2_q1",
+                                "question": "When is the company meeting?",
+                                "options": [
+                                    "Monday afternoon",
+                                    "Monday morning",
+                                    "Tuesday morning",
+                                    "Friday afternoon"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Đoạn văn nói: 'There will be a company meeting on Monday morning.'"
+                            },
+                            {
+                                "id": "p2_q2",
+                                "question": "What will the manager discuss?",
+                                "options": [
+                                    "Salary increases",
+                                    "New projects and safety rules",
+                                    "Vacation policies",
+                                    "Employee birthdays"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Đoạn văn nói: 'The manager will talk about new projects and safety rules.'"
+                            },
+                            {
+                                "id": "p2_q3",
+                                "question": "How long will the meeting last?",
+                                "options": [
+                                    "30 minutes",
+                                    "1 hour",
+                                    "2 hours",
+                                    "All day"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Cuộc họp bắt đầu lúc 9:00 a.m. và kết thúc lúc 10:00 a.m. -> 1 tiếng."
+                            }
+                        ]
+                    },
+                    {
+                        "id": "passage_3",
+                        "title": "Office Cleanliness",
+                        "type": "memo",
+                        "difficulty": "basic",
+                        "content": "The office must stay clean at all times. Please clean your desk before you leave each day. Put all trash in the bins. Do not leave food on your desk overnight. The cleaning staff comes every evening, but we all need to help keep our workspace tidy. Thank you for your cooperation.",
+                        "questions": [
+                            {
+                                "id": "p3_q1",
+                                "question": "What should employees do before leaving?",
+                                "options": [
+                                    "Turn off the lights",
+                                    "Clean their desk",
+                                    "Lock the door",
+                                    "Check emails"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Đoạn văn nói: 'Please clean your desk before you leave each day.'"
+                            },
+                            {
+                                "id": "p3_q2",
+                                "question": "When does the cleaning staff come?",
+                                "options": [
+                                    "Every morning",
+                                    "Every evening",
+                                    "Once a week",
+                                    "Twice a month"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Đoạn văn nói: 'The cleaning staff comes every evening.'"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "basic_set_2",
+                "name": "Cơ bản 2",
+                "description": "Bài đọc dạng email và thông báo - Mức điểm 200-300/495 RC",
+                "passages": [
+                    {
+                        "id": "passage_4",
+                        "title": "New Parking Rules",
+                        "type": "notice",
+                        "difficulty": "basic",
+                        "content": "Starting next Monday, all employees must use the parking lot behind Building B. The parking lot in front of Building A will be reserved for visitors only. Each employee will receive a parking pass. Please display your pass on your dashboard at all times. Cars without a pass may be towed.",
+                        "questions": [
+                            {
+                                "id": "p4_q1",
+                                "question": "Where should employees park starting next Monday?",
+                                "options": [
+                                    "In front of Building A",
+                                    "Behind Building B",
+                                    "On the street",
+                                    "In the basement"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Đoạn văn nói: 'all employees must use the parking lot behind Building B.'"
+                            },
+                            {
+                                "id": "p4_q2",
+                                "question": "What might happen to cars without a parking pass?",
+                                "options": [
+                                    "They will be fine",
+                                    "They may be towed",
+                                    "They can park anywhere",
+                                    "Nothing will happen"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Đoạn văn nói: 'Cars without a pass may be towed.'"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "passage_5",
+                        "title": "Holiday Schedule",
+                        "type": "email",
+                        "difficulty": "basic",
+                        "content": "Dear Team,\n\nThis is a reminder about the upcoming holidays. The office will be closed from December 24th to January 2nd. We will return to work on January 3rd. Please make sure to finish all urgent tasks before December 23rd. If you have any questions, please contact HR.\n\nBest regards,\nHuman Resources",
+                        "questions": [
+                            {
+                                "id": "p5_q1",
+                                "question": "When does the office reopen?",
+                                "options": [
+                                    "December 24th",
+                                    "January 2nd",
+                                    "January 3rd",
+                                    "December 23rd"
+                                ],
+                                "correctAnswer": 2,
+                                "explanation": "Email nói: 'We will return to work on January 3rd.'"
+                            },
+                            {
+                                "id": "p5_q2",
+                                "question": "What should employees do before December 23rd?",
+                                "options": [
+                                    "Take vacation",
+                                    "Finish urgent tasks",
+                                    "Contact HR",
+                                    "Clean their desk"
+                                ],
+                                "correctAnswer": 1,
+                                "explanation": "Email nói: 'Please make sure to finish all urgent tasks before December 23rd.'"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
