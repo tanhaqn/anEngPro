@@ -1,0 +1,1469 @@
+{
+    "categories": [
+        {
+            "id": "tenses",
+            "title": "Part 1: 12 Thì & Sự Phối Hợp Thì (12 Tenses & Sequence)",
+            "description": "Nắm vững 12 thì cơ bản và cách phối hợp các thì trong câu.",
+            "topics": [
+                {
+                    "id": "present",
+                    "title": "I. Nhóm Hiện Tại (Present)",
+                    "image": "https://img.freepik.com/free-vector/english-grammar-concept-illustration_114360-11626.jpg",
+                    "rules": [
+                        {
+                            "id": 1,
+                            "name_vi": "1. Hiện tại đơn",
+                            "name_en": "Present Simple",
+                            "formulas": {
+                                "affirmative": "S + V1/s/es",
+                                "negative": "S + do/does + NOT + V0",
+                                "interrogative": "Do/Does + S + V0...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Diễn tả chân lý, sự thật hiển nhiên.",
+                                    "examples": [
+                                        {
+                                            "sentence": "The sun rises in the East.",
+                                            "translation": "Mặt trời mọc ở đằng Đông."
+                                        },
+                                        {
+                                            "sentence": "Water boils at 100 degrees Celsius.",
+                                            "translation": "Nước sôi ở 100 độ C."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Thói quen hằng ngày ở hiện tại.",
+                                    "examples": [
+                                        {
+                                            "sentence": "She usually gets up at 6 a.m.",
+                                            "translation": "Cô ấy thường thức dậy lúc 6 giờ sáng."
+                                        },
+                                        {
+                                            "sentence": "I play football every Sunday.",
+                                            "translation": "Tôi chơi bóng đá mỗi Chủ nhật."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Lịch trình tàu xe, máy bay, lịch học (theo thời gian biểu).",
+                                    "examples": [
+                                        {
+                                            "sentence": "The train leaves at 7 p.m tonight.",
+                                            "translation": "Chuyến tàu rời đi lúc 7 giờ tối nay."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Dùng trong mệnh đề chỉ thời gian (tương lai giả định).",
+                                    "examples": [
+                                        {
+                                            "sentence": "I will wait here until he comes.",
+                                            "translation": "Tôi sẽ đợi ở đây cho đến khi anh ấy đến."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "always (luôn luôn)",
+                                "usually (thường xuyên)",
+                                "often (thường)",
+                                "sometimes (thỉnh thoảng)",
+                                "occasionally (thỉnh thoảng)",
+                                "frequently (thường xuyên)",
+                                "normally (thông thường)",
+                                "seldom (hiếm khi)",
+                                "rarely (hiếm khi)",
+                                "never (không bao giờ)",
+                                "every day/week/month/year",
+                                "once/twice/three times a week",
+                                "as a rule (như một quy luật)"
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name_vi": "2. Hiện tại tiếp diễn",
+                            "name_en": "Present Continuous",
+                            "formulas": {
+                                "affirmative": "S + am/is/are + V-ing",
+                                "negative": "S + am/is/are + NOT + V-ing",
+                                "interrogative": "Am/Is/Are + S + V-ing...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Đang xảy ra ngay lúc nói.",
+                                    "examples": [
+                                        {
+                                            "sentence": "She is cooking in the kitchen now.",
+                                            "translation": "Bây giờ cô ấy đang nấu ăn trong bếp."
+                                        },
+                                        {
+                                            "sentence": "Look! It is raining.",
+                                            "translation": "Nhìn kìa! Trời đang mưa."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Sắp xảy ra trong tương lai gần (có kế hoạch, dự định sẵn).",
+                                    "examples": [
+                                        {
+                                            "sentence": "He is flying to Paris tomorrow.",
+                                            "translation": "Anh ấy sẽ bay đi Paris vào ngày mai."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Phàn nàn về một thói quen xấu (thường đi với 'always').",
+                                    "examples": [
+                                        {
+                                            "sentence": "He is always coming late.",
+                                            "translation": "Anh ta lúc nào cũng đến trễ."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "now (bây giờ)",
+                                "right now (ngay bây giờ)",
+                                "at present (hiện tại)",
+                                "at the moment (ngay lúc này)",
+                                "Look!",
+                                "Listen!",
+                                "Be quiet!",
+                                "Keep silent!",
+                                "Watch out!"
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name_vi": "3. Hiện tại hoàn thành",
+                            "name_en": "Present Perfect",
+                            "formulas": {
+                                "affirmative": "S + have/has + V3/ed",
+                                "negative": "S + have/has + NOT + V3/ed",
+                                "interrogative": "Have/Has + S + V3/ed...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Hành động vừa mới xảy ra.",
+                                    "examples": [
+                                        {
+                                            "sentence": "I have just finished my homework.",
+                                            "translation": "Tôi vừa mới làm xong bài tập."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Hành động xảy ra trong quá khứ nhưng không rõ thời gian.",
+                                    "examples": [
+                                        {
+                                            "sentence": "She has lost her keys.",
+                                            "translation": "Cô ấy đã làm mất chìa khóa."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Hành động lặp đi lặp lại nhiều lần.",
+                                    "examples": [
+                                        {
+                                            "sentence": "I have seen this movie three times.",
+                                            "translation": "Tôi đã xem phim này 3 lần rồi."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Hành động bắt đầu ở quá khứ và kéo dài đến hiện tại.",
+                                    "examples": [
+                                        {
+                                            "sentence": "We have lived here for 10 years.",
+                                            "translation": "Chúng tôi đã sống ở đây được 10 năm."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "just, recently, lately (gần đây, vừa mới)",
+                                "already (rồi)",
+                                "yet (chưa)",
+                                "ever (đã từng)",
+                                "never (chưa từng)",
+                                "so far, up to now, until now (cho đến nay)",
+                                "since + mốc thời gian",
+                                "for + khoảng thời gian",
+                                "This is the first/second... time"
+                            ]
+                        },
+                        {
+                            "id": 4,
+                            "name_vi": "4. Hiện tại hoàn thành tiếp diễn",
+                            "name_en": "Present Perfect Continuous",
+                            "formulas": {
+                                "affirmative": "S + have/has + been + V-ing",
+                                "negative": "S + have/has + not + been + V-ing",
+                                "interrogative": "Have/Has + S + been + V-ing...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Nhấn mạnh tính liên tục của hành động từ quá khứ đến hiện tại (thường để lại kết quả hiện hữu).",
+                                    "examples": [
+                                        {
+                                            "sentence": "I have been waiting for you all day.",
+                                            "translation": "Tôi đã đợi bạn cả ngày nay rồi."
+                                        },
+                                        {
+                                            "sentence": "She is tired because she has been working hard.",
+                                            "translation": "Cô ấy mệt vì cô ấy đã làm việc vất vả liên tục."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "all day (cả ngày)",
+                                "all week (cả tuần)",
+                                "for a long time",
+                                "almost every day"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "past",
+                    "title": "II. Nhóm Quá Khứ (Past)",
+                    "image": "https://img.freepik.com/free-vector/time-management-concept-illustration_114360-1013.jpg",
+                    "rules": [
+                        {
+                            "id": 5,
+                            "name_vi": "5. Quá khứ đơn",
+                            "name_en": "Past Simple",
+                            "formulas": {
+                                "affirmative": "S + V2/ed (Was/Were)",
+                                "negative": "S + did + NOT + V0",
+                                "interrogative": "Did + S + V0...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Hành động đã xảy ra và chấm dứt hoàn toàn trong quá khứ.",
+                                    "examples": [
+                                        {
+                                            "sentence": "I bought a new car yesterday.",
+                                            "translation": "Tôi đã mua một chiếc xe mới hôm qua."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Chuỗi hành động liên tiếp trong quá khứ.",
+                                    "examples": [
+                                        {
+                                            "sentence": "He came home, took a shower, and went to bed.",
+                                            "translation": "Anh ấy về nhà, tắm rửa rồi đi ngủ."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "yesterday (hôm qua)",
+                                "ago (cách đây)",
+                                "last night/week/month/year",
+                                "in + năm quá khứ",
+                                "in the past"
+                            ]
+                        },
+                        {
+                            "id": 6,
+                            "name_vi": "6. Quá khứ tiếp diễn",
+                            "name_en": "Past Continuous",
+                            "formulas": {
+                                "affirmative": "S + was/were + V-ing",
+                                "negative": "S + was/were + NOT + V-ing",
+                                "interrogative": "Was/Were + S + V-ing...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Đang xảy ra tại một thời điểm xác định trong quá khứ.",
+                                    "examples": [
+                                        {
+                                            "sentence": "At 7 p.m yesterday, I was watching TV.",
+                                            "translation": "Lúc 7 giờ tối qua, tôi đang xem TV."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Một hành động đang xảy ra (dài) thì hành động khác xen vào (ngắn).",
+                                    "examples": [
+                                        {
+                                            "sentence": "When I was cooking, the phone rang.",
+                                            "translation": "Khi tôi đang nấu ăn thì điện thoại reo."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "at + giờ + quá khứ",
+                                "at this time last night",
+                                "when",
+                                "while",
+                                "as"
+                            ]
+                        },
+                        {
+                            "id": 7,
+                            "name_vi": "7. Quá khứ hoàn thành",
+                            "name_en": "Past Perfect",
+                            "formulas": {
+                                "affirmative": "S + had + V3/ed",
+                                "negative": "S + had + NOT + V3/ed",
+                                "interrogative": "Had + S + V3/ed...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Diễn tả hành động xảy ra trước một hành động khác trong quá khứ hoặc trước một thời điểm trong quá khứ.",
+                                    "examples": [
+                                        {
+                                            "sentence": "Before she went to bed, she had finished her work.",
+                                            "translation": "Trước khi cô ấy đi ngủ, cô ấy đã làm xong việc."
+                                        },
+                                        {
+                                            "sentence": "By the time the police arrived, the thief had escaped.",
+                                            "translation": "Vào lúc cảnh sát đến thì tên trộm đã tẩu thoát."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "before",
+                                "after",
+                                "by the time",
+                                "as soon as",
+                                "when"
+                            ]
+                        },
+                        {
+                            "id": 8,
+                            "name_vi": "8. Quá khứ hoàn thành tiếp diễn",
+                            "name_en": "Past Perfect Continuous",
+                            "formulas": {
+                                "affirmative": "S + had + been + V-ing",
+                                "negative": "S + had + not + been + V-ing",
+                                "interrogative": "Had + S + been + V-ing...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Nhấn mạnh tính liên tục của hành động trước một hành động khác trong quá khứ.",
+                                    "examples": [
+                                        {
+                                            "sentence": "I had been waiting for 2 hours when he finally came.",
+                                            "translation": "Tôi đã đợi suốt 2 tiếng đồng hồ thì cuối cùng anh ta mới đến."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "until then",
+                                "by the time",
+                                "prior to that time"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "future",
+                    "title": "III. Nhóm Tương Lai (Future)",
+                    "image": "https://img.freepik.com/free-vector/rocket-concept-illustration_114360-1606.jpg",
+                    "rules": [
+                        {
+                            "id": 9,
+                            "name_vi": "9. Tương lai đơn",
+                            "name_en": "Future Simple",
+                            "formulas": {
+                                "affirmative": "S + will/shall + V0",
+                                "negative": "S + will/shall + NOT + V0",
+                                "interrogative": "Will/Shall + S + V0...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Quyết định ngay lúc nói.",
+                                    "examples": [
+                                        {
+                                            "sentence": "I will open the door for you.",
+                                            "translation": "Tôi sẽ mở cửa cho bạn."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Dự đoán không có căn cứ.",
+                                    "examples": [
+                                        {
+                                            "sentence": "I think it will rain.",
+                                            "translation": "Tôi nghĩ trời sẽ mưa."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Lời hứa, lời đe dọa, lời đề nghị.",
+                                    "examples": [
+                                        {
+                                            "sentence": "I promise I will come back.",
+                                            "translation": "Tôi hứa tôi sẽ quay lại."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "tomorrow",
+                                "next week/month/year",
+                                "in + thời gian tới",
+                                "think/promise/hope/expect"
+                            ]
+                        },
+                        {
+                            "id": 10,
+                            "name_vi": "10. Tương lai tiếp diễn",
+                            "name_en": "Future Continuous",
+                            "formulas": {
+                                "affirmative": "S + will + be + V-ing",
+                                "negative": "S + will + NOT + be + V-ing",
+                                "interrogative": "Will + S + be + V-ing...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Đang xảy ra tại một thời điểm cụ thể trong tương lai.",
+                                    "examples": [
+                                        {
+                                            "sentence": "At 8 a.m tomorrow, I will be taking an exam.",
+                                            "translation": "Lúc 8 giờ sáng mai, tôi sẽ đang làm bài thi."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "at + giờ + tương lai",
+                                "at this time next week"
+                            ]
+                        },
+                        {
+                            "id": 11,
+                            "name_vi": "11. Tương lai hoàn thành",
+                            "name_en": "Future Perfect",
+                            "formulas": {
+                                "affirmative": "S + will + have + V3/ed",
+                                "negative": "S + will + NOT + have + V3/ed",
+                                "interrogative": "Will + S + have + V3/ed...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Hoàn thành trước một thời điểm hoặc một hành động khác trong tương lai.",
+                                    "examples": [
+                                        {
+                                            "sentence": "By next year, I will have built my house.",
+                                            "translation": "Trước năm sau, tôi sẽ xây xong nhà."
+                                        },
+                                        {
+                                            "sentence": "By the time you come back, I will have finished it.",
+                                            "translation": "Trước lúc bạn quay lại, tôi sẽ làm xong nó."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "by + thời gian tương lai",
+                                "by the time"
+                            ]
+                        },
+                        {
+                            "id": 12,
+                            "name_vi": "12. Tương lai hoàn thành tiếp diễn",
+                            "name_en": "Future Perfect Continuous",
+                            "formulas": {
+                                "affirmative": "S + will + have + been + V-ing",
+                                "negative": "S + will + NOT + have + been + V-ing",
+                                "interrogative": "Will + S + have + been + V-ing...?"
+                            },
+                            "usages": [
+                                {
+                                    "title": "Nhấn mạnh tính liên tục của hành động tính đến một thời điểm trong tương lai.",
+                                    "examples": [
+                                        {
+                                            "sentence": "By next month, we will have been living here for 5 years.",
+                                            "translation": "Tính đến tháng sau là chúng tôi sẽ sống ở đây được tròn 5 năm."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "signal_words": [
+                                "by + thời gian tương lai",
+                                "for + khoảng thời gian"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "sequence",
+                    "title": "IV. Sự Phối Hợp Thì (Sequence of Tenses)",
+                    "rules": [
+                        {
+                            "id": 13,
+                            "name_vi": "Quy tắc phối hợp",
+                            "name_en": "Sequence Rules",
+                            "usages": [
+                                {
+                                    "title": "Trong Quá khứ",
+                                    "examples": [
+                                        {
+                                            "sentence": "When I arrived (sau), the train had left (trước). (QKĐ - QKHT)",
+                                            "translation": "Khi tôi đến thì tàu đã chạy rồi."
+                                        },
+                                        {
+                                            "sentence": "While I was reading, she was cooking. (QKTD - QKTD)",
+                                            "translation": "Trong khi tôi đang đọc sách thì cô ấy đang nấu ăn."
+                                        },
+                                        {
+                                            "sentence": "When we were having dinner, the light went out. (QKTD - QKĐ)",
+                                            "translation": "Khi chúng tôi đang ăn tối thì đèn tắt."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Trong Tương lai",
+                                    "examples": [
+                                        {
+                                            "sentence": "I will wait here until you come. (TLĐ - HTĐ)",
+                                            "translation": "Tôi sẽ đợi ở đây cho đến khi bạn đến."
+                                        }
+                                    ]
+                                }
+                            ],
+                            "note": "Trong các mệnh đề trạng ngữ chỉ thời gian (bắt đầu bằng When, While, As soon as, Before, After, By the time...), KHÔNG bao giờ dùng thì Tương lai. Phải chuyển về Hiện tại đơn hoặc Hiện tại hoàn thành."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "structures",
+            "title": "Part 2: Các Cấu Trúc Ngữ Pháp Quan Trọng",
+            "description": "Câu bị động, Câu điều kiện, Câu tường thuật, Mệnh đề quan hệ...",
+            "topics": [
+                {
+                    "id": "passive",
+                    "title": "I. Câu Bị Động (Passive Voice)",
+                    "image": "https://img.freepik.com/free-vector/business-team-discussing-ideas-startup_74855-4380.jpg",
+                    "rules": [
+                        {
+                            "id": 14,
+                            "name_vi": "1. Công thức chung",
+                            "name_en": "General Formula",
+                            "structure": "S + BE + V3/ed + (by O)",
+                            "usages": [
+                                {
+                                    "title": "Công thức cơ bản",
+                                    "examples": [
+                                        {
+                                            "sentence": "My mother cooks dinner every day. -> Dinner is cooked by my mother every day.",
+                                            "translation": "Bữa tối được nấu bởi mẹ tôi mỗi ngày."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 15,
+                            "name_vi": "2. Các dạng đặc biệt",
+                            "name_en": "Special Passive Forms",
+                            "structure": "Causative, Reporting, NEED",
+                            "usages": [
+                                {
+                                    "title": "a. Nhờ vả (Causative Form)",
+                                    "examples": [
+                                        {
+                                            "sentence": "Active: Have/Get + sb + (to) V0",
+                                            "translation": "Nhờ ai làm gì"
+                                        },
+                                        {
+                                            "sentence": "Passive: Have/Get + sth + DONE (V3/ed)",
+                                            "translation": "Cái gì được làm"
+                                        },
+                                        {
+                                            "sentence": "I had my car fixed.",
+                                            "translation": "Tôi đã để xe mình được sửa."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "b. Tường thuật (People say that...)",
+                                    "examples": [
+                                        {
+                                            "sentence": "It is said that he is rich.",
+                                            "translation": "Người ta nói anh ấy giàu."
+                                        },
+                                        {
+                                            "sentence": "He is said to be rich.",
+                                            "translation": "Người ta nói anh ấy giàu (Cách 2)."
+                                        },
+                                        {
+                                            "sentence": "He was said to have stolen the money.",
+                                            "translation": "Người ta nói anh ấy đã trộm tiền."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "c. Bị động với NEED",
+                                    "examples": [
+                                        {
+                                            "sentence": "Active: Person + need + to V",
+                                            "translation": "Ai đó cần làm gì"
+                                        },
+                                        {
+                                            "sentence": "Passive: Thing + need + V-ing",
+                                            "translation": "Cái gì cần được làm"
+                                        },
+                                        {
+                                            "sentence": "My hair needs cutting.",
+                                            "translation": "Tóc tôi cần được cắt."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "conditional",
+                    "title": "II. Câu Điều Kiện (Conditional Sentences)",
+                    "image": "https://img.freepik.com/free-vector/decision-making-concept-illustration_114360-2987.jpg",
+                    "rules": [
+                        {
+                            "id": 16,
+                            "name_vi": "Điều kiện Loại 1",
+                            "name_en": "Type 1",
+                            "structure": "If + S + V(ht), S + Will/Can + V0",
+                            "usages": [
+                                {
+                                    "title": "Có thể xảy ra ở hiện tại hoặc tương lai.",
+                                    "examples": [
+                                        {
+                                            "sentence": "If it rains, I will stay at home.",
+                                            "translation": "Nếu trời mưa, tôi sẽ ở nhà."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 17,
+                            "name_vi": "Điều kiện Loại 2",
+                            "name_en": "Type 2",
+                            "structure": "If + S + V2/ed (were), S + Would/Could + V0",
+                            "usages": [
+                                {
+                                    "title": "Không có thật ở hiện tại (giả định).",
+                                    "examples": [
+                                        {
+                                            "sentence": "If I were you, I would buy that car.",
+                                            "translation": "Nếu tôi là bạn, tôi sẽ mua chiếc xe đó."
+                                        },
+                                        {
+                                            "sentence": "If I had money, I would travel around the world.",
+                                            "translation": "Nếu tôi có tiền, tôi sẽ đi vòng quanh thế giới."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 18,
+                            "name_vi": "Điều kiện Loại 3",
+                            "name_en": "Type 3",
+                            "structure": "If + S + Had V3, S + Would/Could + Have V3",
+                            "usages": [
+                                {
+                                    "title": "Không có thật ở quá khứ (tiếc nuối).",
+                                    "examples": [
+                                        {
+                                            "sentence": "If I had known the truth, I would have told you.",
+                                            "translation": "Nếu tôi biết sự thật, tôi đã nói với bạn rồi."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 19,
+                            "name_vi": "Đảo ngữ câu điều kiện",
+                            "name_en": "Inversion in Conditionals",
+                            "structure": "Type 1: Should | Type 2: Were | Type 3: Had",
+                            "usages": [
+                                {
+                                    "title": "Loại 1: Should + S + ...",
+                                    "examples": [
+                                        {
+                                            "sentence": "Should you need help, call me.",
+                                            "translation": "Nếu bạn cần giúp đỡ, hãy gọi tôi."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Loại 2: Were + S + (to V)...",
+                                    "examples": [
+                                        {
+                                            "sentence": "Were I you, I wouldn't do that.",
+                                            "translation": "Nếu tôi là bạn..."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Loại 3: Had + S + V3...",
+                                    "examples": [
+                                        {
+                                            "sentence": "Had I studied harder, I would have passed.",
+                                            "translation": "Nếu tôi học chăm hơn..."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "reported",
+                    "title": "III. Câu Tường Thuật (Reported Speech)",
+                    "rules": [
+                        {
+                            "id": 20,
+                            "name_vi": "1. Quy tắc chuyển đổi chung",
+                            "name_en": "General Rules",
+                            "structure": "Lùi thì, Đổi ngôi, Đổi trạng từ",
+                            "usages": [
+                                {
+                                    "title": "Lùi thì",
+                                    "examples": [
+                                        {
+                                            "sentence": "HT Đơn -> QK Đơn; HT Hoàn Thành -> QK Hoàn Thành; Will -> Would",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Đổi trạng từ",
+                                    "examples": [
+                                        {
+                                            "sentence": "Here -> There; Now -> Then; Today -> That day",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Yesterday -> The day before/The previous day",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Tomorrow -> The following day/The next day",
+                                            "translation": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 21,
+                            "name_vi": "2. Các dạng câu cụ thể",
+                            "name_en": "Specific Forms",
+                            "usages": [
+                                {
+                                    "title": "a. Câu trần thuật (Statements)",
+                                    "examples": [
+                                        {
+                                            "sentence": "He said (that) he was busy then.",
+                                            "translation": "Anh ấy nói lúc đó anh ấy đang bận."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "b. Câu hỏi Yes/No",
+                                    "examples": [
+                                        {
+                                            "sentence": "She asked me IF / WHETHER I loved English.",
+                                            "translation": "Cô ấy hỏi tôi xem tôi có yêu tiếng Anh không."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "c. Câu hỏi Wh-Questions",
+                                    "examples": [
+                                        {
+                                            "sentence": "He asked me where I was going.",
+                                            "translation": "Anh ấy hỏi tôi đang đi đâu."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "d. Câu mệnh lệnh",
+                                    "examples": [
+                                        {
+                                            "sentence": "The teacher told me TO open the door.",
+                                            "translation": "Giáo viên bảo tôi mở cửa."
+                                        },
+                                        {
+                                            "sentence": "He asked us NOT TO talk in class.",
+                                            "translation": "Ông ấy yêu cầu chúng tôi không nói chuyện."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "relative_clause",
+                    "title": "IV. Mệnh Đề Quan Hệ (Relative Clauses)",
+                    "image": "https://img.freepik.com/free-vector/connection-concept-illustration_114360-3164.jpg",
+                    "rules": [
+                        {
+                            "id": 22,
+                            "name_vi": "1. Đại từ & Trạng từ quan hệ",
+                            "name_en": "Relative Pronouns & Adverbs",
+                            "usages": [
+                                {
+                                    "title": "Đại từ quan hệ",
+                                    "examples": [
+                                        {
+                                            "sentence": "WHO (Người, chủ ngữ): The man who is standing there is my father.",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "WHOM (Người, tân ngữ): The woman whom you saw yesterday is my aunt.",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "WHICH (Vật): The book which I bought is interesting.",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "THAT: Thay cho Who/Whom/Which trong mệnh đề xác định.",
+                                            "translation": "Bắt buộc sau so sánh nhất, all, only..."
+                                        },
+                                        {
+                                            "sentence": "WHOSE (Sở hữu): The boy whose eyes are blue is Tom.",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Trạng từ quan hệ",
+                                    "examples": [
+                                        {
+                                            "sentence": "WHERE (= in/at/on which): Nơi chốn.",
+                                            "translation": "This is the house where I was born."
+                                        },
+                                        {
+                                            "sentence": "WHEN (= on/at which): Thời gian.",
+                                            "translation": "I remember the day when we first met."
+                                        },
+                                        {
+                                            "sentence": "WHY (= for which): Lý do.",
+                                            "translation": "That is the reason why I left."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 23,
+                            "name_vi": "2. Rút gọn mệnh đề QH",
+                            "name_en": "Reduced Relative Clauses",
+                            "usages": [
+                                {
+                                    "title": "Dùng V-ing (Chủ động)",
+                                    "examples": [
+                                        {
+                                            "sentence": "The man standing over there is my boss.",
+                                            "translation": "Người đàn ông đứng đằng kia là sếp tôi."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Dùng V3/ed (Bị động)",
+                                    "examples": [
+                                        {
+                                            "sentence": "The book written by To Hoai is popular.",
+                                            "translation": "Cuốn sách được viết bởi Tô Hoài rất phổ biến."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "Dùng To V0",
+                                    "examples": [
+                                        {
+                                            "sentence": "She was the last person to leave the room.",
+                                            "translation": "Dùng sau số thứ tự (first, second...), so sánh nhất, only."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "inversion",
+                    "title": "V. Đảo Ngữ (Inversion)",
+                    "rules": [
+                        {
+                            "id": 24,
+                            "name_vi": "Các dạng đảo ngữ",
+                            "name_en": "Inversion Forms",
+                            "usages": [
+                                {
+                                    "title": "1. Đảo ngữ với từ phủ định đầu câu",
+                                    "examples": [
+                                        {
+                                            "sentence": "Signal: Never, Rarely, Seldom, Little, Hardly...",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Never have I seen such a beautiful flower.",
+                                            "translation": "Chưa bao giờ tôi thấy bông hoa đẹp như thế."
+                                        },
+                                        {
+                                            "sentence": "Rarely does she go out at night.",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "2. Đảo ngữ 'Vừa mới... thì...'",
+                                    "examples": [
+                                        {
+                                            "sentence": "No sooner ... than ... | Hardly ... when ...",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "No sooner had I arrived home than it rained.",
+                                            "translation": "Tôi vừa về đến nhà thì trời mưa."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "3. Đảo ngữ 'Không những... mà còn...'",
+                                    "examples": [
+                                        {
+                                            "sentence": "Not only + Aux + S + V + BUT + S + ALSO + V...",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Not only is she beautiful but she is also intelligent.",
+                                            "translation": "Cô ấy không những đẹp mà còn thông minh."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "4. Đảo ngữ với So / Such",
+                                    "examples": [
+                                        {
+                                            "sentence": "So + Adj/Adv + Aux + S + that...",
+                                            "translation": "So fast did he run that nobody could catch him."
+                                        },
+                                        {
+                                            "sentence": "Such + be + N + that...",
+                                            "translation": "Such was the storm that the bridge collapsed."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "rewrite",
+            "title": "Part 3: Các Công Thức Viết Lại Câu (Sentence Transformation)",
+            "description": "Too...to, Enough, Because/Although, So sánh, It takes...",
+            "topics": [
+                {
+                    "id": "cause_effect_result",
+                    "title": "I. Kết quả, Nguyên nhân & Nhượng bộ",
+                    "rules": [
+                        {
+                            "id": 25,
+                            "name_vi": "Cấu trúc Kết quả & Đủ",
+                            "name_en": "Result & Enough",
+                            "usages": [
+                                {
+                                    "title": "1. TOO... TO (Quá... đến nỗi không thể)",
+                                    "examples": [
+                                        {
+                                            "sentence": "The coffee is too hot for me to drink.",
+                                            "translation": "Cà phê quá nóng để tôi có thể uống."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "2. SO... THAT (Quá... đến nỗi mà)",
+                                    "examples": [
+                                        {
+                                            "sentence": "The box is so heavy that he can't lift it.",
+                                            "translation": "Cái hộp quá nặng đến nỗi anh ấy không nhấc nổi."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "3. ENOUGH (Đủ... để)",
+                                    "examples": [
+                                        {
+                                            "sentence": "He isn't old enough to drive a car.",
+                                            "translation": "Cậu ấy chưa đủ tuổi để lái xe."
+                                        },
+                                        {
+                                            "sentence": "Note: Adj/Adv + ENOUGH but ENOUGH + Noun",
+                                            "translation": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 26,
+                            "name_vi": "Nguyên nhân & Nhượng bộ",
+                            "name_en": "Cause & Concession",
+                            "usages": [
+                                {
+                                    "title": "1. BECAUSE <-> BECAUSE OF",
+                                    "examples": [
+                                        {
+                                            "sentence": "Because + Clause <-> Because of + Noun/V-ing",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Because he was lazy, he failed. -> Because of being lazy, he failed.",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "2. ALTHOUGH <-> IN SPITE OF",
+                                    "examples": [
+                                        {
+                                            "sentence": "Although + Clause <-> In spite of/Despite + Noun/V-ing",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "In spite of being tired, she finished the work.",
+                                            "translation": "Mặc dù mệt, cô ấy vẫn hoàn thành công việc."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "time_money",
+                    "title": "II. Thời gian & Chuyển đổi thì",
+                    "rules": [
+                        {
+                            "id": 27,
+                            "name_vi": "Thời gian & Tiền bạc",
+                            "name_en": "Time & Money",
+                            "usages": [
+                                {
+                                    "title": "1. IT TAKES <-> SPEND",
+                                    "examples": [
+                                        {
+                                            "sentence": "It takes sb + Time + TO V0",
+                                            "translation": "Ai đó mất bao lâu để làm gì"
+                                        },
+                                        {
+                                            "sentence": "S + spend + Time + V-ing",
+                                            "translation": "Ai đó dành bao lâu để làm gì"
+                                        },
+                                        {
+                                            "sentence": "It took me 2 hours to do this. -> I spent 2 hours doing this.",
+                                            "translation": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 28,
+                            "name_vi": "Chuyển đổi thì (Quan trọng)",
+                            "name_en": "Tense Transformation",
+                            "usages": [
+                                {
+                                    "title": "a. Lần cuối... cách đây... <-> Không... được (khoảng thời gian)",
+                                    "examples": [
+                                        {
+                                            "sentence": "S + last + V2 + Time + ago",
+                                            "translation": "Lần cuối làm gì"
+                                        },
+                                        {
+                                            "sentence": "S + haven't/hasn't + V3 + for + Time",
+                                            "translation": "Không làm gì được bao lâu"
+                                        },
+                                        {
+                                            "sentence": "I last saw him 5 years ago. -> I haven't seen him for 5 years.",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "b. Lần cuối... là vào... <-> Không... từ khi...",
+                                    "examples": [
+                                        {
+                                            "sentence": "The last time... was in... <-> Haven't... since...",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "The last time we met was in 2010. -> We haven't met since 2010.",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "c. Bắt đầu... cách đây... <-> Đã làm... được...",
+                                    "examples": [
+                                        {
+                                            "sentence": "Started/Began + V-ing + ago <-> Have/Has + V3 + for...",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "She started teaching 3 years ago. -> She has taught for 3 years.",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "d. Khi nào <-> Bao lâu",
+                                    "examples": [
+                                        {
+                                            "sentence": "When did you buy this? -> How long have you had this?",
+                                            "translation": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "other_rewrite",
+                    "title": "III. Các Cấu Trúc Khác",
+                    "rules": [
+                        {
+                            "id": 29,
+                            "name_vi": "So sánh & Đề nghị & Khác",
+                            "name_en": "Miscellaneous",
+                            "usages": [
+                                {
+                                    "title": "1. So sánh",
+                                    "examples": [
+                                        {
+                                            "sentence": "A hơn B <-> B không bằng A",
+                                            "translation": "Tom is taller than Jerry. -> Jerry is not as tall as Tom."
+                                        },
+                                        {
+                                            "sentence": "So sánh nhất <-> Không ai bằng",
+                                            "translation": "Nile is the longest river. -> No river is as long as Nile."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "2. PREFER <-> WOULD RATHER",
+                                    "examples": [
+                                        {
+                                            "sentence": "Prefer V-ing TO V-ing <-> Would rather V0 THAN V0",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "I prefer staying home to going out. -> I would rather stay home than go out.",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "3. Đề nghị (Suggestion)",
+                                    "examples": [
+                                        {
+                                            "sentence": "Let's + V0",
+                                            "translation": "Let's go to the cinema."
+                                        },
+                                        {
+                                            "sentence": "Why don't we + V0?",
+                                            "translation": "Why don't we go...?"
+                                        },
+                                        {
+                                            "sentence": "What/How about + V-ing?",
+                                            "translation": "What about going...?"
+                                        },
+                                        {
+                                            "sentence": "I suggest + V-ing",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "4. Đã đến lúc (It's time)",
+                                    "examples": [
+                                        {
+                                            "sentence": "It's time for O to V0",
+                                            "translation": "Đến lúc phải làm gì"
+                                        },
+                                        {
+                                            "sentence": "It's (high) time S + V2/ed",
+                                            "translation": "Đã đến lúc (giả định) - It's time you went to bed."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "5. UNLESS (Trừ khi)",
+                                    "examples": [
+                                        {
+                                            "sentence": "Unless = If... not",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Unless you study, you fail. (= If you don't study)",
+                                            "translation": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "phonetics_vocab",
+            "title": "Part 4: Ngữ Âm, Từ Vựng & Từ Loại",
+            "description": "Quy tắc phát âm, trọng âm, giới từ và cụm động từ.",
+            "topics": [
+                {
+                    "id": "phonetics",
+                    "title": "I. Ngữ Âm (Phonetics)",
+                    "rules": [
+                        {
+                            "id": 30,
+                            "name_vi": "Quy tắc phát âm đuôi -ED & -S",
+                            "name_en": "Pronunciation Rules",
+                            "usages": [
+                                {
+                                    "title": "1. Đuôi -ED",
+                                    "examples": [
+                                        {
+                                            "sentence": "/id/: Tận cùng t, d (wanted, needed)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "/t/: Tận cùng p, k, f, s, sh, ch... (stopped, washed)",
+                                            "translation": "Mẹo: Phong kiến phương tây thật sang chảnh"
+                                        },
+                                        {
+                                            "sentence": "/d/: Còn lại (played, loved)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Ngoại lệ (đọc /id/): naked, wicked, beloved...",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "2. Đuôi -S/-ES",
+                                    "examples": [
+                                        {
+                                            "sentence": "/iz/: Tận cùng s, ss, ch, sh, x, z... (misses, watches)",
+                                            "translation": "Mẹo: Sóng gió chơi xuân zui ghê cơ"
+                                        },
+                                        {
+                                            "sentence": "/s/: Tận cùng p, k, f, t, th (stops, books)",
+                                            "translation": "Mẹo: Thời phong kiến phương tây"
+                                        },
+                                        {
+                                            "sentence": "/z/: Còn lại (plays, bags)",
+                                            "translation": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 31,
+                            "name_vi": "Chữ cái đặc biệt & Trọng âm",
+                            "name_en": "Special Sounds & Stress",
+                            "usages": [
+                                {
+                                    "title": "1. Chữ cái đặc biệt",
+                                    "examples": [
+                                        {
+                                            "sentence": "CH: /tʃ/ (teacher), /k/ (chemistry), /ʃ/ (machine)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "G: /dʒ/ (trước e, i, y - page), /g/ (game)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "EA: /i:/ (meat), /e/ (head), /ei/ (break)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "TH: /θ/ (think), /ð/ (this)",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "2. Quy tắc trọng âm",
+                                    "examples": [
+                                        {
+                                            "sentence": "2 âm tiết: N/Adj nhấn 1 (table), V nhấn 2 (begin)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "3 âm tiết trở lên: Nhấn âm 3 từ cuối lên (economy)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Hậu tố nhấn chính nó: -ee, -eer, -ese (engineer)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Hậu tố nhấn trước nó: -tion, -sion, -ic, -ity (nation)",
+                                            "translation": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "vocab_wordform",
+                    "title": "II. Từ Loại & Giới Từ (Word Forms & Prepositions)",
+                    "rules": [
+                        {
+                            "id": 32,
+                            "name_vi": "Vị trí & Dấu hiệu Từ loại",
+                            "name_en": "Word Forms",
+                            "usages": [
+                                {
+                                    "title": "1. Dấu hiệu nhận biết (Hậu tố)",
+                                    "examples": [
+                                        {
+                                            "sentence": "Noun: -tion, -ment, -ness, -ity, -er, -or, -ist...",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Adj: -ful, -less, -ive, -able, -ous, -al...",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Adv: -ly",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Verb: -ize, -ate, -fy, -en",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "2. Vị trí trong câu",
+                                    "examples": [
+                                        {
+                                            "sentence": "Noun: Sau a/an/the, sau Adj, sau giới từ, làm S/O.",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Adj: Trước N, sau To Be, sau Linking Verbs (look, feel...)",
+                                            "translation": "You look tired."
+                                        },
+                                        {
+                                            "sentence": "Adv: Sau V thường, trước Adj.",
+                                            "translation": "He runs fast. Extremely cold."
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": 33,
+                            "name_vi": "Giới từ & Cụm động từ",
+                            "name_en": "Prepositions & Phrasal Verbs",
+                            "usages": [
+                                {
+                                    "title": "1. Giới từ Thời gian (Time)",
+                                    "examples": [
+                                        {
+                                            "sentence": "IN: Tháng, Năm, Mùa, Buổi (in May, in 2024)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "ON: Ngày, Thứ (on Monday, on May 1st)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "AT: Giờ, Lễ hội (at 7 o'clock, at Christmas)",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "2. Giới từ Nơi chốn (Place)",
+                                    "examples": [
+                                        {
+                                            "sentence": "IN (trong), ON (trên), AT (tại điểm), UNDER (dưới), BETWEEN (giữa)...",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "3. Adj + Preposition",
+                                    "examples": [
+                                        {
+                                            "sentence": "excited ABOUT, good/bad AT, afraid OF, interested IN",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "full OF, satisfied WITH, famous FOR, different FROM",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "4. Cụm động từ & Thành ngữ",
+                                    "examples": [
+                                        {
+                                            "sentence": "Give up (từ bỏ), Look for (tìm), Look after (chăm sóc)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Put on (mặc), Take off (cởi), Run out of (hết)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "Idioms: out of order (hư), out of work (thất nghiệp)",
+                                            "translation": ""
+                                        }
+                                    ]
+                                },
+                                {
+                                    "title": "5. Verb Patterns",
+                                    "examples": [
+                                        {
+                                            "sentence": "V + V-ing: enjoy, avoid, deny, suggest, mind... (I enjoy reading)",
+                                            "translation": ""
+                                        },
+                                        {
+                                            "sentence": "V + To V: want, decide, plan, promise, agree... (I want to buy)",
+                                            "translation": ""
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

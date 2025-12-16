@@ -13,7 +13,7 @@
         <nav class="hidden md:flex items-center gap-2">
             <a *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive="bg-gray-700 text-white"
                 [routerLinkActiveOptions]="{exact: link.path === '/'}"
-                class="px-4 py-2 rounded-md text-sm font-medium text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">
+                class="px-4 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
                 {{link.label}}
             </a>
         </nav>
@@ -41,7 +41,7 @@
 
         <!-- Desktop Actions -->
         <div class="hidden md:flex items-center gap-4">
-            <a routerLink="/login" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">
+            <a routerLink="/login" class="text-sm font-medium text-gray-300 hover:text-white transition-colors">
                 Đăng nhập
             </a>
             <a routerLink="/register"
@@ -51,8 +51,9 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <button (click)="toggleMobileMenu()" class="md:hidden text-gray-400 hover:text-white">
-            <span class="material-symbols-outlined text-2xl">
+        <button (click)="toggleMobileMenu()" class="md:hidden text-gray-400 hover:text-white"
+            [attr.aria-label]="isMobileMenuOpen ? 'Đóng menu' : 'Mở menu'" aria-expanded="false">
+            <span class="material-symbols-outlined text-2xl" aria-hidden="true">
                 {{ isMobileMenuOpen ? 'close' : 'menu' }}
             </span>
         </button>
@@ -63,13 +64,13 @@
         <nav class="flex flex-col p-4 space-y-1">
             <a *ngFor="let link of navLinks" [routerLink]="link.path" (click)="closeMobileMenu()"
                 routerLinkActive="bg-gray-700 text-white" [routerLinkActiveOptions]="{exact: link.path === '/'}"
-                class="px-4 py-3 rounded-md text-base font-medium text-gray-400 hover:bg-gray-800 hover:text-white transition-colors">
+                class="px-4 py-3 rounded-md text-base font-medium text-gray-300 hover:bg-gray-800 hover:text-white transition-colors">
                 {{link.label}}
             </a>
         </nav>
         <div class="border-t border-gray-800 p-4 flex items-center gap-4">
             <a routerLink="/login" (click)="closeMobileMenu()"
-                class="flex-1 text-center text-sm font-medium text-gray-400 hover:text-white transition-colors">
+                class="flex-1 text-center text-sm font-medium text-gray-300 hover:text-white transition-colors">
                 Đăng nhập
             </a>
             <a routerLink="/register" (click)="closeMobileMenu()"
