@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import elsaData from '../data/ELSA_FULL.json';
+import technicalData from '../data/TECHNICAL_VOCAB.json';
 import { Course, Word, GrammarAnalysis } from '../models/vocabulary.model';
 
 // Re-export models for consumers
@@ -10,14 +11,15 @@ export * from '../models/vocabulary.model';
 })
 export class VocabularyService {
   private courses: Course[] = [];
+  private technicalCourses: Course[] = [];
 
   constructor() {
     this.initializeCourses();
+    this.initializeTechnicalCourses();
   }
 
   private initializeCourses() {
     // Map data from ELSA_FULL.json to Course structure
-    // We will use the existing thumbnails for the first few courses if possible, or generic ones
     const thumbnails = [
       'https://lh3.googleusercontent.com/aida-public/AB6AXuAsrHYDdUnF0obV4y5h3zduiP2LXPF0W67pwQolfYGQ8oXfEO3-iSAsbKlbgHnqQQQy6xbf5XufaDEF1J8KrJ13OBMMDmD_1XAbdpTAYOVxeVNArB0H1WJl3yhURi6-tYyJQ1xT-MSPkxRhz5Owa-Ngl__R5NjgajP5IcdK34AN8PqQVeGw0RcYhF_AUoYsCCCayirNH7955p6cFXbiE8xdqXxT1-2LpXYZDrVziii0L7Irha_6R6QsJh4p7gdxLqJl48B4P_nawqEh',
       'https://lh3.googleusercontent.com/aida-public/AB6AXuDlLEIrf3PzxER1o5EBr9Zq2h9yaIV36hUIFdUts4UCZm6YdQCKZENaLvqTQ5w6BAF74yVhAEBpB7iiRqFjcrMCPjEAsvCnUD0JGrQVnCi8qg7PJsoe6Qp4ByCrsCy-571377ktOgPaHQWINSta-tYolfBzmCOGUwXeQ3ZyvF8HntuPhuAUgO50KDYkIofjtn0LCDlXtTjxJ7ujqwFGB-nU8Yz5Ls141L5STzLlgVfq89QQg5xIsx0XEtVwli32AuGLOFt2ETngHqMz',
@@ -32,65 +34,89 @@ export class VocabularyService {
         id: topic.topic_id.toString(),
         title: topic.topic_name,
         description: `Học từ vựng về chủ đề ${topic.topic_name}`,
-        level: this.assignLevel(index), // Assign level based on index
+        level: this.assignLevel(index),
         thumbnail: thumbnails[index % thumbnails.length],
-        words: topic.words.map((w: any, wIndex: number) => ({
-          id: `${topic.topic_id}-${wIndex}`,
-          term: w.word,
-          definition: w.english_definition,
-          pronunciation: w.ipa,
-          example: w.example_sentence,
-          partOfSpeech: w.part_of_speech,
-          meaning: w.vietnamese_meaning,
-          exampleTranslation: w.example_translation,
-          grammarAnalysis: w.grammar_analysis,
-          collocations: w.collocations,
-          notes: w.notes,
-          imageKeyword: w.image_keyword,
-          synonyms: w.synonyms,
-          antonyms: w.antonyms,
-          wordFamily: w.word_family,
-          commonMistakes: w.common_mistakes,
-          mnemonic: w.mnemonic
-        }))
+        words: this.mapWords(topic.words, topic.topic_id.toString())
       };
     });
   }
 
+  private initializeTechnicalCourses() {
+    const techThumbnails = [
+      'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=60',
+      'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=60',
+      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=60',
+      'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=60',
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=800&auto=format&fit=crop&q=60'
+    ];
+
+    this.technicalCourses = (technicalData as any[]).map((topic, index) => {
+      return {
+        id: `tech-${topic.topic_id}`,
+        title: topic.topic_name,
+        description: `Tiếng Anh chuyên ngành: ${topic.topic_name}`,
+        level: 'Advanced', // Technical is generally advanced
+        thumbnail: techThumbnails[index % techThumbnails.length],
+        words: this.mapWords(topic.words, `tech-${topic.topic_id}`)
+      };
+    });
+  }
+
+  private mapWords(words: any[], topicId: string): Word[] {
+    return words.map((w: any, index: number) => ({
+      id: `${topicId}-${index}`,
+      term: w.word,
+      definition: w.english_definition,
+      pronunciation: w.ipa || '',
+      ipa: w.ipa,
+      example: w.example_sentence,
+      partOfSpeech: w.part_of_speech,
+      meaning: w.vietnamese_meaning,
+      exampleTranslation: w.example_translation,
+      grammarAnalysis: w.grammar_analysis,
+      collocations: w.collocations,
+      notes: w.notes,
+      imageKeyword: w.image_keyword,
+      synonyms: w.synonyms,
+      antonyms: w.antonyms,
+      wordFamily: w.word_family,
+      commonMistakes: w.common_mistakes,
+      mnemonic: w.mnemonic
+    }));
+  }
+
   private assignLevel(index: number): string {
-    // Distribute courses across three levels
-    const levelIndex = index % 3;
-    switch (levelIndex) {
-      case 0:
-        return 'Beginner';
-      case 1:
-        return 'Intermediate';
-      case 2:
-        return 'Advanced';
-      default:
-        return 'Intermediate';
-    }
+    const levels = ['Beginner', 'Intermediate', 'Advanced'];
+    return levels[index % 3];
   }
 
   getCourses(): Course[] {
     return this.courses;
   }
 
+  getTechnicalCourses(): Course[] {
+    return this.technicalCourses;
+  }
+
   getCourseById(id: string): Course | undefined {
-    return this.courses.find(c => c.id === id);
+    return this.courses.find(c => c.id === id) || this.technicalCourses.find(c => c.id === id);
   }
 
   getWordById(id: string): Word | undefined {
-    for (const course of this.courses) {
+    const allCourses = [...this.courses, ...this.technicalCourses];
+    for (const course of allCourses) {
       const word = course.words.find(w => w.id === id);
       if (word) return word;
     }
     return undefined;
   }
+
   getNextCourseId(id: string): string | undefined {
-    const index = this.courses.findIndex(c => c.id === id);
-    if (index !== -1 && index < this.courses.length - 1) {
-      return this.courses[index + 1].id;
+    const isTech = id.startsWith('tech-');
+    const courses = isTech ? this.technicalCourses : this.courses;
+    const index = courses.findIndex(c => c.id === id);
+    if (index !== -1 && index < courses.length - 1) {
+      return courses[index + 1].id;
     }
     return undefined;
   }

@@ -21,6 +21,7 @@ export class Navbar {
   navLinks = [
     { path: '/', label: 'Trang chủ' },
     { path: '/vocabulary', label: 'Từ vựng' },
+    { path: '/technical-vocabulary', label: 'Tiếng Anh IT' },
     { path: '/grammar', label: 'Ngữ pháp' },
     { path: '/reading', label: 'Luyện đọc' },
     { path: '/toeic', label: 'TOEIC' },

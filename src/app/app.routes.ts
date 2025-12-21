@@ -16,6 +16,7 @@ import { GrammarExercise } from './features/grammar/grammar-exercise/grammar-exe
 
 import { ReadingComponent } from './features/reading/reading/reading';
 import { Review } from './features/review/review';
+import { TechnicalVocabulary } from './features/vocabulary/technical-vocabulary/technical-vocabulary';
 
 // TOEIC Imports
 import { ToeicHomeComponent } from './features/toeic/toeic-home/toeic-home';
@@ -37,6 +38,8 @@ export const routes: Routes = [
     { path: 'register', component: Register },
     { path: 'vocabulary', component: CourseList },
     { path: 'vocabulary/:id', component: LessonDetail },
+    { path: 'technical-vocabulary', component: TechnicalVocabulary },
+    { path: 'technical-vocabulary/:id', component: LessonDetail },
     { path: 'vocabulary/:id/exercises', component: LessonExercisesComponent },
     { path: 'vocabulary/:id/exercises/matching', component: MatchingComponent },
     { path: 'vocabulary/:id/exercises/quiz', component: Quiz },
